@@ -1,53 +1,50 @@
-// Use state and use effect
-import { useEffect, useState } from 'react';
-
 // Mainpage
 export default function MainPage() {
   return (
-    <div className="w-full h-screen flex flex-row">
-      <Left />
-      <Right />
+    <>
+      <Navbar />
+      <div className="w-full h-screen pt-14 flex flex-row">
+        <Left />
+        <Right />
+      </div>
+    </>
+  )
+}
+
+// navbar
+function Navbar() {
+  return (
+    <div className="w-full fixed p-3
+    bg-slate-900">
+      <div className="text-2xl font-semibold
+      text-white">LearnSQL</div>
     </div>
   )
 }
 
+// list of pages
+const array = [
+  { name: "SQL Introduction" },
+  { name: "SQL Introduction" },
+  { name: "SQL Introduction" },
+  { name: "SQL Introduction" },
+  { name: "SQL Introduction" },
+  { name: "SQL Introduction" },
+  { name: "SQL Introduction" },
+  { name: "SQL Introduction" },
+  { name: "SQL Introduction" }
+]
+
 // left column for pages list
 function Left() {
-
-  const [isDark, setIsDark] = useState(() => {
-    // initialize from localStorage
-    return localStorage.getItem("theme") === "dark";
-  });
-
-  useEffect(() => {
-    if (isDark) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [isDark]);
-
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-  };
-
   return (
-    <div className="w-96 h-full fixed py-3 px-5
-      border-r-white border-3 bg-white dark:bg-slate-900/95">
-      <div className='flex justify-between flex-row'>
-        <div className="text-2xl font-semibold
-      text-white">LearnSQL</div>
-
-        <button
-          onClick={toggleTheme}
-          className="px-3 py-1 rounded-md
-                text-stone-800 dark:text-white border border-stone-600 dark:border-gray-800
-                hover:bg-stone-600 hover:text-white dark:hover:bg-gray-800 transition"
-        >
-          {isDark ? '🌞 Light' : '🌙 Dark'}
-        </button>
+    <div className="w-96 h-full py-3 px-5
+      border-r-white border-r-2 bg-slate-900">
+      <div className='pt-10 w-80'>
+        {array.map((arr, idx) => (
+          <li className='list-none py-2 px-4 text-xl rounded-md cursor-pointer
+          hover:bg-slate-800 text-white' key={idx}>{arr.name}</li>
+        ))}
       </div>
     </div>
   )
@@ -56,7 +53,11 @@ function Left() {
 // right column for pages
 function Right() {
   return (
-    <div className="w-full
-    bg-white dark:bg-slate-900/95"></div>
+    <div className="w-full p-3 px-5
+    bg-slate-900">
+      <div className="h-full">
+        <h1 className="text-8xl font-semibold text-white">SQL</h1>
+      </div>
+    </div>
   )
 }
