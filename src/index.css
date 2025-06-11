@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+/* Custom Scrollbar: Transparent Track */
+.scrollbar-transparent::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-transparent::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-transparent::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4); /* semi-transparent white */
+  border-radius: 10px;
+}
