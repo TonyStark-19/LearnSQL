@@ -2,14 +2,43 @@
 import { GrMysql } from "react-icons/gr";
 import { IoIosArrowForward } from "react-icons/io";
 
+// react router
+import { Routes, Route } from 'react-router-dom';
+
+// import link
+import { Link } from 'react-router-dom';
+
+// import pages
+import { Page1 } from "./pages";
+import { Page2 } from "./pages";
+
+// main export
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/*" element={<MainPage />} />
+    </Routes>
+  );
+}
+
 // Mainpage
-export default function MainPage() {
+function MainPage() {
   return (
     <>
       <Navbar />
       <div className="w-full h-screen pt-16 flex flex-row">
         <Left />
-        <Right />
+
+        <div className="flex-1 h-full overflow-y-auto pt-4 px-5 scrollbar-transparent bg-[#0F172A]">
+          <div className="text-slate-400 text-xl pb-2 font-semibold uppercase">Learn sql</div>
+
+          <Routes>
+            <Route path="sql-intro" element={<Page1 />} />
+            <Route path="dbms" element={<Page2 />} />
+          </Routes>
+
+          <div className="text-slate-400 py-3 pl-3 font-semibold">Made with ❤️ by Aditya chandel</div>
+        </div>
       </div>
     </>
   )
@@ -36,10 +65,10 @@ function Navbar() {
 
 // list of pages 1
 const array = [
-  { name: "SQL Introduction" },
-  { name: "DBMS" },
-  { name: "MySQL" }
-]
+  { name: "SQL Introduction", path: "/sql-intro" },
+  { name: "DBMS", path: "/dbms" },
+  { name: "MySQL", path: "/mysql" }
+];
 
 // list of pages 2
 const array2 = [
@@ -74,18 +103,20 @@ function Left() {
   return (
     <div className="w-96 h-full overflow-y-auto py-4 scrollbar-transparent
       border-r-slate-700 border-r-2 bg-[#0F172A]">
-      <div className="text-slate-400 text-xa pl-3 font-semibold uppercase">Get started</div>
+      <div className="text-slate-400 pl-3 font-semibold uppercase">Get started</div>
       <div className='pt-5 pr-7 pb-5 w-85 border-b-2 border-slate-700 '>
         {array.map((arr, idx) => (
-          <li className='group list-none py-2 px-5 font-semibold text-xl
+          <Link to={arr.path} key={idx}>
+            <li className='group list-none py-2 px-5 font-semibold text-xl
           rounded-r-xl cursor-pointer flex flex-row items-center justify-between
           hover:bg-slate-800 text-slate-100' key={idx}>{arr.name}
-            <IoIosArrowForward className="text-transparent group-hover:text-slate-100" />
-          </li>
+              <IoIosArrowForward className="text-transparent group-hover:text-slate-100" />
+            </li>
+          </Link>
         ))}
       </div>
 
-      <div className="text-slate-400 text-xa pl-3 pt-4 font-semibold uppercase">Learn sql</div>
+      <div className="text-slate-400 pl-3 pt-4 font-semibold uppercase">Learn sql</div>
       <div className='pt-5 pr-7 pb-5 w-85'>
         {array2.map((arr, idx) => (
           <li className='group list-none py-2 px-5 font-semibold text-xl
@@ -97,25 +128,4 @@ function Left() {
       </div>
     </div>
   );
-}
-
-
-// right column for pages
-function Right() {
-  return (
-    <div className="flex-1 h-full overflow-y-auto p-3 px-5 bg-[#0F172A]">
-      <Page1 />
-    </div>
-  );
-}
-
-// Content for each page
-
-// page 1
-function Page1() {
-  return (
-    <div className="h-full">
-      <h1 className="text-8xl font-semibold text-slate-100">SQL Introduction</h1>
-    </div>
-  )
 }
