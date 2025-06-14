@@ -1,5 +1,6 @@
 // Content for each page
 
+// Get started pages
 // page 1
 export function Page1() {
     return (
@@ -93,6 +94,289 @@ export function Page2() {
                 <div className="text-2xl pt-4 py-7">Let's dive into MySQL (a relational database system) which we will use to
                     learn about databases using SQL in the next page.</div>
             </div>
+        </div>
+    )
+}
+
+// page 3
+export function Page3() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">MySQL</h1>
+
+            <div className="text-gray-200 pt-10">
+                <div className="text-4xl font-semibold">What is MySQL?</div>
+
+                <ul className="text-2xl list-disc pl-6 pb-7">
+                    <li className="pt-7">MySQL is a relational database management system (RDBMS).</li>
+                    <li className="pt-3">It uses SQL language to interact with databases.</li>
+                </ul>
+            </div>
+        </div>
+    )
+}
+
+// Learn sql pages
+// page 4
+export function Page4() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Create Database</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 5
+export function Page5() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Drop Database</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 6
+export function Page6() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Create Table</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 7
+export function Page7() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">SQL Datatypes</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 8
+export function Page8() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">SQL Commands</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 9
+export function Page9() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Database Related Queries</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 10
+export function Page10() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Table Related Queries</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 11
+export function Page11() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">SQL Keys</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 5
+export function Page12() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">SQL Constraints</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 13
+export function Page13() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">SQL Select</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 14
+export function Page14() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Where Clause</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 15
+export function Page15() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">SQL Operators</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 16
+export function Page16() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Limit Clause</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 17
+export function Page17() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Order By Clause</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 18
+export function Page18() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Aggregate Functions</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 19
+export function Page19() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Group By Clause</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 20
+export function Page20() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Having Clause</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 21
+export function Page21() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Cascading</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 22
+export function Page22() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">More Table Related Queries</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 23
+export function Page23() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Joins In SQL</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 24
+export function Page24() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">SQL Sub-Queries</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 25
+export function Page25() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">MySQL Views</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 26
+export function Page26() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">SQL Projects</h1>
+
+            <div className="text-gray-200 pt-10"></div>
+        </div>
+    )
+}
+
+// page 27
+export function Page27() {
+    return (
+        <div className="min-h-full w-full px-4">
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">More Links</h1>
+
+            <div className="text-gray-200 pt-10"></div>
         </div>
     )
 }
