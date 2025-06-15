@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 // import pages
 import {
-  Page1, Page2, Page3, Page4, Page5, Page6, Page7, Page8, Page9, Page10, Page11, Page12, Page13, Page14,
+  Page1, Page2, Page3, Page4, Page6, Page7, Page8, Page9, Page10, Page11, Page12, Page13, Page14,
   Page15, Page16, Page17, Page18, Page19, Page20, Page21, Page22, Page23, Page24, Page25, Page26, Page27
 } from "./pages";
 
@@ -39,7 +39,6 @@ function MainPage() {
             <Route path="dbms" element={<Page2 />} />
             <Route path="mysql" element={<Page3 />} />
             <Route path="create-DB" element={<Page4 />} />
-            <Route path="drop-DB" element={<Page5 />} />
             <Route path="create-table" element={<Page6 />} />
             <Route path="datatypes" element={<Page7 />} />
             <Route path="commands" element={<Page8 />} />
@@ -102,7 +101,6 @@ const array = [
 // list of pages 2
 const array2 = [
   { name: "Create Database", path: "/create-DB" },
-  { name: "Drop Database", path: "/drop-DB" },
   { name: "Create Table", path: "/create-table" },
   { name: "SQL Datatypes", path: "/datatypes" },
   { name: "SQL Commands", path: "/commands" },
