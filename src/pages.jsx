@@ -110,7 +110,32 @@ export function Page3() {
                 <ul className="text-2xl list-disc pl-6 pb-7">
                     <li className="pt-7">MySQL is a relational database management system (RDBMS).</li>
                     <li className="pt-3">It uses SQL language to interact with databases.</li>
+                    <li className="pt-3">We will be using MySQL to learn SQL language.</li>
                 </ul>
+
+                <div className="text-4xl pt-5 font-semibold">Installing MySQL</div>
+
+                <ul className="text-2xl list-disc pl-6 pb-7">
+                    <li className="pt-7">If you have not installed MySQL till now. Install it from the link below :</li>
+                    <li className="pt-3"><a className="hover:underline" href="https://www.mysql.com/">Download MySQL</a></li>
+                </ul>
+
+                <div className="text-2xl pt-1 pl-3 border-l-4 border-slate-700"><span className="font-bold">Note : </span>
+                    You can follow a tutorial to download it to make sure everything is done correctly.</div>
+
+                <div className="text-4xl pt-5 font-semibold">MySQL Workbench</div>
+
+                <ul className="text-2xl list-disc pl-6 pb-7">
+                    <li className="pt-7">MySQL Workbench is where we will write our SQL queries.</li>
+                    <li className="pt-3">Below is a preview image of the MySQL Workbench :</li>
+                </ul>
+
+                <div className="rounded-lg overflow-hidden">
+                    <img src="/images/workbench.png" alt="workbench"></img>
+                </div>
+
+                <div className="text-2xl pt-4 py-7">So the introduction of SQL is done. Let's begin
+                    learning SQL from the next page.</div>
             </div>
         </div>
     )
@@ -123,18 +148,65 @@ export function Page4() {
         <div className="min-h-full w-full px-4">
             <h1 className="text-8xl font-semibold pt-3 text-slate-100">Create Database</h1>
 
-            <div className="text-gray-200 pt-10"></div>
-        </div>
-    )
-}
+            <div className="text-gray-200 pt-10">
+                <div className="text-4xl font-semibold">Creating our first Database</div>
 
-// page 5
-export function Page5() {
-    return (
-        <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Drop Database</h1>
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">To create your first Database on MySQL write the following command on
+                        MySQl Workbench :</li>
+                </ul>
 
-            <div className="text-gray-200 pt-10"></div>
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    CREATE DATABASE xyz;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-3">
+                    <li className="pt-3">After writing it select the command and then click on the second bolt like
+                        icon at the top of Workbench.
+                    </li>
+                    <li className="pt-3">Then you can referesh the schemas section on the left of the Workbench
+                        and then you will see your database being created. As you can see below :
+                    </li>
+                </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img1.png" alt="workbench preview"></img>
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-3">
+                    <li className="pt-7">So congratulations you have created your first database successfully.</li>
+                    <li className="pt-3">But to use this database you have to run this command : </li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    USE xyz;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-3">
+                    <li className="pt-3">After this you will see the xyz database being highlighted. And now you can
+                        use it and perform SQL queries on it.
+                    </li>
+                </ul>
+
+                <div className="pt-3 pl-3 pb-4 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img2.png" alt="workbench preview"></img>
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-3">
+                    <li className="pt-3">But if you want to delete this database you can simply do it by using this command :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    DROP DATABASE xyz;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-3">
+                    <li className="pt-3">You can still create it using the same command we used to create database.</li>
+                </ul>
+
+                <div className="text-2xl pt-4 py-7">Now let's learn the most important part of databases
+                    : Tables in the next page.</div>
+            </div>
         </div>
     )
 }
@@ -145,7 +217,59 @@ export function Page6() {
         <div className="min-h-full w-full px-4">
             <h1 className="text-8xl font-semibold pt-3 text-slate-100">Create Table</h1>
 
-            <div className="text-gray-200 pt-10"></div>
+            <div className="text-gray-200 pt-10">
+                <div className="text-4xl font-semibold">Creating our first Table</div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">For creating our first Table on MySQL we use the following syntax :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        CREATE TABLE table_name ({"\n"}
+                        &nbsp;&nbsp;column_name1 datatype constraint,{"\n"}
+                        &nbsp;&nbsp;column_name2 datatype constraint,{"\n"}
+                        &nbsp;&nbsp;column_name3 datatype constraint{"\n"}
+                        );
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-5">We can add as much as columns as we want.</li>
+                    <li className="pt-3">So let's create our first table. Write the follwing code in your
+                        MySQL Workbench :
+                    </li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        CREATE TABLE student ( {"\n"}
+                        &nbsp;&nbsp;id INT PRIMARY KEY, {"\n"}
+                        &nbsp;&nbsp;name VARCHAR(50), {"\n"}
+                        &nbsp;&nbsp;age INT NOT NULL {"\n"}
+                        );
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-5">After writing the above code, select it all and run it.</li>
+                    <li className="pt-3">Then refresh the schema section and then you will see your table being created.
+                        As you can see below :
+                    </li>
+                </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img3.png" alt="workbench preview"></img>
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">Now you must be wondering what are these datatypes, constraints
+                        like INT, NOT NULL, PRIMARY KEY, VARCHAR(50) etc. But don't worry we will dive
+                        into it in the upcoming pages.</li>
+                </ul>
+
+                <div className="text-2xl pt-4 py-7">Now let's learn about the datatypes used in SQL in the next page.</div>
+            </div>
         </div>
     )
 }
@@ -178,7 +302,68 @@ export function Page9() {
         <div className="min-h-full w-full px-4">
             <h1 className="text-8xl font-semibold pt-3 text-slate-100">Database Related Queries</h1>
 
-            <div className="text-gray-200 pt-10"></div>
+            <div className="text-gray-200 pt-10">
+                <div className="text-4xl font-semibold">Let's see some more database related queries</div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">We created our first database using the follwing command :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    CREATE DATABASE xyz;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">To avoid any error in the action output tab at the bottom, we will
+                        use the follwing command as best practice :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    CREATE DATABASE IF NOT EXISTS xyz;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">This command checks if the database with same name exists or not. If it is
+                        already there then it does not create the database and if it is there it will create it.</li>
+                    <li className="pt-7">We can do same for deleting the database. We deleted database using the following
+                        code :
+                    </li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    DROP DATABASE xyz;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">To avoid any error in the action output tab at the bottom, we will
+                        use the follwing command as best practice :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    DROP DATABASE IF NOT EXISTS xyz;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">This command checks if the database with same name exists or not. If it is
+                        there then it deletes it and if it is not there nothing will happen.</li>
+                    <li className="pt-7">We can also check how many databases and tables we have created so far
+                        in our MySQL Workbench.
+                    </li>
+                    <li className="pt-3">To check how many databases are present, we run the following code :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    SHOW DATABASES;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">To check how many TABLES are present, we run the following code :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    SHOW TABLES;
+                </div>
+            </div>
         </div>
     )
 }
