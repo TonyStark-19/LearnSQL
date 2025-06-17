@@ -200,7 +200,11 @@ export function Page4() {
                     <img className="rounded-lg" src="/images/img2.png" alt="workbench preview"></img>
                 </div>
 
-                <ul className="text-2xl list-disc pl-6 pb-3">
+                <div className="text-2xl pt-1 pl-3 border-l-4 border-slate-700"><span className="font-bold">Note : </span>
+                    When you re-open your MySQL Workbench after closing it then you have to use this code again to
+                    use the database and avoid errors.</div>
+
+                <ul className="text-2xl list-disc pl-6 pb-3 pt-2">
                     <li className="pt-3">But if you want to delete this database you can simply do it by using this command :</li>
                 </ul>
 
@@ -549,11 +553,11 @@ export function Page13() {
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7 list-none">Let's understand this code :</li>
-                    <li className="pt-3">So here we know about "SELECT", this symbol "*" means all. So SELECT * means
+                    <li className="pt-3">So here we know about "SELECT", this symbol "*" means all. So "SELECT *" means
                         Select all.</li>
                     <li className="pt-3">"FROM" is used to define from where we want to select data.</li>
                     <li className="pt-3">And at last "student" is the table which we created and want to select data from.</li>
-                    <li className="pt-3">So this whole code means select all data from table student. As a result is shows
+                    <li className="pt-3">So this whole code means select all data from the table "student". As a result is shows
                         whole table.</li>
                     <li className="pt-7">But what if we wanted to just select only specific columns from the given table.
                         We can do this with the follwing syntax :</li>
@@ -580,7 +584,7 @@ export function Page13() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">So what we did? Rather than selecting thw whole table, we selected only few
+                    <li className="pt-7">So what we did? Rather than selecting the whole table, we selected only few
                         specific columns (id, name).</li>
                     <li className="pt-3">if you want to just select only one column, you can do that as well like this :</li>
                 </ul>
@@ -607,7 +611,118 @@ export function Page14() {
         <div className="min-h-full w-full px-4">
             <h1 className="text-8xl font-semibold pt-3 text-slate-100">Where Clause</h1>
 
-            <div className="text-gray-200 pt-10"></div>
+            <div className="text-gray-200 pt-10">
+                <div className="text-4xl font-semibold">Before learning about Where Clause we will first create a sample
+                    database :</div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">First let's create database named college :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        CREATE DATABASE college {"\n"}
+                        USE college {"\n"}
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">After creating the database, now let's create table :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        CREATE TABLE studenttable ( {"\n"}
+                        &nbsp;&nbsp;rollno INT PRIMARY KEY,  {"\n"}
+                        &nbsp;&nbsp;name VARCHAR(50),  {"\n"}
+                        &nbsp;&nbsp;marks INT NOT NULL,  {"\n"}
+                        &nbsp;&nbsp;grade VARCHAR(1),  {"\n"}
+                        &nbsp;&nbsp;city VARCHAR(20)  {"\n"}
+                        );
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">Now let's insert sample data to this table :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        INSERT INTO {"\n"}
+                        studenttable (rollno, name, marks, grade, city) {"\n"}
+                        VALUES {"\n"}
+                        (101, "Anil", 78, "C", "Pune"), {"\n"}
+                        (102, "bhumika", 93, "A", "Mumbai"), {"\n"}
+                        (103, "chetan", 85, "B", "Mumbai"), {"\n"}
+                        (104, "dhruv", 96, "A", "Delhi"), {"\n"}
+                        (105, "emanuel", 12, "F", "Delhi"), {"\n"}
+                        (106, "farah", 82, "B", "Delhi");
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">We will use this table in the upcoming pages as well to understand
+                        about SQL concepts.</li>
+                    <li className="pt-3">Now let's dive into Where Clause</li>
+                </ul>
+
+                <div className="text-4xl pt-5 font-semibold">Where Clause</div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">Where Clause is used to define some conditions.</li>
+                    <li className="pt-3">It is used to filter data from the database as per some conditions.</li>
+                    <li className="pt-3">We can use Where Clause using the following syntax :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        SELECT col1, col2 FROM table_name {"\n"}
+                        WHERE conditions;
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">Let's understand this syntax with an example :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    SELECT * FROM studenttable WHERE marks &gt; 80;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">Above code returns only that data of students who have marks greater than 80. Which
+                        can be seen below :</li>
+                </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img9.png" alt="workbench preview"></img>
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">Let's take another example :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    SELECT * FROM studenttable WHERE city = "Mumbai";
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">Above code returns only that data of students who are from city Mumbai.
+                        Which also can be seen below :
+                    </li>
+                </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img10.png" alt="workbench preview"></img>
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">Now you have understand how the Where Clause works.</li>
+                    <li className="pt-3">We can use different types of operators with Where Clause.</li>
+                </ul>
+
+                <div className="text-2xl pt-5 pb-6">Now let's learn about Operators in SQL in the next page.</div>
+            </div>
         </div>
     )
 }
@@ -629,7 +744,65 @@ export function Page16() {
         <div className="min-h-full w-full px-4">
             <h1 className="text-8xl font-semibold pt-3 text-slate-100">Limit Clause</h1>
 
-            <div className="text-gray-200 pt-10"></div>
+            <div className="text-gray-200 pt-10">
+                <div className="text-4xl font-semibold">Let's learn about Limit Clause</div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">Limit Clause sets an upper limit on number of rows to be returned as result.</li>
+                    <li className="pt-3">Which means by using Limit Clause we get a limited amount of data even
+                        if the condtion asks to return more data from the database.</li>
+                    <li className="pt-3"> We can use Limit Clause using the follwing syntax :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        SELECT col1, col2 FROM table_name {"\n"}
+                        LIMIT number;
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">Let's understand this syntax with an example :</li>
+                    <li className="pt-3">First we will use Select all statement to check the diffrence :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    SELECT * FROM studenttable;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">The above statement will show the follwing result :</li>
+                </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img7.png" alt="workbench preview"></img>
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">Now let's run the Limit statement :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    SELECT * FROM studenttable LIMIT 3;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">The above statement will show the follwing result :</li>
+                </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img8.png" alt="workbench preview"></img>
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">Now you must be seeing the diffrence between the results.</li>
+                    <li className="pt-3">The Select all statement returns all data of the table but Limits it to 3.
+                        Which means only 3 rows will be returned as result.</li>
+                </ul>
+
+                <div className="text-2xl pt-5 pb-6">Now let's learn about another type of clause which is
+                    Order By Clause in the next page.</div>
+            </div>
         </div>
     )
 }
@@ -640,7 +813,57 @@ export function Page17() {
         <div className="min-h-full w-full px-4">
             <h1 className="text-8xl font-semibold pt-3 text-slate-100">Order By Clause</h1>
 
-            <div className="text-gray-200 pt-10"></div>
+            <div className="text-gray-200 pt-10">
+                <div className="text-4xl font-semibold">Let's learn about Order By Clause</div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">Order By Clause is used to sort the result in ascending (ASC) or descending
+                        order (DESC).</li>
+                    <li className="pt-3">Which means by using Order By Clause we get a the result in a sorted fashion.
+                        And this result can be in ascending (ASC) or descending order (DESC).</li>
+                    <li className="pt-3"> We can use Order By Clause using the follwing syntax :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 mb-6 w-[800px] overflow-x-auto">
+                    <code>
+                        SELECT col1, col2 FROM table_name {"\n"}
+                        ORDER BY col_name(s) ASC;
+                    </code>
+                </pre>
+
+                <div className="text-2xl pt-1 pl-3 border-l-4 border-slate-700"><span className="font-bold">Note : </span>
+                    There's no need to write ASC for sorting data in ascending order. It will be done as a defalut
+                    thing but you have to write DESC for sorting data in descending order.</div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">Let's understand this syntax with an example :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        SELECT * FROM studenttable {'\n'}
+                        ORDER BY city ASC;
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">The above statement will show the follwing result :</li>
+                </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img11.png" alt="workbench preview"></img>
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">As you can see in the above result the data is sorted in ascending order
+                        as per the city.</li>
+                    <li className="pt-3">As a result the city Delhi is at the top while Pune is at the bottom.</li>
+                    <li className="pt-3">You can order the result by roll number, name, marks or grade and whether
+                        it's ascending or descending ordering of data.</li>
+                </ul>
+
+                <div className="text-2xl pt-5 pb-6">Now let's learn about Aggregate functions in the next page.</div>
+            </div>
         </div>
     )
 }
@@ -662,7 +885,45 @@ export function Page19() {
         <div className="min-h-full w-full px-4">
             <h1 className="text-8xl font-semibold pt-3 text-slate-100">Group By Clause</h1>
 
-            <div className="text-gray-200 pt-10"></div>
+            <div className="text-gray-200 pt-10">
+                <div className="text-4xl font-semibold">Let's learn about Group By Clause</div>
+
+                <ul className="text-2xl list-disc pl-6 pb-5">
+                    <li className="pt-7">Group rows that have the same values into summary rows.</li>
+                    <li className="pt-3">It collects data from multiple records and groups the result by one or
+                        more column.</li>
+                </ul>
+
+                <div className="text-2xl pt-1 pl-3 border-l-4 border-slate-700"><span className="font-bold">Note : </span>
+                    We generally use Group By Clause with some Aggregate function</div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">Let's understand Group By Clause with an example :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        SELECT city, COUNT(name) {'\n'}
+                        FROM studenttable {'\n'}
+                        GROUP BY city;
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">In the above statement we are selecting city column which gives city names
+                        and COUNT(name) column which gives count of names.</li>
+                    <li className="pt-3">The above function COUNT(name) won't work without grouping it with something.</li>
+                    <li className="pt-3">That's why we group it with city. Now the result will a total number of names
+                        or student as per the city. As you can see below :</li>
+                </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/image12.png" alt="workbench preview"></img>
+                </div>
+
+                <div className="text-2xl pt-5 pb-6">Now let's learn about another type of clause which is
+                    Having Clause in the next page.</div>
+            </div>
         </div>
     )
 }
@@ -673,7 +934,46 @@ export function Page20() {
         <div className="min-h-full w-full px-4">
             <h1 className="text-8xl font-semibold pt-3 text-slate-100">Having Clause</h1>
 
-            <div className="text-gray-200 pt-10"></div>
+            <div className="text-gray-200 pt-10">
+                <div className="text-4xl font-semibold">Let's learn about Having Clause</div>
+
+                <ul className="text-2xl list-disc pl-6 pb-5">
+                    <li className="pt-7">It is similar to Where Clause as it also applies some condtion on rows.</li>
+                    <li className="pt-3">It is used when we want to apply any condition after grouping.</li>
+                    <li className="pt-3">Which means when we have grouped the data using Group By Clause. Then if we want
+                        to apply some condition to the group we use Having Clause.</li>
+                    <li className="pt-7">Let's understand Having Clause with an example :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        SELECT COUNT(name), city {'\n'}
+                        FROM studenttable {'\n'}
+                        GROUP BY city {'\n'}
+                        HAVING MAX(marks) &gt; 90;
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">In the above statement we are selecting city column which gives city names
+                        and COUNT(name) column which gives count of names.</li>
+                    <li className="pt-3">Then we have grouped the data by city.</li>
+                    <li className="pt-3">And then applied a condition using Having Clause, that give me count of students
+                        in each city only if the highest mark in the city is greater than 90.</li>
+                    <li className="pt-3">And then it gives the following result :</li>
+                </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img13.png" alt="workbench preview"></img>
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">This result means that only the city Mumbai and Delhi have one or more students
+                        who have maximum marks greater than 90.</li>
+                </ul>
+
+                <div className="text-2xl pt-5 pb-6">Now let's learn about Cascading in Foreign Keys in the next page.</div>
+            </div>
         </div>
     )
 }
