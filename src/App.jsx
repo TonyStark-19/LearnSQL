@@ -2,6 +2,15 @@
 import { GrMysql } from "react-icons/gr";
 import { IoIosArrowForward } from "react-icons/io";
 
+// import use location
+import { useLocation } from "react-router-dom";
+
+// import use effect
+import { useEffect } from "react";
+
+// import use navigate
+import { Navigate } from 'react-router-dom';
+
 // react router
 import { Routes, Route } from 'react-router-dom';
 
@@ -28,6 +37,7 @@ function MainPage() {
   return (
     <>
       <Navbar />
+      <ScrollToTop />
       <div className="w-full h-screen pt-16 flex flex-row">
         <Left />
 
@@ -35,6 +45,7 @@ function MainPage() {
           <div className="text-slate-400 text-xl pb-2 font-semibold uppercase">Learn sql</div>
 
           <Routes>
+            <Route path="/" element={<Navigate to="/sql-intro" replace />} />
             <Route path="sql-intro" element={<Page1 />} />
             <Route path="dbms" element={<Page2 />} />
             <Route path="mysql" element={<Page3 />} />
@@ -68,6 +79,17 @@ function MainPage() {
       </div>
     </>
   )
+}
+
+// scroll to top function
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
 }
 
 // navbar
@@ -120,37 +142,62 @@ const array2 = [
   { name: "More Queries (Tables)", path: "/More-queries" },
   { name: "Joins in SQL", path: "/joins" },
   { name: "SQL Sub Queries", path: "/sub-queries" },
-  { name: "MySQL Views", path: "/views" },
+  { name: "MySQL Views", path: "/views" }
+]
+
+// list of pages 3
+const array3 = [
   { name: "SQL Projects", path: "/projects" },
   { name: "More Links", path: "/links" }
-]
+];
 
 // left column for pages list
 function Left() {
+  const location = useLocation();
+
   return (
     <div className="w-96 h-full overflow-y-auto py-4 scrollbar-transparent
       border-r-slate-700 border-r-2 bg-[#0F172A]">
       <div className="text-slate-400 pl-3 font-semibold uppercase">Get started</div>
-      <div className='pt-5 pr-7 pb-5 w-85 border-b-2 border-slate-700 '>
+      <div className='py-3 pr-7 w-85 border-b-2 border-slate-700'>
         {array.map((arr, idx) => (
           <Link to={arr.path} key={idx}>
-            <li className='group list-none py-2 px-5 font-semibold text-xl
-          rounded-r-xl cursor-pointer flex flex-row items-center justify-between
-          hover:bg-slate-800 text-slate-100' key={idx}>{arr.name}
-              <IoIosArrowForward className="text-transparent group-hover:text-slate-100" />
+            <li className={`group list-none py-2 px-5 my-2 font-semibold text-xl
+            rounded-r-xl cursor-pointer flex flex-row items-center justify-between
+            hover:bg-slate-800 text-slate-100 ${location.pathname === arr.path ? 'bg-slate-800' : ''}`}>
+              {arr.name}
+              <IoIosArrowForward className={`${location.pathname === arr.path ?
+                "text-white" : "text-transparent group-hover:text-slate-100"}`} />
             </li>
           </Link>
         ))}
       </div>
 
       <div className="text-slate-400 pl-3 pt-4 font-semibold uppercase">Learn sql</div>
-      <div className='pt-5 pr-7 pb-5 w-85'>
+      <div className='py-3 pr-7 pb-5 w-85 border-b-2 border-slate-700'>
         {array2.map((arr, idx) => (
           <Link to={arr.path} key={idx}>
-            <li className='group list-none py-2 px-5 font-semibold text-xl
-          rounded-r-xl cursor-pointer flex flex-row items-center justify-between
-            hover:bg-slate-800 text-slate-100' key={idx}>{arr.name}
-              <IoIosArrowForward className="text-transparent group-hover:text-slate-100" />
+            <li className={`group list-none py-2 px-5 my-2 font-semibold text-xl
+            rounded-r-xl cursor-pointer flex flex-row items-center justify-between
+            hover:bg-slate-800 text-slate-100 ${location.pathname === arr.path ? 'bg-slate-800' : ''}`}>
+              {arr.name}
+              <IoIosArrowForward className={`${location.pathname === arr.path ?
+                "text-white" : "text-transparent group-hover:text-slate-100"}`} />
+            </li>
+          </Link>
+        ))}
+      </div>
+
+      <div className="text-slate-400 pl-3 pt-4 font-semibold uppercase">Resources</div>
+      <div className='py-3 pr-7 pb-5 w-85'>
+        {array3.map((arr, idx) => (
+          <Link to={arr.path} key={idx}>
+            <li className={`group list-none py-2 px-5 my-2 font-semibold text-xl
+            rounded-r-xl cursor-pointer flex flex-row items-center justify-between
+            hover:bg-slate-800 text-slate-100 ${location.pathname === arr.path ? 'bg-slate-800' : ''}`}>
+              {arr.name}
+              <IoIosArrowForward className={`${location.pathname === arr.path ?
+                "text-white" : "text-transparent group-hover:text-slate-100"}`} />
             </li>
           </Link>
         ))}
