@@ -733,7 +733,92 @@ export function Page15() {
         <div className="min-h-full w-full px-4">
             <h1 className="text-8xl font-semibold pt-3 text-slate-100">SQL Operators</h1>
 
-            <div className="text-gray-200 pt-10"></div>
+            <div className="text-gray-200 pt-10">
+                <div className="text-4xl font-semibold">Let's learn about types of SQL Operators</div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">
+                        <span className="font-bold">Arithmetic Operators : </span>
+                        + (Addition), - (Subtraction), * (Multiplication), / (Division), % (Modulus)
+                    </li>
+                    <li className="pt-5">
+                        <span className="font-bold">Comparison Operators : </span>
+                        = (Equal to), != (Not equal to), &gt;, &gt;=, &lt;, &lt;=
+                    </li>
+                    <li className="pt-5">
+                        <span className="font-bold">Logical Operators : </span>
+                        AND, OR, NOT, IN, BETWEEN, ALL, LIKE, ANY
+                    </li>
+                    <li className="pt-5">
+                        <span className="font-bold">Bitwise Operators : </span>
+                        & (Bitwise AND), | (Bitwise OR)
+                    </li>
+                    <li className="pt-7 list-none">Let's see some Logical Operators :</li>
+                    <li className="pt-7">Logical AND (to check for both conditions to be true)</li>
+                    <li className="pt-3">Let's understand this with an example :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    SELECT * FROM studenttable WHERE marks &gt; 80 AND city = "Mumbai";
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-5">Above statements returns those rows where marks is greater than 80 and city is
+                        Mumbai.</li>
+                    <li className="pt-7">Logical OR (to check for one of the conditions to be true)</li>
+                    <li className="pt-3">Let's understand this with an example :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    SELECT * FROM studenttable WHERE marks &gt; 90 OR city = "Mumbai";
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-5">Above statements returns those rows where marks is greater than 90 or where the
+                        city is Mumbai.</li>
+                    <li className="pt-7">Logical BETWEEN (selects for a given range)</li>
+                    <li className="pt-3">Let's understand this with an example :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    SELECT * FROM studenttable WHERE marks BETWEEN 80 AND 90;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-5">
+                    <li className="pt-5">Above statements returns those rows where marks is between the range 80 and 90.</li>
+                </ul>
+
+                <div className="text-2xl pt-1 pl-3 border-l-4 border-slate-700"><span className="font-bold">Note : </span>
+                    Here AND is not Logical AND Operator</div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">Logical IN (matches any value in the list)</li>
+                    <li className="pt-3">Let's understand this with an example :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    SELECT * FROM studenttable WHERE city IN ("Delhi", "Mumbai");
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-5">Above statements returns those rows where city is in from the list ("Delhi",
+                        "Mumbai")</li>
+                    <li className="pt-7">Logical NOT (to negate the given conditon)</li>
+                    <li className="pt-3">Let's understand this with an example :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    SELECT * FROM studenttable WHERE city NOT IN ("Delhi", "Mumbai");
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-5">Above statements returns those rows where city is not from the list ("Delhi",
+                        "Mumbai")</li>
+                </ul>
+
+                <div className="text-2xl pt-5 pb-6">Now let's learn about another type of clause which is
+                    LIMIT Clause in the next page.</div>
+            </div>
         </div>
     )
 }
@@ -874,7 +959,101 @@ export function Page18() {
         <div className="min-h-full w-full px-4">
             <h1 className="text-8xl font-semibold pt-3 text-slate-100">Aggregate Functions</h1>
 
-            <div className="text-gray-200 pt-10"></div>
+            <div className="text-gray-200 pt-10">
+                <div className="text-4xl font-semibold">Let's learn about Aggregate Functions</div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">Aggregate Functions perform a calculation on a set of values, and
+                        return a single value.</li>
+                    <li className="pt-3">Let's see the types of Aggregate Functions :</li>
+                    <li className="pt-7">COUNT( ) : it returns the count of the total number of items for
+                        the particular column.</li>
+                    <li className="pt-3">Let's understand it with some example :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    SELECT COUNT(name) FROM studenttable;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">The above statement shows the count of names as it can be seen below :</li>
+                </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img15.png" alt="workbench preview"></img>
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">MAX( ) : it returns the maximum value for the particular column.</li>
+                    <li className="pt-3">Let's understand it with some example :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    SELECT MAX(marks) FROM studenttable;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">The above statement shows the maximum marks as it can be seen below :</li>
+                </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img16.png" alt="workbench preview"></img>
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">MIN( ) : it returns the minimum value for the particular column.</li>
+                    <li className="pt-3">Let's understand it with some example :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    SELECT MIN(marks) FROM studenttable;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">The above statement shows the minimum marks as it can be seen below :</li>
+                </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img17.png" alt="workbench preview"></img>
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">SUM( ) : it returns the total sum value for the particular column.</li>
+                    <li className="pt-3">Let's understand it with some example :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    SELECT SUM(marks) FROM studenttable;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">The above statement shows the total sum of marks as it can be seen below :</li>
+                </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img18.png" alt="workbench preview"></img>
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">AVG( ) : it returns the average value for the particular column.</li>
+                    <li className="pt-3">Let's understand it with some example :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    SELECT AVG(marks) FROM studenttable;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">The above statement shows the average of marks as it can be seen below :</li>
+                </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img19.png" alt="workbench preview"></img>
+                </div>
+
+                <div className="text-2xl pt-5 pb-6">Now let's learn about another type of clause which is
+                    Group By Clause in the next page.</div>
+            </div>
         </div>
     )
 }
@@ -1028,7 +1207,45 @@ export function Page25() {
         <div className="min-h-full w-full px-4">
             <h1 className="text-8xl font-semibold pt-3 text-slate-100">MySQL Views</h1>
 
-            <div className="text-gray-200 pt-10"></div>
+            <div className="text-gray-200 pt-10">
+                <div className="text-4xl font-semibold">Let's learn about MySQL Views</div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">A view is a virtual table based on the result-set of an SQL statement.</li>
+                    <li className="pt-3">A view always shows up-to-date data. The database engine recreates the view
+                        , every time a user queries it.</li>
+                    <li className="pt-7">Let's understand MySQL Views with an example :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        CREATE VIEW view1 AS {'\n'}
+                        SELECT rollno, name FROM studenttable; {'\n'}
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">The above statemet create a MySQL View "view1".</li>
+                    <li className="pt-3">This "view1" is created on the statement "SELECT rollno, name FROM studenttable"
+                        which selects rollno and name column from the studenttable.</li>
+                    <li className="pt-3">Now to see thie MySQL View "view1" we can run this follwing code : </li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    SELECT * FROM view1;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">This statement will give us the follwing result :</li>
+                </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img14.png" alt="workbench preview"></img>
+                </div>
+
+                <div className="text-2xl pt-5 pb-6">This marks the end of the SQL Learning. But i have some more resources
+                    for you in the next two pages.</div>
+            </div>
         </div>
     )
 }
