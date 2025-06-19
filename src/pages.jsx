@@ -17,10 +17,11 @@ export function Page1() {
                     <li className="pt-3">SQL is used to store, manipulate and retrieve data from relational databases</li>
 
                     <li className="pt-3">It is used to perform <span className="font-bold">CRUD</span> operations :
-                        <ul className="text-2xl list-disc pl-8">
+                        <ul className="text-2xl list-disc list-inside">
                             <li className="pt-3"><span className="font-bold">C</span>reate - To create databases,
                                 tables, insert data in tables etc.</li>
-                            <li className="pt-3"><span className="font-bold">R</span>ead - To read data present in the database.</li>
+                            <li className="pt-3"><span className="font-bold">R</span>ead - To read data present in
+                                the database.</li>
                             <li className="pt-3"><span className="font-bold">U</span>pdate - Modify already inserted data.</li>
                             <li className="pt-3"><span className="font-bold">D</span>elete - Delete databases, table
                                 or specific data point/row or multiple rows.</li>
@@ -28,15 +29,17 @@ export function Page1() {
                     </li>
                 </ul>
 
-                <div className="text-2xl pt-1 border-l-4 border-slate-700 pl-3"><span className="font-bold">Note : </span>SQL keywords are not case
-                    sensitive. Eg : select is the same as SELECT in SQL.</div>
+                <div className="text-2xl pt-1 border-l-4 border-slate-700 pl-3"><span className="font-bold">Note : </span>
+                    SQL keywords are not case sensitive. Eg : select is the same as SELECT in SQL.</div>
 
                 <div className="text-4xl pt-7 font-semibold">SQL vs MySQL</div>
 
-                <div className="text-2xl pt-5">SQL is a language used to perform <span className="font-bold">CRUD </span>
-                    operations in Relational Database, while MySQL is a Relational Database Management System (RDBMS) that uses SQL.</div>
+                <div className="text-2xl pt-5 pb-5">SQL is a language used to perform <span className="font-bold">CRUD </span>
+                    operations in Relational Database, while MySQL is a Relational Database Management System (RDBMS)
+                    that uses SQL.</div>
 
-                <div className="text-2xl py-7">Let's dive into Database Management System (DBMS) in the next page.</div>
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Let's dive into Database Management
+                    System (DBMS) in the next page.</div>
             </div>
         </div>
     )
@@ -91,8 +94,8 @@ export function Page2() {
                     </li>
                 </ul>
 
-                <div className="text-2xl pt-4 py-7">Let's dive into MySQL (a relational database system) which we will use to
-                    learn about databases using SQL in the next page.</div>
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Let's dive into MySQL (a relational
+                    database system) which we will use to learn about databases using SQL in the next page.</div>
             </div>
         </div>
     )
@@ -130,11 +133,11 @@ export function Page3() {
                     <li className="pt-3">Below is a preview image of the MySQL Workbench :</li>
                 </ul>
 
-                <div className="rounded-lg overflow-hidden">
+                <div className="rounded-lg overflow-hidden pb-5">
                     <img src="/images/workbench.png" alt="workbench"></img>
                 </div>
 
-                <div className="text-2xl pt-4 py-7">So the introduction of SQL is done. Let's begin
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">So the introduction of SQL is done. Let's begin
                     learning SQL from the next page.</div>
             </div>
         </div>
@@ -212,13 +215,13 @@ export function Page4() {
                     DROP DATABASE xyz;
                 </div>
 
-                <ul className="text-2xl list-disc pl-6 pb-3">
+                <ul className="text-2xl list-disc pl-6 pb-5">
                     <li className="pt-3">You can still create the same database it using the same code
                         we used to create database earlier.</li>
                 </ul>
 
-                <div className="text-2xl pt-3 pb-6">Now let's learn the most important part of databases
-                    : Tables in the next page.</div>
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn the most important part
+                    of databases i.e tables in the next page.</div>
             </div>
         </div>
     )
@@ -275,13 +278,14 @@ export function Page6() {
                     <img className="rounded-lg" src="/images/img3.png" alt="workbench preview"></img>
                 </div>
 
-                <ul className="text-2xl list-disc pl-6 pb-2">
+                <ul className="text-2xl list-disc pl-6 pb-5">
                     <li className="pt-7">Now you must be wondering what are these datatypes, constraints
                         like INT, NOT NULL, PRIMARY KEY, VARCHAR(50) etc. But don't worry we will dive
                         into it in the upcoming pages.</li>
                 </ul>
 
-                <div className="text-2xl pt-3 pb-6">Now let's learn about the datatypes used in SQL in the next page.</div>
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about the datatypes
+                    used in SQL in the next page.</div>
             </div>
         </div>
     )
@@ -307,7 +311,7 @@ export function Page8() {
             <div className="text-gray-200 pt-10">
                 <div className="text-4xl font-semibold">Let's understand the types SQL Commands</div>
 
-                <ul className="text-2xl list-disc pl-6 pb-2">
+                <ul className="text-2xl list-disc pl-6 pb-5">
                     <li className="pt-7">
                         <span className="font-bold">DDL </span>
                         (Data Definition Language) : create, alter, rename, truncate & drop
@@ -330,7 +334,8 @@ export function Page8() {
                     </li>
                 </ul>
 
-                <div className="text-2xl pt-3 pb-6">Now let's learn about more database realted queries on the next page.</div>
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about more database
+                    realted queries on the next page.</div>
             </div>
         </div>
     )
@@ -404,8 +409,10 @@ export function Page9() {
                     SHOW TABLES;
                 </div>
 
-                <div className="text-2xl pt-5 pb-6">Now let's learn about the some more Table related queries
-                    in the next page.</div>
+                <div className="pb-5"></div>
+
+                <div className="text-2xl pt-2 pb-7 border-t-2 border-slate-700">Now let's learn about the some more
+                    Table related queries in the next page.</div>
             </div>
         </div>
     )
@@ -500,12 +507,13 @@ export function Page10() {
                     <img className="rounded-lg" src="/images/img5.png" alt="workbench preview"></img>
                 </div>
 
-                <ul className="text-2xl list-disc pl-6 pb-2">
+                <ul className="text-2xl list-disc pl-6 pb-5">
                     <li className="pt-7">Which means the data has been successfully inserted. Congratualtions you have not
                         learned to create your first table but also inserted the data to it.</li>
                 </ul>
 
-                <div className="text-2xl pt-5 pb-6">Now let's learn about SQL Keys in the next page.</div>
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about SQL Keys in the next
+                    page.</div>
             </div>
         </div>
     )
@@ -517,7 +525,22 @@ export function Page11() {
         <div className="min-h-full w-full px-4">
             <h1 className="text-8xl font-semibold pt-3 text-slate-100">SQL Keys</h1>
 
-            <div className="text-gray-200 pt-10"></div>
+            <div className="text-gray-200 pt-10">
+                <div className="text-4xl font-semibold">Let's learn about types of keys</div>
+
+                <ul className="text-2xl list-disc pl-6 pb-5">
+                    <li className="pt-7"><span className="font-bold">Primary key : </span>
+                        it is a column (or set of columns) in a table that uniquely identifies each row.</li>
+                    <li className="pt-3">It is a unique id. There is only one Primary key and it should be NOT null.</li>
+                    <li className="pt-7"><span className="font-bold">Foreign key : </span>
+                        it is a column (or set of columns) in a table that refers to the Primary key in another table.</li>
+                    <li className="pt-3">There can be multiple Foreign keys.</li>
+                    <li className="pt-3">Foreign keys can have duplicate and null values.</li>
+                </ul>
+
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about SQL Constraints in
+                    the next page.</div>
+            </div>
         </div>
     )
 }
@@ -528,7 +551,128 @@ export function Page12() {
         <div className="min-h-full w-full px-4">
             <h1 className="text-8xl font-semibold pt-3 text-slate-100">SQL Constraints</h1>
 
-            <div className="text-gray-200 pt-10"></div>
+            <div className="text-gray-200 pt-10">
+                <div className="text-4xl font-semibold">Let's learn about SQL Constraints and it's types</div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">SQL Constraints are used to specify rules for data in a table.</li>
+                    <li className="pt-7"><span className="font-bold">NOT NULL : </span>
+                        columns cannot have a null value</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    col1 INT NOT NULL;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7"><span className="font-bold">UNIQUE : </span>
+                        all values in column are different</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    col1 INT UNIQUE;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7"><span className="font-bold">PRIMARY KEY : </span>
+                        makes a column unique and not null but used only for one.</li>
+                    <li className="pt-3">It can be written in two of the following syntax :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    id INT PRIMARY KEY;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">It the first one, we declare it in a single line, specifiy the Primary key id.
+                        Now let's see the second syntax :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        CREATE TABLE temp ( {"\n"}
+                        &nbsp;&nbsp;id INT NOT NULL, {"\n"}
+                        &nbsp;&nbsp;PRIMARY KEY (id) {"\n"}
+                        );
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">It the second one, we declare it in two lines. In the first line we declare id
+                        as int type and not null and in the second line we make it (id) a Primary key.</li>
+                </ul>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7"><span className="font-bold">FOREIGN KEY : </span>
+                        prevents action that would destroy links between tables</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        CREATE TABLE temp ( {"\n"}
+                        &nbsp;&nbsp;cust_id INT, {"\n"}
+                        &nbsp;&nbsp;FOREIGN KEY (cust_id) REFERENCES customer(id) {"\n"}
+                        );
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">Here cust_id is a foreign key which refers to primary kry (id) of the customer
+                        table.</li>
+                </ul>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7"><span className="font-bold">DEFAULT : </span>
+                        sets the default value of a column</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    salary INT DEFAULT 25000;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">Here 25000 is set to be the default value for the salary column.</li>
+                </ul>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7"><span className="font-bold">CHECK : </span>
+                        it can limit the values allowed in a column.</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        CREATE TABLE city ( {"\n"}
+                        &nbsp;&nbsp;id INT PRIMARY KEY, {"\n"}
+                        &nbsp;&nbsp;city VARCHAR(50), {"\n"}
+                        &nbsp;&nbsp;age INT, {"\n"}
+                        &nbsp;&nbsp;CONSTRAINT age_check CHECK (age &gt;= 18 AND city="Delhi") {"\n"}
+                        );
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">Here we defined a constraint age_check which skips the values which have
+                        age greater or equal to 18 and where city is delhi.</li>
+                    <li className="pt-3">Let's take another example :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        CREATE TABLE newTab ( {"\n"}
+                        &nbsp;&nbsp;age INT CHECK (age &gt;= 18), {"\n"}
+                        );
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-5">
+                    <li className="pt-3">Here we are creating a table newTab in which column age will fill age values
+                        greater or equal to 18 only.</li>
+                    <li className="pt-3">Let's take another example :</li>
+                </ul>
+
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about Select query in
+                    detail in the next page.</div>
+            </div>
         </div>
     )
 }
@@ -593,12 +737,13 @@ export function Page13() {
                     SELECT name FROM student;
                 </div>
 
-                <ul className="text-2xl list-disc pl-6 pb-2">
+                <ul className="text-2xl list-disc pl-6 pb-5">
                     <li className="pt-7">Now you must be seeing the name column only. You can do the same for id
                         and age columns.</li>
                 </ul>
 
-                <div className="text-2xl pt-5 pb-6">Now let's learn about Where Clause in the next page.</div>
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about Where Clause
+                    in the next page.</div>
 
             </div>
         </div>
@@ -716,12 +861,13 @@ export function Page14() {
                     <img className="rounded-lg" src="/images/img10.png" alt="workbench preview"></img>
                 </div>
 
-                <ul className="text-2xl list-disc pl-6 pb-2">
+                <ul className="text-2xl list-disc pl-6 pb-5">
                     <li className="pt-7">Now you have understand how the Where Clause works.</li>
                     <li className="pt-3">We can use different types of operators with Where Clause.</li>
                 </ul>
 
-                <div className="text-2xl pt-5 pb-6">Now let's learn about Operators in SQL in the next page.</div>
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about Operators
+                    in SQL in the next page.</div>
             </div>
         </div>
     )
@@ -811,13 +957,13 @@ export function Page15() {
                     SELECT * FROM studenttable WHERE city NOT IN ("Delhi", "Mumbai");
                 </div>
 
-                <ul className="text-2xl list-disc pl-6 pb-2">
+                <ul className="text-2xl list-disc pl-6 pb-5">
                     <li className="pt-5">Above statements returns those rows where city is not from the list ("Delhi",
                         "Mumbai")</li>
                 </ul>
 
-                <div className="text-2xl pt-5 pb-6">Now let's learn about another type of clause which is
-                    LIMIT Clause in the next page.</div>
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about another type
+                    of clause which is LIMIT Clause in the next page.</div>
             </div>
         </div>
     )
@@ -879,14 +1025,14 @@ export function Page16() {
                     <img className="rounded-lg" src="/images/img8.png" alt="workbench preview"></img>
                 </div>
 
-                <ul className="text-2xl list-disc pl-6 pb-2">
+                <ul className="text-2xl list-disc pl-6 pb-5">
                     <li className="pt-7">Now you must be seeing the diffrence between the results.</li>
                     <li className="pt-3">The Select all statement returns all data of the table but Limits it to 3.
                         Which means only 3 rows will be returned as result.</li>
                 </ul>
 
-                <div className="text-2xl pt-5 pb-6">Now let's learn about another type of clause which is
-                    Order By Clause in the next page.</div>
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about another type
+                    of clause which is Order By Clause in the next page.</div>
             </div>
         </div>
     )
@@ -939,7 +1085,7 @@ export function Page17() {
                     <img className="rounded-lg" src="/images/img11.png" alt="workbench preview"></img>
                 </div>
 
-                <ul className="text-2xl list-disc pl-6 pb-2">
+                <ul className="text-2xl list-disc pl-6 pb-5">
                     <li className="pt-7">As you can see in the above result the data is sorted in ascending order
                         as per the city.</li>
                     <li className="pt-3">As a result the city Delhi is at the top while Pune is at the bottom.</li>
@@ -947,7 +1093,8 @@ export function Page17() {
                         it's ascending or descending ordering of data.</li>
                 </ul>
 
-                <div className="text-2xl pt-5 pb-6">Now let's learn about Aggregate functions in the next page.</div>
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about Aggregate functions
+                    in the next page.</div>
             </div>
         </div>
     )
@@ -1047,12 +1194,12 @@ export function Page18() {
                     <li className="pt-7">The above statement shows the average of marks as it can be seen below :</li>
                 </ul>
 
-                <div className="pt-3 pl-3 overflow-hidden">
+                <div className="pt-3 pl-3 pb-5 overflow-hidden">
                     <img className="rounded-lg" src="/images/img19.png" alt="workbench preview"></img>
                 </div>
 
-                <div className="text-2xl pt-5 pb-6">Now let's learn about another type of clause which is
-                    Group By Clause in the next page.</div>
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about another type of
+                    clause which is Group By Clause in the next page.</div>
             </div>
         </div>
     )
@@ -1096,12 +1243,12 @@ export function Page19() {
                         or student as per the city. As you can see below :</li>
                 </ul>
 
-                <div className="pt-3 pl-3 overflow-hidden">
+                <div className="pt-3 pl-3 pb-5 overflow-hidden">
                     <img className="rounded-lg" src="/images/image12.png" alt="workbench preview"></img>
                 </div>
 
-                <div className="text-2xl pt-5 pb-6">Now let's learn about another type of clause which is
-                    Having Clause in the next page.</div>
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about another type
+                    of clause which is Having Clause in the next page.</div>
             </div>
         </div>
     )
@@ -1146,12 +1293,13 @@ export function Page20() {
                     <img className="rounded-lg" src="/images/img13.png" alt="workbench preview"></img>
                 </div>
 
-                <ul className="text-2xl list-disc pl-6 pb-2">
+                <ul className="text-2xl list-disc pl-6 pb-5">
                     <li className="pt-7">This result means that only the city Mumbai and Delhi have one or more students
                         who have maximum marks greater than 90.</li>
                 </ul>
 
-                <div className="text-2xl pt-5 pb-6">Now let's learn about Cascading in Foreign Keys in the next page.</div>
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about Cascading in
+                    Foreign Keys in the next page.</div>
             </div>
         </div>
     )
@@ -1161,9 +1309,42 @@ export function Page20() {
 export function Page21() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Cascading</h1>
+            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Cascading for Foriegn key</h1>
 
-            <div className="text-gray-200 pt-10"></div>
+            <div className="text-gray-200 pt-10">
+                <div className="text-4xl font-semibold">Let's learn about Cascading for Foriegn key</div>
+
+                <ul className="text-2xl list-disc pl-6 pb-5">
+                    <li className="pt-7"><span className="font-bold">On Delete Cascade : </span>
+                        When we create a foreign key using this option, it deletes the referencing rows in the child table
+                        when the referenced row is deleted in the parent table which has a primary key.</li>
+                    <li className="pt-7"><span className="font-bold">On Update Cascade : </span>
+                        When we create a foreign key using this option, it updates the referencing rows in the child table
+                        when the referenced row is updated in the parent table which has a primary key.</li>
+                    <li className="pt-7">Using these two while creating Foriegn keys is the best practice to avoid
+                        any errors when we update on delete the rows from the parent table.</li>
+                    <li className="pt-3">Let's see an example of how we use them in our SQL code :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        CREATE TABLE student ( {"\n"}
+                        &nbsp;&nbsp;id INT PRIMARY KEY, {"\n"}
+                        &nbsp;&nbsp;courseID INT, {"\n"}
+                        &nbsp;&nbsp;FOREIGN KEY(courseID) REFERENCES course(id), {"\n"}
+                        &nbsp;&nbsp;ON DELETE CASCADE {"\n"}
+                        &nbsp;&nbsp;ON UPDATE CASCADE {"\n"}
+                        );
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-5">
+                    <li className="pt-3">That's it. By just adding these two lines we can cascade the foreign keys.</li>
+                </ul>
+
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about more Table related
+                    queries in the next page.</div>
+            </div>
         </div>
     )
 }
@@ -1174,7 +1355,236 @@ export function Page22() {
         <div className="min-h-full w-full px-4">
             <h1 className="text-8xl font-semibold pt-3 text-slate-100">More Table Related Queries</h1>
 
-            <div className="text-gray-200 pt-10"></div>
+            <div className="text-gray-200 pt-10">
+                <div className="text-4xl font-semibold">Let's learn about more Table related Queries</div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7"><span className="font-bold">Update : </span>
+                        to update existing rows</li>
+                    <li className="pt-3">We use the following syntax :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        UPDATE table_name {"\n"}
+                        SET col1 = val1, col2 = val2 {"\n"}
+                        WHERE condition; {"\n"}
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">Let's understand in with an example :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        UPDATE studenttable {"\n"}
+                        SET grade = "O" {"\n"}
+                        WHERE grade = "A"; {"\n"}
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-5">
+                    <li className="pt-3">The above code replaces grade value to O where the value of grade is A.</li>
+                </ul>
+
+                <div className="text-2xl pt-1 border-l-4 border-slate-700 pl-3"><span className="font-bold">Note : </span>
+                    before running the above command in MySQL, you have to turn off the safe mode using the follwoing code :</div>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-6 w-[800px]">
+                    SET SQL_SAFE_UPDATES = 0;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7"><span className="font-bold">Delete : </span>
+                        to delete existing rows</li>
+                    <li className="pt-3">We use the following syntax :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        DELETE FROM table_name {"\n"}
+                        WHERE condition; {"\n"}
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">Let's understand in with an example :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        DELETE FROM studenttable {"\n"}
+                        WHERE MARKS &lt; 33; {"\n"}
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">The above code delete rows where value of marks is less than 33.</li>
+                </ul>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7"><span className="font-bold">Alter : </span>
+                        to change the schema</li>
+                    <li className="pt-3">It has follwing types :</li>
+                    <li className="pt-7"><span className="font-bold">ADD </span>Column</li>
+                    <li className="pt-3">We use the following syntax :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        ALTER TABLE table_name {"\n"}
+                        ADD COLUMN column_name datatype constraint; {"\n"}
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">Let's understand in with an example :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        ALTER TABLE studenttable {"\n"}
+                        ADD COLUMN age INT NOT NULL DEFAULT 19; {"\n"}
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">The above code adds a column age of type int with 19 as default values.</li>
+                </ul>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7"><span className="font-bold">DROP </span>Column</li>
+                    <li className="pt-3">We use the following syntax :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        ALTER TABLE table_name {"\n"}
+                        DROP COLUMN column_name; {"\n"}
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">Let's understand in with an example :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        ALTER TABLE studenttable {"\n"}
+                        DROP COLUMN stu_age; {"\n"}
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">The above code deletes the column stu_age.</li>
+                </ul>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7"><span className="font-bold">RENAME </span>Table</li>
+                    <li className="pt-3">We use the following syntax :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        ALTER TABLE table_name {"\n"}
+                        RENAME TO new_table_name; {"\n"}
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">Let's understand in with an example :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        ALTER TABLE studenttable {"\n"}
+                        RENAME TO student; {"\n"}
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">The above code renames the table name from "studenttable" to "student".</li>
+                </ul>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7"><span className="font-bold">CHANGE </span>Column (rename)</li>
+                    <li className="pt-3">We use the following syntax :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        ALTER TABLE table_name {"\n"}
+                        CHANGE COLUMN old_name new_name new_datatype new_contraint; {"\n"}
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">Let's understand in with an example :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        ALTER TABLE studenttable {"\n"}
+                        CHANGE age stu_age INT; {"\n"}
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">The above code renames the column name from "age" to "stu_age".</li>
+                </ul>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7"><span className="font-bold">MODIFY </span>Column (modify datatype/ constraint)</li>
+                    <li className="pt-3">We use the following syntax :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        ALTER TABLE table_name {"\n"}
+                        MODIFY col_name new_datatype new_contraint; {"\n"}
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">Let's understand in with an example :</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        ALTER TABLE studenttable {"\n"}
+                        MODIFY age VARCHAR(2); {"\n"}
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">The above code modifies the column age from "type int" to "type VARCHAR(2)".</li>
+                </ul>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7"><span className="font-bold">TRUNCATE : </span>to delete table's data</li>
+                    <li className="pt-3">We use the following syntax :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    TRUNCATE table_name;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">Let's understand in with an example :</li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    TRUNCATE studenttable;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-5">
+                    <li className="pt-3">The above code deletes all data which was inserted in this table.</li>
+                </ul>
+
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about Joins in SQL
+                    in the next page.</div>
+            </div>
         </div>
     )
 }
@@ -1239,12 +1649,12 @@ export function Page25() {
                     <li className="pt-7">This statement will give us the follwing result :</li>
                 </ul>
 
-                <div className="pt-3 pl-3 overflow-hidden">
+                <div className="pt-3 pl-3 pb-5 overflow-hidden">
                     <img className="rounded-lg" src="/images/img14.png" alt="workbench preview"></img>
                 </div>
 
-                <div className="text-2xl pt-5 pb-6">This marks the end of the SQL Learning. But i have some more resources
-                    for you in the next two pages.</div>
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">This marks the end of the SQL
+                    Learning. But i have some more resources for you in the next two pages.</div>
             </div>
         </div>
     )
