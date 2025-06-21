@@ -77,7 +77,7 @@ export function Page2() {
                         DBMS stands for <span className="font-bold">Database Management System</span>.
                     </li>
                     <li className="pt-3">
-                        It is software used to create, manage, organize, and control access to databases.
+                        It is a software used to create, manage, organize, and control access to databases.
                     </li>
                     <li className="pt-3">
                         DBMS provides a systematic way to perform operations like storing, modifying, retrieving,
@@ -119,7 +119,6 @@ export function Page2() {
         </div>
     );
 }
-
 
 // page 3
 export function Page3() {
@@ -166,6 +165,7 @@ export function Page3() {
                         MySQL databases.</li>
                     <li className="pt-3">It provides a graphical interface where we will write and execute all our SQL
                         queries.</li>
+                    <li className="pt-3">Below is a preview image of the MySQL Workbench:</li>
                 </ul>
 
                 <div className="rounded-lg overflow-hidden pb-5">
@@ -215,7 +215,8 @@ export function Page4() {
 
                 <ul className="text-2xl list-disc pl-6 pb-3 pt-2">
                     <li className="pt-3">
-                        Now, refresh the **Schemas** section on the left pane of Workbench to see your newly created database.
+                        Now, refresh the <span className="font-bold">Schemas</span> section on the
+                        left pane of Workbench to see your newly created database.
                     </li>
                 </ul>
 
@@ -238,7 +239,8 @@ export function Page4() {
 
                 <ul className="text-2xl list-disc pl-6 pb-3">
                     <li className="pt-3">
-                        After running this, the `xyz` database will be highlighted — you can now run queries in it.
+                        After running this, the <span className="font-bold">xyz</span> database will be highlighted
+                        — you can now run queries in it. As you can see below:
                     </li>
                 </ul>
 
@@ -248,8 +250,7 @@ export function Page4() {
 
                 <div className="text-2xl pt-1 pl-3 border-l-4 border-slate-700">
                     <span className="font-bold">Note:</span> If you close and reopen MySQL Workbench, you will need to
-                    run the `USE xyz;` command again
-                    to activate your database.
+                    run the <span className="font-bold">USE xyz;</span> command again to activate your database.
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-3 pt-2">
@@ -264,12 +265,12 @@ export function Page4() {
 
                 <ul className="text-2xl list-disc pl-6 pb-5">
                     <li className="pt-3">
-                        You can recreate it anytime by using the `CREATE DATABASE` command again.
+                        You can recreate it anytime by using the <span className="font-bold">CREATE DATABASE</span> command again.
                     </li>
                 </ul>
 
                 <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Up next — let’s explore the most important part of a database: **Tables**!
+                    Up next — let’s explore the most important part of a database: <span className="font-bold">TABLES!</span>
                 </div>
             </div>
         </div>
@@ -325,8 +326,8 @@ export function Page6() {
                         After writing the above code, select all of it and click the second bolt icon to run it.
                     </li>
                     <li className="pt-3">
-                        Then, refresh the **Schemas** section. You’ll see your table created under the selected database,
-                        as shown below:
+                        Then, refresh the <span className="font-bold">Schemas</span> section. You’ll see your table
+                        created under the selected database, as shown below:
                     </li>
                 </ul>
 
@@ -336,19 +337,19 @@ export function Page6() {
 
                 <ul className="text-2xl list-disc pl-6 pb-5">
                     <li className="pt-7">
-                        Now you might be curious about the terms like `INT`, `NOT NULL`, `PRIMARY KEY`, `VARCHAR(50)`, etc.
+                        Now you might be curious about the terms like "INT", "NOT NULL", "PRIMARY KEY", "VARCHAR(50)", etc.
                         Don’t worry — we’ll explore each of these in detail in the upcoming pages.
                     </li>
                 </ul>
 
                 <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Great! Your first table is ready. Let's move ahead and understand the different **data types** used in SQL.
+                    Great! Your first table is ready. Let's move ahead and understand the different <span className=
+                        "font-bold">data types</span> used in SQL.
                 </div>
             </div>
         </div>
     );
 }
-
 
 // page 7
 export function Page7() {
@@ -368,36 +369,119 @@ export function Page8() {
             <h1 className="text-8xl font-semibold pt-3 text-slate-100">SQL Commands</h1>
 
             <div className="text-gray-200 pt-10">
-                <div className="text-4xl font-semibold">Let's understand the types SQL Commands</div>
+                <div className="text-4xl font-semibold">Understanding the Types of SQL Commands</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-5">
                     <li className="pt-7">
-                        <span className="font-bold">DDL </span>
-                        (Data Definition Language) : create, alter, rename, truncate & drop
+                        <span className="font-bold">DDL</span> (Data Definition Language): A subset of SQL
+                        used for defining and managing the structure of database objects such as tables, indexes, and constraints.
                     </li>
-                    <li className="pt-7">
-                        <span className="font-bold">DQL </span>
-                        (Data Query Language) : select
+                    <li className="pt-3">
+                        DDL commands are used to create, modify, and delete database structures.
                     </li>
-                    <li className="pt-7">
-                        <span className="font-bold">DML </span>
-                        (Data Manipulation Language) : select, insert, update & delete
+                    <li className="pt-3">
+                        Common DDL commands include:
+                        <ul className="text-2xl list-disc pl-6 pb-5">
+                            <li className="pt-3 list-inside">CREATE TABLE</li>
+                            <li className="pt-3 list-inside">ALTER TABLE</li>
+                            <li className="pt-3 list-inside">DROP TABLE</li>
+                            <li className="pt-3 list-inside">CREATE INDEX</li>
+                            <li className="pt-3 list-inside">DROP INDEX</li>
+                            <li className="pt-3 list-inside">CREATE CONSTRAINT</li>
+                            <li className="pt-3 list-inside">DROP CONSTRAINT</li>
+                            <li className="pt-3 list-inside">TRUNCATE TABLE</li>
+                        </ul>
                     </li>
-                    <li className="pt-7">
-                        <span className="font-bold">DCL </span>
-                        (Data Control Language) : grand & revoke permission to users
+
+                    <li className="pt-3">
+                        <span className="font-bold">DQL</span> (Data Query Language): Focuses on retrieving
+                        data from the database.
                     </li>
-                    <li className="pt-7">
-                        <span className="font-bold">TCL </span>
-                        (Transaction COntrol Language) : start transaction, commit, rollback etc.
+                    <li className="pt-3">
+                        The primary command in DQL is <span className="font-bold">SELECT</span>, which is used to
+                        extract specific data from one or more tables.
+                    </li>
+                    <li className="pt-3">
+                        Common DQL commands and clauses include:
+                        <ul className="text-2xl list-disc pl-6 pb-5">
+                            <li className="pt-3 list-inside">SELECT</li>
+                            <li className="pt-3 list-inside">WHERE</li>
+                            <li className="pt-3 list-inside">AND, OR, NOT</li>
+                            <li className="pt-3 list-inside">DISTINCT</li>
+                            <li className="pt-3 list-inside">LIKE</li>
+                            <li className="pt-3 list-inside">IN</li>
+                            <li className="pt-3 list-inside">BETWEEN</li>
+                            <li className="pt-3 list-inside">IS NULL</li>
+                            <li className="pt-3 list-inside">AS</li>
+                            <li className="pt-3 list-inside">ORDER BY</li>
+                            <li className="pt-3 list-inside">GROUP BY</li>
+                            <li className="pt-3 list-inside">Aggregate Functions (e.g., COUNT, SUM, AVG)</li>
+                        </ul>
+                    </li>
+
+                    <li className="pt-3">
+                        <span className="font-bold">DML</span> (Data Manipulation Language): Deals with managing data
+                        within tables.
+                    </li>
+                    <li className="pt-3">
+                        DML commands allow you to insert, update, and delete records, helping maintain data accuracy
+                        and consistency.
+                    </li>
+                    <li className="pt-3">
+                        Common DML commands include:
+                        <ul className="text-2xl list-disc pl-6 pb-5">
+                            <li className="pt-3 list-inside">INSERT</li>
+                            <li className="pt-3 list-inside">UPDATE</li>
+                            <li className="pt-3 list-inside">DELETE</li>
+                        </ul>
+                    </li>
+
+                    <li className="pt-3">
+                        <span className="font-bold">DCL</span> (Data Control Language): Manages access rights and
+                        permissions for users in a database.
+                    </li>
+                    <li className="pt-3">
+                        DCL commands help control who can access or modify the database and perform administrative tasks.
+                    </li>
+                    <li className="pt-3">
+                        These commands are essential for maintaining data security and privacy.
+                    </li>
+                    <li className="pt-3">
+                        Common DCL commands include:
+                        <ul className="text-2xl list-disc pl-6 pb-5">
+                            <li className="pt-3 list-inside">GRANT</li>
+                            <li className="pt-3 list-inside">REVOKE</li>
+                        </ul>
+                    </li>
+
+                    <li className="pt-3">
+                        <span className="font-bold">TCL</span> (Transaction Control Language): Focuses on managing
+                        transactions in a database.
+                    </li>
+                    <li className="pt-3">
+                        TCL commands ensure that a group of operations (a transaction) are completed successfully before
+                        the data is saved permanently.
+                    </li>
+                    <li className="pt-3">
+                        These commands help maintain data integrity by allowing operations to be committed or rolled back
+                        based on the outcome.
+                    </li>
+                    <li className="pt-3">
+                        Common TCL commands include:
+                        <ul className="text-2xl list-disc pl-6 pb-5">
+                            <li className="pt-3 list-inside">COMMIT</li>
+                            <li className="pt-3 list-inside">ROLLBACK</li>
+                            <li className="pt-3 list-inside">SAVEPOINT</li>
+                        </ul>
                     </li>
                 </ul>
 
-                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about more database
-                    realted queries on the next page.</div>
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">
+                    Now let's explore more <span className="font-bold">database-related queries</span> on the next page.
+                </div>
             </div>
         </div>
-    )
+    );
 }
 
 // page 9
@@ -420,7 +504,7 @@ export function Page9() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
+                    <li className="pt-5">
                         To avoid errors in the Action Output tab (especially when a database already exists), it's a
                         good practice to use this command instead:
                     </li>
@@ -431,9 +515,9 @@ export function Page9() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
-                        This command checks if a database named `xyz` already exists. If it doesn't, it creates one;
-                        otherwise, it does nothing—thus preventing an error.
+                    <li className="pt-5">
+                        This command checks if a database named <span className="font-bold">xyz </span>
+                        already exists. If it doesn't, it creates one; otherwise, it does nothing—thus preventing an error.
                     </li>
                     <li className="pt-7">
                         Similarly, we can safely delete a database using this basic command:
@@ -445,7 +529,7 @@ export function Page9() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
+                    <li className="pt-5">
                         Again, to avoid errors when deleting a database that may not exist, it's recommended to use:
                     </li>
                 </ul>
@@ -455,9 +539,9 @@ export function Page9() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
-                        This command checks whether the database `xyz` exists. If it does, it deletes it. If not, it
-                        does nothing and avoids throwing an error.
+                    <li className="pt-5">
+                        This command checks whether the database <span className="font-bold">xyz </span> exists.
+                        If it does, it deletes it. If not, it does nothing and avoids throwing an error.
                     </li>
                     <li className="pt-7">
                         You can also view all existing databases and tables using built-in SQL commands.
@@ -484,7 +568,8 @@ export function Page9() {
                 <div className="pb-5"></div>
 
                 <div className="text-2xl pt-2 pb-7 border-t-2 border-slate-700">
-                    Great! Now let’s move ahead and learn more about **table-related queries** in the next page.
+                    Great! Now let’s move ahead and learn more about <span className="font-bold">table-related queries </span>
+                    in the next page.
                 </div>
             </div>
         </div>
@@ -517,7 +602,7 @@ export function Page10() {
                 </pre>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
+                    <li className="pt-5">
                         To view the table we created, run the following query:
                     </li>
                 </ul>
@@ -527,7 +612,7 @@ export function Page10() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
+                    <li className="pt-5">
                         This will open a result grid showing the contents of the table, like this:
                     </li>
                 </ul>
@@ -556,7 +641,7 @@ export function Page10() {
                 </pre>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
+                    <li className="pt-5">
                         Let’s understand this with a practical example:
                     </li>
                 </ul>
@@ -572,7 +657,7 @@ export function Page10() {
                 </pre>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
+                    <li className="pt-5">
                         After writing this query, select and run it. If the Action Output tab shows a green tick,
                         it means the data was successfully inserted.
                     </li>
@@ -586,7 +671,7 @@ export function Page10() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
+                    <li className="pt-5">
                         This time, you should see the following result in the result grid:
                     </li>
                 </ul>
@@ -603,7 +688,7 @@ export function Page10() {
                 </ul>
 
                 <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Let’s move ahead and learn about **SQL Keys** in the next page.
+                    Let’s move ahead and learn about <span className="font-bold">SQL Keys</span> in the next page.
                 </div>
             </div>
         </div>
@@ -629,14 +714,14 @@ export function Page11() {
                     <li className="pt-3">Foreign keys can have duplicate and null values.</li>
                 </ul>
 
-                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about SQL Constraints in
-                    the next page.</div>
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about
+                    <span className="font-bold"> SQL Constraints</span> in the next page.</div>
             </div>
         </div>
     )
 }
 
-// page 5
+// page 12
 export function Page12() {
     return (
         <div className="min-h-full w-full px-4">
@@ -744,7 +829,7 @@ export function Page12() {
                 <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-3">Here we defined a constraint age_check which skips the values which have
                         age greater or equal to 18 and where city is delhi.</li>
-                    <li className="pt-3">Let's take another example :</li>
+                    <li className="pt-7">Let's take another example :</li>
                 </ul>
 
                 <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
@@ -761,7 +846,8 @@ export function Page12() {
                     <li className="pt-3">Let's take another example :</li>
                 </ul>
 
-                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about Select query in
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about
+                    <span className="font-bold"> Select</span> query in
                     detail in the next page.</div>
             </div>
         </div>
@@ -778,8 +864,10 @@ export function Page13() {
                 <div className="text-4xl font-semibold">Understanding the SELECT Query</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">The `SELECT` statement is used to retrieve data from a database.</li>
-                    <li className="pt-7">Earlier, we used `SELECT` to fetch all data from our table using this command:</li>
+                    <li className="pt-7">The <span className="font-bold">SELECT</span> statement is used to
+                        retrieve data from a database.</li>
+                    <li className="pt-7">Earlier, we used <span className="font-bold">SELECT</span>
+                        to fetch all data from our table using this command:</li>
                 </ul>
 
                 <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
@@ -787,10 +875,10 @@ export function Page13() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7 pb-2 list-none font-semibold">Let’s break it down:</li>
+                    <li className="pt-5 pb-2 list-none font-semibold">Let’s break it down:</li>
                     <li className="pt-3"><span className="font-bold">SELECT</span>: Keyword used to specify the columns
                         to retrieve.</li>
-                    <li className="pt-3"><span className="font-bold">*</span>: A wildcard character that means "all columns".</li>
+                    <li className="pt-3"><span className="font-bold">* </span>: A wildcard character that means "all columns".</li>
                     <li className="pt-3"><span className="font-bold">FROM</span>: Specifies the table to retrieve data from.</li>
                     <li className="pt-3">So this query means: "Select all columns from the student table".</li>
                     <li className="pt-7">But what if you want to fetch only specific columns instead of the entire table?
@@ -802,7 +890,7 @@ export function Page13() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">Here’s a practical example:</li>
+                    <li className="pt-5">Here’s a practical example:</li>
                 </ul>
 
                 <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
@@ -810,7 +898,7 @@ export function Page13() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">Run the above query and you’ll see the following result:</li>
+                    <li className="pt-5">Run the above query and you’ll see the following result:</li>
                 </ul>
 
                 <div className="pt-3 pl-3 overflow-hidden">
@@ -818,8 +906,7 @@ export function Page13() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">As you can see, only the <code>id</code> and <code>name</code> columns are
-                        displayed.</li>
+                    <li className="pt-7">As you can see, only the id and name columns are displayed.</li>
                     <li className="pt-3">You can also select just one column if needed. For example:</li>
                 </ul>
 
@@ -828,12 +915,11 @@ export function Page13() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-5">
-                    <li className="pt-7">Now only the <code>name</code> column will be shown. You can try the same with
-                        <code>id</code> or <code>age</code>.</li>
+                    <li className="pt-5">Now only the name column will be shown. You can try the same with id or age.</li>
                 </ul>
 
                 <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Great job! ✅ Now let’s move forward and learn about the <span className="font-bold">WHERE</span>
+                    Great job! Now let’s move forward and learn about the <span className="font-bold">WHERE </span>
                     clause in the next page.
                 </div>
             </div>
@@ -864,7 +950,7 @@ export function Page14() {
                 </pre>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">Now create a table inside this database:</li>
+                    <li className="pt-5">Now create a table inside this database:</li>
                 </ul>
 
                 <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
@@ -880,19 +966,19 @@ export function Page14() {
                 </pre>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">Now let's insert some sample data into this table:</li>
+                    <li className="pt-5">Now let's insert some sample data into this table:</li>
                 </ul>
 
                 <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
                     <code>
                         INSERT INTO studenttable (rollno, name, marks, grade, city){"\n"}
                         VALUES{"\n"}
-                        (101, "Anil", 78, "C", "Pune"),{"\n"}
-                        (102, "Bhumika", 93, "A", "Mumbai"),{"\n"}
-                        (103, "Chetan", 85, "B", "Mumbai"),{"\n"}
-                        (104, "Dhruv", 96, "A", "Delhi"),{"\n"}
-                        (105, "Emanuel", 12, "F", "Delhi"),{"\n"}
-                        (106, "Farah", 82, "B", "Delhi");
+                        (101, "anil", 78, "C", "Pune"),{"\n"}
+                        (102, "bhumika", 93, "A", "Mumbai"),{"\n"}
+                        (103, "chetan", 85, "B", "Mumbai"),{"\n"}
+                        (104, "dhruv", 96, "A", "Delhi"),{"\n"}
+                        (105, "emanuel", 12, "F", "Delhi"),{"\n"}
+                        (106, "farah", 82, "B", "Delhi");
                     </code>
                 </pre>
 
@@ -918,7 +1004,7 @@ export function Page14() {
                 </pre>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">Let's understand it with an example:</li>
+                    <li className="pt-5">Let's understand it with an example:</li>
                 </ul>
 
                 <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
@@ -926,7 +1012,7 @@ export function Page14() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">This query returns only those students who scored more than 80 marks:</li>
+                    <li className="pt-5">This query returns only those students who scored more than 80 marks:</li>
                 </ul>
 
                 <div className="pt-3 pl-3 overflow-hidden">
@@ -934,7 +1020,7 @@ export function Page14() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">Let’s try another example:</li>
+                    <li className="pt-5">Let’s try another example:</li>
                 </ul>
 
                 <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
@@ -942,7 +1028,7 @@ export function Page14() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">This query returns all students who are from Mumbai:</li>
+                    <li className="pt-5">This query returns all students who are from Mumbai:</li>
                 </ul>
 
                 <div className="pt-3 pl-3 overflow-hidden">
@@ -961,7 +1047,6 @@ export function Page14() {
         </div>
     );
 }
-
 
 // page 15
 export function Page15() {
@@ -1075,8 +1160,10 @@ export function Page16() {
                 <div className="text-4xl font-semibold">Let’s learn about the LIMIT Clause</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">The <span className="font-bold">LIMIT</span> clause is used to set an upper limit on the number of rows returned in the result.</li>
-                    <li className="pt-3">Even if the query matches more rows, the LIMIT clause restricts the output to the specified number.</li>
+                    <li className="pt-7">The <span className="font-bold">LIMIT</span> clause is used to set an upper
+                        limit on the number of rows returned in the result.</li>
+                    <li className="pt-3">Even if the query matches more rows, the LIMIT clause restricts the output
+                        to the specified number.</li>
                     <li className="pt-3">You can use the LIMIT clause with the following syntax:</li>
                 </ul>
 
@@ -1088,8 +1175,9 @@ export function Page16() {
                 </pre>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">Let’s understand this with an example.</li>
-                    <li className="pt-3">First, run the <span className="font-mono font-bold">SELECT *</span> query to view the entire table:</li>
+                    <li className="pt-5">Let’s understand this with an example.</li>
+                    <li className="pt-3">First, run the <span className="font-mono font-bold">SELECT *</span> query
+                        to view the entire table:</li>
                 </ul>
 
                 <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
@@ -1097,7 +1185,7 @@ export function Page16() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">This will return the entire table as shown below:</li>
+                    <li className="pt-5">This will return the entire table as shown below:</li>
                 </ul>
 
                 <div className="pt-3 pl-3 overflow-hidden">
@@ -1105,7 +1193,8 @@ export function Page16() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">Now, let’s run the same query but with a <span className="font-mono font-bold">LIMIT</span> of 3 rows:</li>
+                    <li className="pt-5">Now, let’s run the same query but with a <span className="font-mono font-bold">
+                        LIMIT</span> of 3 rows:</li>
                 </ul>
 
                 <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
@@ -1113,7 +1202,7 @@ export function Page16() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">This will return only the first 3 rows from the result set:</li>
+                    <li className="pt-5">This will return only the first 3 rows from the result set:</li>
                 </ul>
 
                 <div className="pt-3 pl-3 overflow-hidden">
@@ -1122,7 +1211,8 @@ export function Page16() {
 
                 <ul className="text-2xl list-disc pl-6 pb-5">
                     <li className="pt-7">As you can see, there’s a clear difference in the output.</li>
-                    <li className="pt-3">The first query returned all rows, while the second limited the output to only 3 rows using the <span className="font-mono font-bold">LIMIT</span> clause.</li>
+                    <li className="pt-3">The first query returned all rows, while the second limited the output
+                        to only 3 rows using the <span className="font-mono font-bold">LIMIT</span> clause.</li>
                 </ul>
 
                 <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">
@@ -1182,7 +1272,7 @@ export function Page17() {
                 </pre>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">The above query will return the following result:</li>
+                    <li className="pt-5">The above query will return the following result:</li>
                 </ul>
 
                 <div className="pt-3 pl-3 overflow-hidden">
@@ -1222,94 +1312,103 @@ export function Page18() {
                     <li className="pt-3">Here are the most commonly used aggregate functions:</li>
                 </ul>
 
-                {/* COUNT() */}
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
+                    <li className="pt-5">
                         <span className="font-bold">COUNT()</span>: Returns the total number of entries in a column.
                     </li>
-                    <li className="pt-3">Example:</li>
+                    <li className="pt-3">Let's understand it with an example:</li>
                 </ul>
+
                 <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
                     SELECT COUNT(name) FROM studenttable;
                 </div>
+
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">This will return the total number of students (non-null names):</li>
+                    <li className="pt-5">This will return the total number of students (non-null names):</li>
                 </ul>
+
                 <div className="pt-3 pl-3 overflow-hidden">
                     <img className="rounded-lg" src="/images/img15.png" alt="COUNT(name) result preview" />
                 </div>
 
-                {/* MAX() */}
                 <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7">
                         <span className="font-bold">MAX()</span>: Returns the highest value from a column.
                     </li>
-                    <li className="pt-3">Example:</li>
+                    <li className="pt-3">Let's understand it with an example:</li>
                 </ul>
+
                 <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
                     SELECT MAX(marks) FROM studenttable;
                 </div>
+
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">This returns the highest marks from the table:</li>
+                    <li className="pt-5">This returns the highest marks from the table:</li>
                 </ul>
+
                 <div className="pt-3 pl-3 overflow-hidden">
                     <img className="rounded-lg" src="/images/img16.png" alt="MAX(marks) result preview" />
                 </div>
 
-                {/* MIN() */}
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
+                    <li className="pt-5">
                         <span className="font-bold">MIN()</span>: Returns the lowest value from a column.
                     </li>
-                    <li className="pt-3">Example:</li>
+                    <li className="pt-3">Let's understand it with an example:</li>
                 </ul>
+
                 <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
                     SELECT MIN(marks) FROM studenttable;
                 </div>
+
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">This will return the lowest marks in the table:</li>
+                    <li className="pt-5">This will return the lowest marks in the table:</li>
                 </ul>
+
                 <div className="pt-3 pl-3 overflow-hidden">
                     <img className="rounded-lg" src="/images/img17.png" alt="MIN(marks) result preview" />
                 </div>
 
-                {/* SUM() */}
                 <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7">
                         <span className="font-bold">SUM()</span>: Returns the total sum of a numeric column.
                     </li>
-                    <li className="pt-3">Example:</li>
+                    <li className="pt-3">Let's understand it with an example:</li>
                 </ul>
+
                 <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
                     SELECT SUM(marks) FROM studenttable;
                 </div>
+
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">This returns the total of all marks:</li>
+                    <li className="pt-5">This returns the total of all marks:</li>
                 </ul>
+
                 <div className="pt-3 pl-3 overflow-hidden">
                     <img className="rounded-lg" src="/images/img18.png" alt="SUM(marks) result preview" />
                 </div>
 
-                {/* AVG() */}
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
+                    <li className="pt-5">
                         <span className="font-bold">AVG()</span>: Returns the average value of a numeric column.
                     </li>
-                    <li className="pt-3">Example:</li>
+                    <li className="pt-3">Let's understand it with an example:</li>
                 </ul>
+
                 <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
                     SELECT AVG(marks) FROM studenttable;
                 </div>
+
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">This returns the average of all marks:</li>
+                    <li className="pt-5">This returns the average of all marks:</li>
                 </ul>
+
                 <div className="pt-3 pl-3 pb-5 overflow-hidden">
                     <img className="rounded-lg" src="/images/img19.png" alt="AVG(marks) result preview" />
                 </div>
 
-                {/* Footer */}
                 <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Now let’s move on to another important clause — the <span className="font-bold">GROUP BY</span>
+                    Now let’s move on to another important clause — the <span className="font-bold">GROUP BY </span>
                     clause in the next page.
                 </div>
             </div>
@@ -1355,14 +1454,14 @@ export function Page19() {
                 </pre>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
+                    <li className="pt-5">
                         In this query, we are selecting the <span className="font-mono font-bold">city</span> column
                         and counting how many students belong to each city using <span className="font-mono font-bold">
                             COUNT(name)</span>.
                     </li>
                     <li className="pt-3">
                         The <span className="font-mono font-bold">COUNT(name)</span> function wouldn’t work meaningfully
-                        on its own in this case. So we group the data by <span className="font-mono font-bold">city</span>
+                        on its own in this case. So we group the data by <span className="font-mono font-bold">city </span>
                         to make the count meaningful.
                     </li>
                     <li className="pt-3">
@@ -1375,7 +1474,7 @@ export function Page19() {
                 </div>
 
                 <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Now let’s learn about another important clause — the <span className="font-bold">HAVING</span>
+                    Now let’s learn about another important clause — the <span className="font-bold">HAVING </span>
                     clause in the next page.
                 </div>
             </div>
@@ -1418,7 +1517,7 @@ export function Page20() {
                 </pre>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
+                    <li className="pt-5">
                         In this query:
                         <ul className="list-disc pl-6">
                             <li className="pt-3">We are selecting the <span className="font-mono font-bold">city</span>
@@ -1469,15 +1568,19 @@ export function Page21() {
 
                 <ul className="text-2xl list-disc pl-6 pb-5">
                     <li className="pt-7">
-                        <span className="font-bold">ON DELETE CASCADE:</span> This ensures that if a row in the parent table is deleted, all related rows in the child table are also automatically deleted.
+                        <span className="font-bold">ON DELETE CASCADE:</span> This ensures that if a row in the parent
+                        table is deleted, all related rows in the child table are also automatically deleted.
                     </li>
-                    <li className="pt-7">
-                        <span className="font-bold">ON UPDATE CASCADE:</span> This ensures that if a value in the parent table (usually the primary key) is updated, the related values in the child table are also updated accordingly.
+                    <li className="pt-5">
+                        <span className="font-bold">ON UPDATE CASCADE:</span> This ensures that if a value in the parent
+                        table (usually the primary key) is updated, the related values in the child table are also updated
+                        accordingly.
                     </li>
-                    <li className="pt-7">
-                        Using both of these options when defining foreign keys is considered a best practice. It helps maintain data integrity and prevents errors when updating or deleting rows from the parent table.
+                    <li className="pt-5">
+                        Using both of these options when defining foreign keys is considered a best practice. It helps
+                        maintain data integrity and prevents errors when updating or deleting rows from the parent table.
                     </li>
-                    <li className="pt-3">
+                    <li className="pt-5">
                         Let’s look at an example of how to use them in SQL:
                     </li>
                 </ul>
@@ -1495,13 +1598,14 @@ export function Page21() {
                 </pre>
 
                 <ul className="text-2xl list-disc pl-6 pb-5">
-                    <li className="pt-3">
+                    <li className="pt-5">
                         That’s it! Just by adding these two lines, we enable cascading behavior on our foreign key.
                     </li>
                 </ul>
 
                 <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Now let’s move forward and explore more table-related queries in the next page.
+                    Now let’s move forward and explore more <span className="font-bold">table-related queries </span>
+                    in the next page.
                 </div>
             </div>
         </div>
@@ -1741,8 +1845,8 @@ export function Page22() {
                     <li className="pt-3">The above code deletes all data which was inserted in this table.</li>
                 </ul>
 
-                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about Joins in SQL
-                    in the next page.</div>
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about
+                    <span className="font-bold"> Joins in SQL</span> in the next page.</div>
             </div>
         </div>
     )
@@ -1925,8 +2029,8 @@ export function Page23() {
 
                 <div className="pb-5"></div>
 
-                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about SQL sub queries
-                    in the next page.</div>
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about
+                    <span className="font-bold"> SQL sub queries</span> in the next page.</div>
             </div>
         </div>
     )
@@ -1984,7 +2088,7 @@ export function Page25() {
                 </pre>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">The above statemet create a MySQL View "view1".</li>
+                    <li className="pt-5">The above statemet create a MySQL View "view1".</li>
                     <li className="pt-3">This "view1" is created on the statement "SELECT rollno, name FROM studenttable"
                         which selects rollno and name column from the studenttable.</li>
                     <li className="pt-3">Now to see thie MySQL View "view1" we can run this follwing code : </li>
@@ -1995,7 +2099,7 @@ export function Page25() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">This statement will give us the follwing result :</li>
+                    <li className="pt-5">This statement will give us the follwing result :</li>
                 </ul>
 
                 <div className="pt-3 pl-3 pb-5 overflow-hidden">
@@ -2009,6 +2113,7 @@ export function Page25() {
     )
 }
 
+// Resources pages
 // page 26
 export function Page26() {
     return (
