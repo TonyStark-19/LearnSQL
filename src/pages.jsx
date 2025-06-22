@@ -504,7 +504,7 @@ export function Page9() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
+                    <li className="pt-3">
                         To avoid errors in the Action Output tab (especially when a database already exists), it's a
                         good practice to use this command instead:
                     </li>
@@ -515,7 +515,7 @@ export function Page9() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
+                    <li className="pt-3">
                         This command checks if a database named <span className="font-bold">xyz </span>
                         already exists. If it doesn't, it creates one; otherwise, it does nothing—thus preventing an error.
                     </li>
@@ -529,7 +529,7 @@ export function Page9() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
+                    <li className="pt-3">
                         Again, to avoid errors when deleting a database that may not exist, it's recommended to use:
                     </li>
                 </ul>
@@ -539,7 +539,7 @@ export function Page9() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
+                    <li className="pt-3">
                         This command checks whether the database <span className="font-bold">xyz </span> exists.
                         If it does, it deletes it. If not, it does nothing and avoids throwing an error.
                     </li>
@@ -555,8 +555,18 @@ export function Page9() {
                     SHOW DATABASES;
                 </div>
 
+                <div className="pt-5 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img20.png" alt="workbench preview" />
+                </div>
+
                 <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-3">
+                        As you can see above, it shows the list of databases in created or present in my MySQL.
+                    </li>
+                </ul>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-5">
                         To view all tables within the currently selected database:
                     </li>
                 </ul>
@@ -565,7 +575,16 @@ export function Page9() {
                     SHOW TABLES;
                 </div>
 
-                <div className="pb-5"></div>
+                <div className="pt-5 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img21.png" alt="workbench preview" />
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-5">
+                    <li className="pt-3">
+                        As you can see above, it shows the list of tables and view created in the database
+                        <span className="font-bold"> xyz.</span>
+                    </li>
+                </ul>
 
                 <div className="text-2xl pt-2 pb-7 border-t-2 border-slate-700">
                     Great! Now let’s move ahead and learn more about <span className="font-bold">table-related queries </span>
@@ -704,15 +723,62 @@ export function Page11() {
             <div className="text-gray-200 pt-10">
                 <div className="text-4xl font-semibold">Let's learn about types of keys</div>
 
-                <ul className="text-2xl list-disc pl-6 pb-5">
+                <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7"><span className="font-bold">Primary key : </span>
                         it is a column (or set of columns) in a table that uniquely identifies each row.</li>
                     <li className="pt-3">It is a unique id. There is only one Primary key and it should be NOT null.</li>
+                    <li className="pt-3">To understand how we declare Primary key, you can see the following example:</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        CREATE TABLE student ({"\n"}
+                        &nbsp;&nbsp;id INT PRIMARY KEY,{"\n"}
+                        &nbsp;&nbsp;name VARCHAR(50),{"\n"}
+                        &nbsp;&nbsp;age INT NOT NULL{"\n"}
+                        );
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">In the above example we declared id as the Priamry key of type int.</li>
+                    <li className="pt-3">As you can see below, the column rollno is an example of primary key:</li>
+                </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img22.png" alt="workbench preview" />
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7"><span className="font-bold">Foreign key : </span>
                         it is a column (or set of columns) in a table that refers to the Primary key in another table.</li>
                     <li className="pt-3">There can be multiple Foreign keys.</li>
                     <li className="pt-3">Foreign keys can have duplicate and null values.</li>
+                    <li className="pt-3">To understand how we declare Foreign key, you can see the following example:</li>
                 </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        CREATE TABLE student ( {"\n"}
+                        &nbsp;&nbsp;id INT PRIMARY KEY, {"\n"}
+                        &nbsp;&nbsp;courseID INT, {"\n"}
+                        &nbsp;&nbsp;FOREIGN KEY (courseID) REFERENCES course(id) {"\n"}
+                        &nbsp;&nbsp;&nbsp;&nbsp;ON DELETE CASCADE {"\n"}
+                        &nbsp;&nbsp;&nbsp;&nbsp;ON UPDATE CASCADE {"\n"}
+                        );
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">In the above example we declared courseId as the Foreign key of type int
+                        which points to the primary key id of the table course.
+                    </li>
+                    <li className="pt-3">And as you can see below, the column departmentId is an example of foreign key.</li>
+                </ul>
+
+                <div className="pt-3 pl-3 pb-5 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img23.png" alt="workbench preview" />
+                </div>
 
                 <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about
                     <span className="font-bold"> SQL Constraints</span> in the next page.</div>
@@ -732,6 +798,7 @@ export function Page12() {
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7">SQL Constraints are used to specify rules for data in a table.</li>
+                    <li className="pt-3">Let's see the types of SQL Constraints:</li>
                     <li className="pt-7"><span className="font-bold">NOT NULL : </span>
                         columns cannot have a null value</li>
                 </ul>
@@ -843,7 +910,6 @@ export function Page12() {
                 <ul className="text-2xl list-disc pl-6 pb-5">
                     <li className="pt-3">Here we are creating a table newTab in which column age will fill age values
                         greater or equal to 18 only.</li>
-                    <li className="pt-3">Let's take another example :</li>
                 </ul>
 
                 <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about
@@ -1078,9 +1144,8 @@ export function Page15() {
                     <li className="pt-5 list-none">
                         <span className="text-3xl font-bold">Let’s explore some Logical Operators with examples:</span>
                     </li>
-
                     <li className="pt-7 font-semibold">1. Logical AND (returns rows where both conditions are true):</li>
-                    <li className="pt-3">Example:</li>
+                    <li className="pt-3">Let's see an example:</li>
                 </ul>
 
                 <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
@@ -1088,10 +1153,18 @@ export function Page15() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-5">This query returns rows where marks are greater than 80 and the city is Mumbai.</li>
+                    <li className="pt-5">This query returns rows where marks are greater than 80 and the city is Mumbai.
+                        As you can see below:
+                    </li>
+                </ul>
 
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img24.png" alt="workbench preview full table" />
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7 font-semibold">2. Logical OR (returns rows where at least one condition is true):</li>
-                    <li className="pt-3">Example:</li>
+                    <li className="pt-3">Let's see an example:</li>
                 </ul>
 
                 <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
@@ -1099,19 +1172,33 @@ export function Page15() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-5">This returns rows where marks are greater than 90 or the city is Mumbai.</li>
+                    <li className="pt-5">This returns rows where marks are greater than 90 or the city is Mumbai.
+                        As you can see below:
+                    </li>
+                </ul>
 
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img25.png" alt="workbench preview full table" />
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7 font-semibold">3. Logical BETWEEN (returns rows within a given range):</li>
-                    <li className="pt-3">Example:</li>
+                    <li className="pt-3">Let's see an example:</li>
                 </ul>
 
                 <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
                     SELECT * FROM studenttable WHERE marks BETWEEN 80 AND 90;
                 </div>
 
-                <ul className="text-2xl list-disc pl-6 pb-5">
-                    <li className="pt-5">This query returns rows where marks are between 80 and 90 (inclusive).</li>
+                <ul className="text-2xl list-disc pl-6 pb-3">
+                    <li className="pt-5">This query returns rows where marks are between 80 and 90 (inclusive).
+                        As you can see below:
+                    </li>
                 </ul>
+
+                <div className="pt-3 pl-3 pb-5 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img26.png" alt="workbench preview full table" />
+                </div>
 
                 <div className="text-2xl pt-1 pl-3 border-l-4 border-slate-700">
                     <span className="font-bold">Note:</span> Here, <code>AND</code> is not the logical AND operator —
@@ -1120,7 +1207,7 @@ export function Page15() {
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7 font-semibold">4. Logical IN (returns rows that match any value from a list):</li>
-                    <li className="pt-3">Example:</li>
+                    <li className="pt-3">Let's see an example:</li>
                 </ul>
 
                 <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
@@ -1128,19 +1215,31 @@ export function Page15() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Returns all students whose city is either Delhi or Mumbai.</li>
+                    <li className="pt-5">Returns all students whose city is either Delhi or Mumbai. As you can see below:</li>
+                </ul>
 
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img27.png" alt="workbench preview full table" />
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7 font-semibold">5. Logical NOT (negates the given condition):</li>
-                    <li className="pt-3">Example:</li>
+                    <li className="pt-3">Let's see an example:</li>
                 </ul>
 
                 <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
                     SELECT * FROM studenttable WHERE city NOT IN ("Delhi", "Mumbai");
                 </div>
 
-                <ul className="text-2xl list-disc pl-6 pb-5">
-                    <li className="pt-5">This query returns rows where the city is neither Delhi nor Mumbai.</li>
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-5">This query returns rows where the city is neither Delhi nor Mumbai. As you can
+                        see below:
+                    </li>
                 </ul>
+
+                <div className="pt-3 pl-3 pb-5 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img28.png" alt="workbench preview full table" />
+                </div>
 
                 <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">
                     Up next, we’ll learn about another useful clause — the <span className="font-bold">LIMIT</span> clause.
@@ -1566,7 +1665,7 @@ export function Page21() {
             <div className="text-gray-200 pt-10">
                 <div className="text-4xl font-semibold">Let’s learn about Cascading for Foreign Keys</div>
 
-                <ul className="text-2xl list-disc pl-6 pb-5">
+                <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7">
                         <span className="font-bold">ON DELETE CASCADE:</span> This ensures that if a row in the parent
                         table is deleted, all related rows in the child table are also automatically deleted.
@@ -1647,12 +1746,18 @@ export function Page22() {
                     </code>
                 </pre>
 
-                <ul className="text-2xl list-disc pl-6 pb-5">
-                    <li className="pt-3">The above code replaces grade value to O where the value of grade is A.</li>
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">The above code replaces grade value to O where the value of grade is A. As you can
+                        see below:
+                    </li>
                 </ul>
 
+                <div className="pt-3 pl-3 pb-5 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img29.png" alt="HAVING clause result preview" />
+                </div>
+
                 <div className="text-2xl pt-1 border-l-4 border-slate-700 pl-3"><span className="font-bold">Note : </span>
-                    before running the above command in MySQL, you have to turn off the safe mode using the follwoing code :</div>
+                    before running the above command in MySQL, you have to turn off the safe mode using the following code :</div>
 
                 <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-6 w-[800px]">
                     SET SQL_SAFE_UPDATES = 0;
@@ -1683,8 +1788,14 @@ export function Page22() {
                 </pre>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-3">The above code delete rows where value of marks is less than 33.</li>
+                    <li className="pt-3">The above code delete rows where value of marks is less than 33. As you can
+                        see below:
+                    </li>
                 </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img30.png" alt="HAVING clause result preview" />
+                </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7"><span className="font-bold">Alter : </span>
@@ -1713,8 +1824,14 @@ export function Page22() {
                 </pre>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-3">The above code adds a column age of type int with 19 as default values.</li>
+                    <li className="pt-3">The above code adds a column age of type int with 19 as default values. As you can
+                        see below:
+                    </li>
                 </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img31.png" alt="HAVING clause result preview" />
+                </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7"><span className="font-bold">DROP </span>Column</li>
@@ -1735,13 +1852,17 @@ export function Page22() {
                 <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
                     <code>
                         ALTER TABLE studenttable {"\n"}
-                        DROP COLUMN stu_age; {"\n"}
+                        DROP COLUMN age; {"\n"}
                     </code>
                 </pre>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-3">The above code deletes the column stu_age.</li>
+                    <li className="pt-3">The above code deletes the column age. As you can see below:</li>
                 </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img30.png" alt="HAVING clause result preview" />
+                </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7"><span className="font-bold">RENAME </span>Table</li>
@@ -1789,13 +1910,19 @@ export function Page22() {
                 <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
                     <code>
                         ALTER TABLE studenttable {"\n"}
-                        CHANGE age stu_age INT; {"\n"}
+                        CHANGE marks stu_marks INT; {"\n"}
                     </code>
                 </pre>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-3">The above code renames the column name from "age" to "stu_age".</li>
+                    <li className="pt-3">The above code renames the column name from "marks" to "stu_marks". As you can see
+                        below:
+                    </li>
                 </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img32.png" alt="HAVING clause result preview" />
+                </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7"><span className="font-bold">MODIFY </span>Column (modify datatype/ constraint)</li>
@@ -1841,9 +1968,15 @@ export function Page22() {
                     TRUNCATE studenttable;
                 </div>
 
-                <ul className="text-2xl list-disc pl-6 pb-5">
-                    <li className="pt-3">The above code deletes all data which was inserted in this table.</li>
+                <ul className="text-2xl list-disc pl-6">
+                    <li className="pt-3">The above code deletes all data which was inserted in this table. As you can see
+                        below:
+                    </li>
                 </ul>
+
+                <div className="pt-3 pl-3 pb-5 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img33.png" alt="HAVING clause result preview" />
+                </div>
 
                 <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about
                     <span className="font-bold"> Joins in SQL</span> in the next page.</div>
@@ -1893,6 +2026,14 @@ export function Page23() {
                 </pre>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-5">This code will have the follwing result:</li>
+                </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img34.png" alt="HAVING clause result preview" />
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7"><span className="font-bold">Left Join : </span>
                         returns all records from the left table, and the matched records from the right table.</li>
                     <li className="pt-3">It has the following syntax :</li>
@@ -1921,6 +2062,14 @@ export function Page23() {
                 </pre>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-5">This code will have the follwing result:</li>
+                </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img35.png" alt="HAVING clause result preview" />
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7"><span className="font-bold">Right Join : </span>
                         returns all records from the right table, and the matched records from the left table.</li>
                     <li className="pt-3">It has the following syntax :</li>
@@ -1947,6 +2096,14 @@ export function Page23() {
                         ON a.student_id = b.student_id;
                     </code>
                 </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-5">This code will have the follwing result:</li>
+                </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img36.png" alt="HAVING clause result preview" />
+                </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7"><span className="font-bold">Full Join : </span>
@@ -1981,6 +2138,14 @@ export function Page23() {
                 </pre>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-5">This code will have the follwing result:</li>
+                </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img37.png" alt="HAVING clause result preview" />
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7"><span className="font-bold">Self Join : </span>
                         it is a regular join but the table is joined with itself.</li>
                     <li className="pt-3">It has the following syntax :</li>
@@ -2008,10 +2173,18 @@ export function Page23() {
                     </code>
                 </pre>
 
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-5">This code will have the follwing result:</li>
+                </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img38.png" alt="HAVING clause result preview" />
+                </div>
+
                 <div className="text-4xl font-semibold pt-5">Union in SQL</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">It is used to combine the result =-set of two or more SELECT statements.</li>
+                    <li className="pt-7">It is used to combine the result of the set of two or more SELECT statements.</li>
                     <li className="pt-3">To use it :</li>
                     <li className="pt-3 list-inside">every SELECT should have same number of columns</li>
                     <li className="pt-3 list-inside">columns must have similar datatypes</li>
@@ -2059,6 +2232,70 @@ export function Page24() {
                         (Subquery);
                     </code>
                 </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">Let's understand Sub-queries with some examples:</li>
+                    <li className="pt-5"><span className="font-bold">Example 1:</span> get names of all students who
+                        scrored more than the class average.</li>
+                    <li className="pt-3">It can be solved using sub-queires like this:</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        SELECT name, marks {'\n'}
+                        FROM studenttable {'\n'}
+                        WHERE marks &gt; {'\n'}
+                        (SELECT avg(marks) FROM studenttable);
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-5">So what we did here?</li>
+                    <li className="pt-3">First we selected name, marks columns from the table, then added a condition that
+                        where marks are greater than (Subquery).
+                    </li>
+                    <li className="pt-3">In the Subquery we selected average marks from the table.</li>
+                    <li className="pt-3">So this complete statement means to select name, marks from table where marks are
+                        greater than the average makrs.</li>
+                    <li className="pt-3">It will give the following result:</li>
+                </ul>
+
+                <div className="pt-3 pl-3 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img39.png" alt="HAVING clause result preview" />
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7"><span className="font-bold">Example 2:</span> get names of all students who
+                        have even roll numbers.</li>
+                    <li className="pt-3">It can be solved using sub-queires like this:</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        SELECT name, rollno {'\n'}
+                        FROM studenttable {'\n'}
+                        WHERE rollno IN {'\n'}
+                        (SELECT rollno FROM studenttable WHERE rollno % 2 = 0);
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-5">So what we did here?</li>
+                    <li className="pt-3">First we selected name, rollno columns from the table, then added a condition that
+                        where rollno IN (Subquery) Here rollno IN means that rollno in the list of (Subquery).
+                    </li>
+                    <li className="pt-3">In the Subquery we selected rollno from the table where rollno is even.</li>
+                    <li className="pt-3">So this complete statement means to select name, rollno from table where rollno is
+                        even.</li>
+                    <li className="pt-3">It will give the following result:</li>
+                </ul>
+
+                <div className="pt-3 pl-3 pb-5 overflow-hidden">
+                    <img className="rounded-lg" src="/images/img40.png" alt="HAVING clause result preview" />
+                </div>
+
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about
+                    <span className="font-bold"> MySQL Views</span> in the next page.</div>
             </div>
         </div>
     )
