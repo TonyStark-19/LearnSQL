@@ -2,17 +2,14 @@
 import { GrMysql } from "react-icons/gr";
 import { IoIosArrowForward } from "react-icons/io";
 
-// import use location
-import { useLocation } from "react-router-dom";
+// import use location and react
+import { BrowserRouter as Router, useLocation, Routes, Route } from "react-router-dom";
 
-// import use effect
-import { useEffect } from "react";
+// import use effect and use ref
+import { useEffect, useRef } from "react";
 
 // import use navigate
 import { Navigate } from 'react-router-dom';
-
-// react router
-import { Routes, Route } from 'react-router-dom';
 
 // import link
 import { Link } from 'react-router-dom';
@@ -25,23 +22,27 @@ import {
 
 // main app
 export default function App() {
+  // use ref for scroll to top
+  const scrollRef = useRef(null);
+
   return (
-    <Routes>
-      <Route path="/*" element={<MainPage />} />
-    </Routes>
+    <>
+      <ScrollToTop scrollRef={scrollRef} />
+      <Routes>
+        <Route path="/*" element={<MainPage scrollRef={scrollRef} />} />
+      </Routes>
+    </>
   );
 }
 
 // Mainpage
-function MainPage() {
+function MainPage({ scrollRef }) {
   return (
     <>
       <Navbar />
-      <ScrollToTop />
       <div className="w-full h-screen pt-16 flex flex-row">
         <Left />
-
-        <div className="flex-1 h-full overflow-y-auto pt-4 px-5 scrollbar-transparent bg-[#0F172A]">
+        <div ref={scrollRef} className="flex-1 h-full overflow-y-auto pt-4 px-5 scrollbar-transparent bg-[#0F172A]">
           <div className="text-slate-400 text-xl pb-2 font-semibold uppercase">Learn sql</div>
 
           <Routes>
@@ -82,11 +83,15 @@ function MainPage() {
 }
 
 // scroll to top function
-function ScrollToTop() {
+function ScrollToTop({ scrollRef }) {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (scrollRef?.current) {
+      scrollRef.current.scrollTo(0, 0);
+    } else {
+      window.scrollTo(0, 0);
+    }
   }, [pathname]);
 
   return null;
