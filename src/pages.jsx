@@ -5,9 +5,9 @@
 export function Page1() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">SQL Introduction</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">SQL Introduction</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">What is SQL?</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-7">
@@ -59,12 +59,12 @@ export function Page1() {
 export function Page2() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">DBMS</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">DBMS</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">What is a Database?</div>
 
-                <ul className="text-2xl list-disc pl-6 pb-3">
+                <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7">A database is a structured collection of interrelated data.</li>
                     <li className="pt-3">It stores information in a format that can be easily accessed, managed,
                         and updated digitally.</li>
@@ -124,12 +124,12 @@ export function Page2() {
 export function Page3() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">MySQL</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">MySQL</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">What is MySQL?</div>
 
-                <ul className="text-2xl list-disc pl-6 pb-3">
+                <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7">MySQL is an open-source Relational Database Management System (RDBMS).</li>
                     <li className="pt-3">It uses SQL (Structured Query Language) to manage and manipulate data in relational
                         databases.</li>
@@ -173,7 +173,8 @@ export function Page3() {
                 </div>
 
                 <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">
-                    That’s it for the MySQL introduction! Let’s begin writing our first SQL command in the next page.
+                    That’s it for the MySQL introduction! Let’s begin writing our first <span className="font-bold">
+                        SQL command</span> in the next page.
                 </div>
             </div>
         </div>
@@ -185,14 +186,24 @@ export function Page3() {
 export function Page4() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Create Database</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">Create Database</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">Creating Your First Database</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7">
-                        To create your first database in MySQL, use the following command in MySQL Workbench:
+                        To create your first database in MySQL, we use the following syntax:
+                    </li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px]">
+                    CREATE DATABASE database_name;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-5">
+                        Let's create a <span className="font-bold">xyz</span> database as an example in MySQL Workbench:
                     </li>
                 </ul>
 
@@ -224,12 +235,23 @@ export function Page4() {
                     <img className="rounded-lg" src="/images/img1.png" alt="Workbench schema preview" />
                 </div>
 
-                <ul className="text-2xl list-disc pl-6 pb-3">
-                    <li className="pt-7">
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-5">
                         🎉 Congratulations! You’ve successfully created your first database.
                     </li>
+                    <li className="pt-5">
+                        To start using the database we created for writing queries, we use the following syntax:
+                    </li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md my-3 w-[800px]">
+                    USE database_name;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-3">
-                        To start using this database for writing queries, run the following command:
+                        To start using the <span className="font-bold">xyz</span> database for writing queries
+                        , run the following command:
                     </li>
                 </ul>
 
@@ -237,7 +259,7 @@ export function Page4() {
                     USE xyz;
                 </div>
 
-                <ul className="text-2xl list-disc pl-6 pb-3">
+                <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-3">
                         After running this, the <span className="font-bold">xyz</span> database will be highlighted
                         — you can now run queries in it. As you can see below:
@@ -253,9 +275,20 @@ export function Page4() {
                     run the <span className="font-bold">USE xyz;</span> command again to activate your database.
                 </div>
 
-                <ul className="text-2xl list-disc pl-6 pb-3 pt-2">
+                <ul className="text-2xl list-disc pl-6 pb-2 pt-2">
                     <li className="pt-3">
-                        If you ever want to delete your database, you can do so with the following command:
+                        If you ever want to delete your database, we use the following syntax:
+                    </li>
+                </ul>
+
+                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md my-3 w-[800px]">
+                    DROP DATABASE database_name;
+                </div>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">
+                        So, If you ever want to delete your database <span className="font-bold">xyz</span>,
+                        you can do so with the following command:
                     </li>
                 </ul>
 
@@ -281,9 +314,9 @@ export function Page4() {
 export function Page6() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Create Table</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">Create Table</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">Creating Your First Table</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
@@ -307,7 +340,7 @@ export function Page6() {
                         You can add as many columns as needed, based on your requirements.
                     </li>
                     <li className="pt-3">
-                        Now let’s create our first real table. Copy and run the following code in your MySQL Workbench:
+                        Now let’s create our first real table in your MySQL Workbench:
                     </li>
                 </ul>
 
@@ -355,9 +388,9 @@ export function Page6() {
 export function Page7() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">SQL Datatypes</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">SQL Datatypes</h1>
 
-            <div className="text-gray-200 pt-10"></div>
+            <div className="text-gray-200 pt-5"></div>
         </div>
     )
 }
@@ -366,9 +399,9 @@ export function Page7() {
 export function Page8() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">SQL Commands</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">SQL Commands</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">Understanding the Types of SQL Commands</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-5">
@@ -488,14 +521,15 @@ export function Page8() {
 export function Page9() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Database Related Queries</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">
+                Database Related Queries</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">Common SQL Queries for Databases</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7">
-                        We created our first database using the following command:
+                        We created our first database <span className="font-bold">xyz</span> using the following command:
                     </li>
                 </ul>
 
@@ -561,7 +595,7 @@ export function Page9() {
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-3">
-                        As you can see above, it shows the list of databases in created or present in my MySQL.
+                        As you can see above, it shows the list of databases created or present in my MySQL.
                     </li>
                 </ul>
 
@@ -599,9 +633,9 @@ export function Page9() {
 export function Page10() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Table Related Queries</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">Table Related Queries</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">Working with Tables in SQL</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
@@ -718,9 +752,9 @@ export function Page10() {
 export function Page11() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">SQL Keys</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">SQL Keys</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">Let's learn about types of keys</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
@@ -741,8 +775,10 @@ export function Page11() {
                 </pre>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-3">In the above example we declared id as the Priamry key of type int.</li>
-                    <li className="pt-3">As you can see below, the column rollno is an example of primary key:</li>
+                    <li className="pt-3">In the above example we declared <span className="font-bold">id</span> as
+                        the Priamry key of <span className="font-bold">type INT</span>.</li>
+                    <li className="pt-3">As you can see below, the <span className="font-bold">column rollno</span> is
+                        an example of primary key:</li>
                 </ul>
 
                 <div className="pt-3 pl-3 overflow-hidden">
@@ -770,10 +806,12 @@ export function Page11() {
                 </pre>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-3">In the above example we declared courseId as the Foreign key of type int
-                        which points to the primary key id of the table course.
+                    <li className="pt-3">In the above example we declared <span className="font-bold">courseId</span> as
+                        the Foreign key of <span className="font-bold">type INT</span> which points to the
+                        primary key <span className="font-bold">id</span> of the table <span className="font-bold">course.</span>
                     </li>
-                    <li className="pt-3">And as you can see below, the column departmentId is an example of foreign key.</li>
+                    <li className="pt-3">And as you can see below, the column <span className="font-bold">departmentId</span> is
+                        an example of foreign key.</li>
                 </ul>
 
                 <div className="pt-3 pl-3 pb-5 overflow-hidden">
@@ -791,9 +829,9 @@ export function Page11() {
 export function Page12() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">SQL Constraints</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">SQL Constraints</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">Let's learn about SQL Constraints and it's types</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
@@ -924,15 +962,15 @@ export function Page12() {
 export function Page13() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">SQL SELECT</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">SQL SELECT</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">Understanding the SELECT Query</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7">The <span className="font-bold">SELECT</span> statement is used to
                         retrieve data from a database.</li>
-                    <li className="pt-7">Earlier, we used <span className="font-bold">SELECT</span>
+                    <li className="pt-3">Earlier, we used <span className="font-bold">SELECT </span>
                         to fetch all data from our table using this command:</li>
                 </ul>
 
@@ -997,9 +1035,9 @@ export function Page13() {
 export function Page14() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">WHERE Clause</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">WHERE Clause</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">
                     Before we learn about the WHERE clause, let's first create a sample database:
                 </div>
@@ -1118,9 +1156,9 @@ export function Page14() {
 export function Page15() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">SQL Operators</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">SQL Operators</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">Let’s learn about different types of SQL Operators</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
@@ -1253,9 +1291,9 @@ export function Page15() {
 export function Page16() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">LIMIT Clause</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">LIMIT Clause</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">Let’s learn about the LIMIT Clause</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
@@ -1326,9 +1364,9 @@ export function Page16() {
 export function Page17() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">ORDER BY Clause</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">ORDER BY Clause</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">Let’s learn about the ORDER BY clause</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
@@ -1399,9 +1437,10 @@ export function Page17() {
 export function Page18() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Aggregate Functions</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">
+                Aggregate Functions</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">Let’s learn about Aggregate Functions</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
@@ -1519,9 +1558,9 @@ export function Page18() {
 export function Page19() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">GROUP BY Clause</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">GROUP BY Clause</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">Let’s learn about the GROUP BY clause</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-5">
@@ -1535,7 +1574,7 @@ export function Page19() {
                 </ul>
 
                 <div className="text-2xl pt-1 pl-3 border-l-4 border-slate-700">
-                    <span className="font-bold">Note:</span> We usually use the <span className="font-bold">GROUP BY</span>
+                    <span className="font-bold">Note:</span> We usually use the <span className="font-bold">GROUP BY </span>
                     clause along with aggregate functions like <span className="font-mono font-bold">COUNT()</span>,
                     <span className="font-mono font-bold">SUM()</span>, etc.
                 </div>
@@ -1585,12 +1624,12 @@ export function Page19() {
 export function Page20() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">HAVING Clause</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">HAVING Clause</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">Let’s learn about the HAVING Clause</div>
 
-                <ul className="text-2xl list-disc pl-6 pb-5">
+                <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7">
                         The <span className="font-bold">HAVING</span> clause is similar to the <span className="font-bold">
                             WHERE</span> clause because it is also used to filter data.
@@ -1619,7 +1658,7 @@ export function Page20() {
                     <li className="pt-5">
                         In this query:
                         <ul className="list-disc pl-6">
-                            <li className="pt-3">We are selecting the <span className="font-mono font-bold">city</span>
+                            <li className="pt-3">We are selecting the <span className="font-mono font-bold">city </span>
                                 column.</li>
                             <li className="pt-3">
                                 We are using <span className="font-mono font-bold">COUNT(name)</span> to count how many
@@ -1660,9 +1699,10 @@ export function Page20() {
 export function Page21() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Cascading for Foreign Key</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">Cascading
+                for Foreign Key</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">Let’s learn about Cascading for Foreign Keys</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
@@ -1715,9 +1755,10 @@ export function Page21() {
 export function Page22() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">More Table Related Queries</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">More Table
+                Related Queries</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">Let's learn about more Table related Queries</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
@@ -1801,7 +1842,7 @@ export function Page22() {
                     <li className="pt-7"><span className="font-bold">Alter : </span>
                         to change the schema</li>
                     <li className="pt-3">It has follwing types :</li>
-                    <li className="pt-7"><span className="font-bold">ADD </span>Column</li>
+                    <li className="pt-7"><span className="font-bold">ADD Column :</span> used to add a column.</li>
                     <li className="pt-3">We use the following syntax :</li>
                 </ul>
 
@@ -1834,7 +1875,7 @@ export function Page22() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7"><span className="font-bold">DROP </span>Column</li>
+                    <li className="pt-7"><span className="font-bold">DROP Column :</span> used to delete a column</li>
                     <li className="pt-3">We use the following syntax :</li>
                 </ul>
 
@@ -1865,7 +1906,7 @@ export function Page22() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7"><span className="font-bold">RENAME </span>Table</li>
+                    <li className="pt-7"><span className="font-bold">RENAME Table :</span> used to rename a table.</li>
                     <li className="pt-3">We use the following syntax :</li>
                 </ul>
 
@@ -1989,16 +2030,78 @@ export function Page22() {
 export function Page23() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">Joins In SQL</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">Joins In SQL</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">Let's learn about Joins in SQL</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
                     <li className="pt-7">Join is used to combine rows from two or more tables, based on a related
                         column between them.</li>
-                    <li className="pt-3">Let's learn about types of Joins :</li>
-                    <li className="pt-7"><span className="font-bold">Inner Join : </span>
+                    <li className="pt-3">Before learning types of joins, we will make sample tables to understand
+                        joins easily.</li>
+                    <li className="pt-5">Let's create first table student</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        CREATE TABLE student ( {'\n'}
+                        &nbsp;&nbsp;student_id INT PRIMARY KEY, {'\n'}
+                        &nbsp;&nbsp;name VARCHAR(50) {'\n'}
+                        );
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">Now let's insert sample data:</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        INSERT INTO student  {'\n'}
+                        (student_id, name) {'\n'}
+                        VALUES {'\n'}
+                        (101, "adam"), {'\n'}
+                        (102, "bob"), {'\n'}
+                        (103, "casey");
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-5">Now let's create second table course</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        CREATE TABLE course ( {'\n'}
+                        &nbsp;&nbsp;student_id INT PRIMARY KEY, {'\n'}
+                        &nbsp;&nbsp;course VARCHAR(50) {'\n'}
+                        );
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">Now let's insert sample data:</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        INSERT INTO course  {'\n'}
+                        (student_id, course) {'\n'}
+                        VALUES {'\n'}
+                        (102, "english"), {'\n'}
+                        (105, "math"), {'\n'}
+                        (103, "science"), {'\n'}
+                        (107, "computer science");
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">Now let's dive into the types of joins in SQL:</li>
+                </ul>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-5"><span className="font-bold">Inner Join : </span>
                         returns records that have matching values in both tables.</li>
                     <li className="pt-3">It has the following syntax :</li>
                 </ul>
@@ -2146,7 +2249,40 @@ export function Page23() {
                 </div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7"><span className="font-bold">Self Join : </span>
+                    <li className="pt-7">Before learning Self join we have to make another sample table for it's better
+                        understanding.</li>
+                    <li className="pt-3">Let's create the table employee</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        CREATE TABLE employee ( {'\n'}
+                        &nbsp;&nbsp;id INT PRIMARY KEY, {'\n'}
+                        &nbsp;&nbsp;name VARCHAR(50), {'\n'}
+                        &nbsp;&nbsp;manager_id INT {'\n'}
+                        );
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-3">Now let's insert sample data:</li>
+                </ul>
+
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
+                    <code>
+                        INSERT INTO employee  {'\n'}
+                        (id, name, manager_id) {'\n'}
+                        VALUES {'\n'}
+                        (101, "adam", 103), {'\n'}
+                        (102, "bob", 104), {'\n'}
+                        (103, "casey", NULL), {'\n'}
+                        (104, "donald", 103);
+                    </code>
+                </pre>
+
+                <ul className="text-2xl list-disc pl-6 pb-2">
+                    <li className="pt-7">Now let's dive into self join:</li>
+                    <li className="pt-5"><span className="font-bold">Self Join : </span>
                         it is a regular join but the table is joined with itself.</li>
                     <li className="pt-3">It has the following syntax :</li>
                 </ul>
@@ -2189,7 +2325,7 @@ export function Page23() {
                     <li className="pt-3 list-inside">every SELECT should have same number of columns</li>
                     <li className="pt-3 list-inside">columns must have similar datatypes</li>
                     <li className="pt-3 list-inside">columns in every SELECT should be in same order</li>
-                    <li className="pt-3">It has the following syntax :</li>
+                    <li className="pt-5">It has the following syntax :</li>
                 </ul>
 
                 <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 w-[800px] overflow-x-auto">
@@ -2213,9 +2349,9 @@ export function Page23() {
 export function Page24() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">SQL Sub-Queries</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">SQL Sub-Queries</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">Let's learn about SQL Sub-queries</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
@@ -2305,9 +2441,9 @@ export function Page24() {
 export function Page25() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">MySQL Views</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">MySQL Views</h1>
 
-            <div className="text-gray-200 pt-10">
+            <div className="text-gray-200 pt-5">
                 <div className="text-4xl font-semibold">Let's learn about MySQL Views</div>
 
                 <ul className="text-2xl list-disc pl-6 pb-2">
@@ -2343,8 +2479,9 @@ export function Page25() {
                     <img className="rounded-lg" src="/images/img14.png" alt="workbench preview"></img>
                 </div>
 
-                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">This marks the end of the SQL
-                    Learning. But i have some more resources for you in the next two pages.</div>
+                <div className="text-2xl pt-3 pb-7 border-t-2 border-slate-700">This marks the end of the
+                    <span className="font-bold">SQL Learning</span> But i have some more <span className="font-bold">
+                        Resources</span> for you in the next two pages.</div>
             </div>
         </div>
     )
@@ -2355,9 +2492,9 @@ export function Page25() {
 export function Page26() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">SQL Projects</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">SQL Projects</h1>
 
-            <div className="text-gray-200 pt-10"></div>
+            <div className="text-gray-200 pt-5"></div>
         </div>
     )
 }
@@ -2366,9 +2503,9 @@ export function Page26() {
 export function Page27() {
     return (
         <div className="min-h-full w-full px-4">
-            <h1 className="text-8xl font-semibold pt-3 text-slate-100">More Links</h1>
+            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700">More Links</h1>
 
-            <div className="text-gray-200 pt-10"></div>
+            <div className="text-gray-200 pt-5"></div>
         </div>
     )
 }
