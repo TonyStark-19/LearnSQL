@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-a: 400px;
+  --breakpoint-b: 600px;
+  --breakpoint-c: 800px;
+}
+
 /* Custom Scrollbar: Transparent Track */
 .scrollbar-transparent::-webkit-scrollbar {
   width: 8px;
