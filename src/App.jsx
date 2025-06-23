@@ -1,12 +1,13 @@
 // react icons
 import { GrMysql } from "react-icons/gr";
 import { IoIosArrowForward } from "react-icons/io";
+import { IoMenu } from "react-icons/io5";
 
 // import use location and react
 import { BrowserRouter as Router, useLocation, Routes, Route } from "react-router-dom";
 
 // import use effect and use ref
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // import use navigate
 import { Navigate } from 'react-router-dom';
@@ -37,11 +38,14 @@ export default function App() {
 
 // Mainpage
 function MainPage({ scrollRef }) {
+  // menu toggle
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
-      <Navbar />
+      <Navbar setMenuOpen={setMenuOpen} />
       <div className="w-full h-screen pt-16 flex flex-row">
-        <Left />
+        <Left menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <div ref={scrollRef} className="flex-1 h-full overflow-y-auto pt-4 px-5 scrollbar-transparent bg-[#0F172A]">
           <div className="text-slate-400 text-xl pb-2 font-semibold uppercase">Learn sql</div>
 
@@ -98,20 +102,26 @@ function ScrollToTop({ scrollRef }) {
 }
 
 // navbar
-function Navbar() {
+function Navbar({ setMenuOpen }) {
   return (
     <div className="w-full fixed p-3 flex flex-row items-center justify-between
       bg-[#0F172A] border-b-slate-700 border-b-2">
-      <Link to="/sql-intro">
-        <div className="text-2xl font-semibold flex flex-row items-center gap-2 cursor-pointer
+      <div className="flex flex-row gap-2">
+        <button className="text-4xl text-white min-lg:hidden cursor-pointer" onClick={() => setMenuOpen(prev => !prev)}>
+          <IoMenu />
+        </button>
+
+        <Link to="/sql-intro">
+          <div className="text-2xl font-semibold flex flex-row items-center gap-2 cursor-pointer
         text-slate-100">LearnSQL
-          <GrMysql className="text-2xl" />
-        </div>
-      </Link>
+            <GrMysql className="text-2xl" />
+          </div>
+        </Link>
+      </div>
 
       <a href="https://github.com/TonyStark-19/LearnSQL">
         <button className="bg-transparent py-1.5 px-3 border-2 border-slate-700 rounded-xl cursor-pointer">
-          <span className="text-slate-100 pr-1">Star on Github</span>⭐
+          <span className="text-slate-100 pr-1 max-a:hidden">Star on Github</span>⭐
         </button>
       </a>
     </div>
@@ -157,16 +167,20 @@ const array3 = [
 ];
 
 // left column for pages list
-function Left() {
+function Left({ menuOpen, setMenuOpen }) {
+  // use location
   const location = useLocation();
 
   return (
-    <div className="w-96 h-full overflow-y-auto py-4 scrollbar-transparent
-      border-r-slate-700 border-r-2 bg-[#0F172A]">
+    <div className={`w-96 h-full overflow-y-auto py-4 scrollbar-transparent
+    border-r-slate-700 border-r-2 bg-[#0F172A]
+    max-lg:fixed max-lg:w-full max-lg:top-16 max-lg:z-50 max-lg:pb-14 max-lg:transition-transform max-lg:duration-300
+    ${menuOpen ? "max-lg:translate-x-0" : "max-lg:-translate-x-full"}`}>
       <div className="text-slate-400 pl-3 font-semibold uppercase">Get started</div>
-      <div className='py-3 pr-7 w-85 border-b-2 border-slate-700'>
+      <div className='py-3 pr-7 w-85 border-b-2 border-slate-700
+      min-lg:w-85 max-lg:w-full'>
         {array.map((arr, idx) => (
-          <Link to={arr.path} key={idx}>
+          <Link to={arr.path} key={idx} onClick={() => setMenuOpen(false)}>
             <li className={`group list-none py-2 px-5 my-2 font-semibold text-xl
             rounded-r-xl cursor-pointer flex flex-row items-center justify-between
             hover:bg-slate-800 text-slate-100 ${location.pathname === arr.path ? 'bg-slate-800' : ''}`}>
@@ -179,9 +193,10 @@ function Left() {
       </div>
 
       <div className="text-slate-400 pl-3 pt-4 font-semibold uppercase">Learn sql</div>
-      <div className='py-3 pr-7 pb-5 w-85 border-b-2 border-slate-700'>
+      <div className='py-3 pr-7 pb-5 w-85 border-b-2 border-slate-700
+      min-lg:w-85 max-lg:w-full'>
         {array2.map((arr, idx) => (
-          <Link to={arr.path} key={idx}>
+          <Link to={arr.path} key={idx} onClick={() => setMenuOpen(false)}>
             <li className={`group list-none py-2 px-5 my-2 font-semibold text-xl
             rounded-r-xl cursor-pointer flex flex-row items-center justify-between
             hover:bg-slate-800 text-slate-100 ${location.pathname === arr.path ? 'bg-slate-800' : ''}`}>
@@ -194,9 +209,10 @@ function Left() {
       </div>
 
       <div className="text-slate-400 pl-3 pt-4 font-semibold uppercase">Resources</div>
-      <div className='py-3 pr-7 pb-5 w-85'>
+      <div className='py-3 pr-7 pb-5 w-85
+      min-lg:w-85 max-lg:w-full'>
         {array3.map((arr, idx) => (
-          <Link to={arr.path} key={idx}>
+          <Link to={arr.path} key={idx} onClick={() => setMenuOpen(false)}>
             <li className={`group list-none py-2 px-5 my-2 font-semibold text-xl
             rounded-r-xl cursor-pointer flex flex-row items-center justify-between
             hover:bg-slate-800 text-slate-100 ${location.pathname === arr.path ? 'bg-slate-800' : ''}`}>
