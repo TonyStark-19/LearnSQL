@@ -46,7 +46,8 @@ function MainPage({ scrollRef }) {
       <Navbar setMenuOpen={setMenuOpen} />
       <div className="w-full h-screen pt-16 flex flex-row">
         <Left menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <div ref={scrollRef} className="flex-1 h-full overflow-y-auto pt-4 px-5 scrollbar-transparent bg-[#0F172A]">
+        <div ref={scrollRef} className="flex-1 h-full overflow-y-auto pt-4 min-sm:px-5 max-sm:px-3 
+        scrollbar-transparent bg-[#0F172A]">
           <div className="text-slate-400 text-xl pb-2 font-semibold uppercase">Learn sql</div>
 
           <Routes>
@@ -79,7 +80,7 @@ function MainPage({ scrollRef }) {
             <Route path="links" element={<Page27 />} />
           </Routes>
 
-          <div className="text-slate-400 py-3 pl-3 font-semibold">Made with ❤️ by Aditya chandel</div>
+          <div className="text-slate-400 py-3 font-semibold">Made with ❤️ by Aditya chandel</div>
         </div>
       </div>
     </>
@@ -106,7 +107,7 @@ function Navbar({ setMenuOpen }) {
   return (
     <div className="w-full fixed p-3 flex flex-row items-center justify-between
       bg-[#0F172A] border-b-slate-700 border-b-2">
-      <div className="flex flex-row gap-2">
+      <div className="flex flex-row items-center justify-center gap-2">
         <button className="text-4xl text-white min-lg:hidden cursor-pointer" onClick={() => setMenuOpen(prev => !prev)}>
           <IoMenu />
         </button>
