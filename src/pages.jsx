@@ -336,8 +336,8 @@ export function Page6() {
                     </li>
                 </ul>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 px-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
+                <pre className="bg-gray-800 text-green-400 font-mono py-3 rounded-md mt-3 min-xl:w-[800px]
+                max-xl:w-full max-lg:w-full min-a:px-5 max-a:px-3">
                     <code>
                         CREATE TABLE table_name ({"\n"}
                         &nbsp;&nbsp;column_name1 datatype constraint,{"\n"}
@@ -1211,8 +1211,8 @@ export function Page14() {
                     <li className="pt-5">Now let's insert some sample data into this table:</li>
                 </ul>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 rounded-md mt-3 min-xl:w-[800px]
+                max-xl:w-full max-lg:w-full min-a:px-5 max-a:px-3">
                     <code>
                         INSERT INTO studenttable {"\n"}
                         (rollno, name, marks, grade, city){"\n"}
@@ -2035,7 +2035,8 @@ export function Page22() {
                 max-xl:w-full max-lg:w-full">
                     <code>
                         ALTER TABLE table_name {"\n"}
-                        ADD COLUMN column_name datatype constraint; {"\n"}
+                        ADD COLUMN {"\n"}
+                        column_name datatype constraint; {"\n"}
                     </code>
                 </pre>
 
@@ -2047,7 +2048,8 @@ export function Page22() {
                 max-xl:w-full max-lg:w-full">
                     <code>
                         ALTER TABLE studenttable {"\n"}
-                        ADD COLUMN age INT NOT NULL DEFAULT 19; {"\n"}
+                        ADD COLUMN {"\n"}
+                        age INT NOT NULL DEFAULT 19; {"\n"}
                     </code>
                 </pre>
 
@@ -2128,8 +2130,8 @@ export function Page22() {
                     <li className="pt-3">We use the following syntax :</li>
                 </ul>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
+                <pre className="bg-gray-800 text-green-400 font-mono p-3 rounded-md mt-3 min-xl:w-[800px]
+                max-xl:w-full max-lg:w-full min-a:px-5 max-a:px-3">
                     <code>
                         ALTER TABLE table_name {"\n"}
                         CHANGE COLUMN old_name  {"\n"}
@@ -2168,7 +2170,8 @@ export function Page22() {
                 max-xl:w-full max-lg:w-full">
                     <code>
                         ALTER TABLE table_name {"\n"}
-                        MODIFY col_name new_datatype new_contraint; {"\n"}
+                        MODIFY col_name {"\n"}
+                        new_datatype new_contraint; {"\n"}
                     </code>
                 </pre>
 
@@ -2313,9 +2316,9 @@ export function Page23() {
                 max-xl:w-full max-lg:w-full">
                     <code>
                         SELECT column(s) {'\n'}
-                        FROM tableA {'\n'}
-                        INNER JOIN tableB {'\n'}
-                        ON tableA.col_name = tableB.col_name;
+                        FROM tableA AS a {'\n'}
+                        INNER JOIN tableB AS b {'\n'}
+                        ON a.col_name = b.col_name;
                     </code>
                 </pre>
 
@@ -2327,9 +2330,9 @@ export function Page23() {
                 max-xl:w-full max-lg:w-full">
                     <code>
                         SELECT * {'\n'}
-                        FROM student {'\n'}
-                        INNER JOIN course {'\n'}
-                        ON student.student_id = course.student_id;
+                        FROM student AS s {'\n'}
+                        INNER JOIN course AS c {'\n'}
+                        ON s.student_id = c.student_id;
                     </code>
                 </pre>
 
@@ -2351,9 +2354,9 @@ export function Page23() {
                 max-xl:w-full max-lg:w-full">
                     <code>
                         SELECT column(s) {'\n'}
-                        FROM tableA {'\n'}
-                        LEFT JOIN tableB {'\n'}
-                        ON tableA.col_name = tableB.col_name;
+                        FROM tableA AS a {'\n'}
+                        LEFT JOIN tableB AS b {'\n'}
+                        ON a.col_name = b.col_name;
                     </code>
                 </pre>
 
@@ -2389,9 +2392,9 @@ export function Page23() {
                 max-xl:w-full max-lg:w-full">
                     <code>
                         SELECT column(s) {'\n'}
-                        FROM tableA {'\n'}
-                        RIGHT JOIN tableB {'\n'}
-                        ON tableA.col_name = tableB.col_name;
+                        FROM tableA AS a {'\n'}
+                        RIGHT JOIN tableB AS b {'\n'}
+                        ON a.col_name = b.col_name;
                     </code>
                 </pre>
 
@@ -2504,9 +2507,9 @@ export function Page23() {
                 max-xl:w-full max-lg:w-full">
                     <code>
                         SELECT column(s) {'\n'}
-                        FROM tableA {'\n'}
-                        JOIN tableB {'\n'}
-                        ON tableA.col_name = tableB.col_name;
+                        FROM tableA AS a {'\n'}
+                        JOIN tableB AS b {'\n'}
+                        ON a.col_name = b.col_name;
                     </code>
                 </pre>
 
@@ -2517,7 +2520,8 @@ export function Page23() {
                 <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
                 max-xl:w-full max-lg:w-full">
                     <code>
-                        SELECT a.name AS manager_name, b.name {'\n'}
+                        SELECT {"\n"}
+                        a.name AS manager_name, b.name {'\n'}
                         FROM employee AS a {'\n'}
                         JOIN employee AS b {'\n'}
                         ON a.id = b.manager_id {'\n'}
@@ -2682,7 +2686,8 @@ export function Page25() {
                 max-xl:w-full max-lg:w-full">
                     <code>
                         CREATE VIEW view1 AS {'\n'}
-                        SELECT rollno, name FROM studenttable; {'\n'}
+                        SELECT rollno, name {"\n"}
+                        FROM studenttable; {'\n'}
                     </code>
                 </pre>
 
@@ -2720,9 +2725,34 @@ export function Page26() {
     return (
         <div className="min-h-full w-full lg:px-4 md:px-2">
             <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">SQL Projects</h1>
+            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">
+                SQL Projects
+            </h1>
 
-            <div className="text-gray-200 pt-5"></div>
+            <div className="text-gray-200 pt-5 min-a:text-2xl max-a:text-xl space-y-6">
+                <p>
+                    This section will showcase all the SQL-based projects I've created as part of my learning and practice journey.
+                </p>
+
+                <p>
+                    These projects are built using concepts from <span className="font-bold">Apna College's SQL
+                        course</span> combined with real-world data handling, query writing, and optimization techniques.
+                </p>
+
+                <p>
+                    I’ll also be sharing the source code and live demos (if applicable) to help you understand how SQL
+                    works in practical applications.
+                </p>
+
+                <p>
+                    🔗 <span className="text-slate-400 italic">GitHub Repository Link:</span>{' '}
+                    <span className="text-yellow-400 italic">Coming soon...</span>
+                </p>
+
+                <p className="pt-6 border-t-2 border-slate-700">
+                    Stay tuned! The projects will be published here once they're complete. 🚀
+                </p>
+            </div>
         </div>
     )
 }
@@ -2732,9 +2762,66 @@ export function Page27() {
     return (
         <div className="min-h-full w-full lg:px-4 md:px-2">
             <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">More Links</h1>
+            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">
+                More Links
+            </h1>
 
-            <div className="text-gray-200 pt-5"></div>
+            <div className="text-gray-200 pt-5 min-a:text-2xl max-a:text-xl space-y-6">
+                <p>
+                    This website was created as part of my learning journey in SQL. <br /> I learned SQL concepts from apna
+                    college's <a href="https://www.youtube.com/watch?v=hlGoQC332VM&t=11487s" target="_blank"
+                        rel="noopener noreferrer" className="text-blue-400 hover:underline mx-1">SQL one shot tutorial</a>
+                    on YouTube.
+                </p>
+
+                <p>
+                    I followed notes provided by Apna College and combined them with my own structuring techniques and
+                    design ideas to build this project using <span className="font-bold">React JS</span> and
+                    <span className="font-bold">Tailwind CSS</span>.
+                </p>
+
+                <p>
+                    If you are serious about learning SQL, I highly recommend that you not only study the theory but also
+                    <span className="font-bold text-green-400"> practice it regularly</span>. <br /> <br /> Two excellent
+                    platforms for SQL practice are:
+                    <ul className="list-disc pl-8 pt-2">
+                        <li>
+                            <a href="https://www.hackerrank.com/domains/sql" target="_blank" rel="noopener noreferrer"
+                                className="text-blue-400 hover:underline">HackerRank SQL Practice
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://leetcode.com/problemset/database/" target="_blank" rel="noopener noreferrer"
+                                className="text-blue-400 hover:underline">LeetCode SQL Questions
+                            </a>
+                        </li>
+                    </ul>
+                </p>
+
+                <p>
+                    Some additional helpful resources for learning and mastering SQL:
+                    <ul className="list-disc pl-8 pt-2">
+                        <li>
+                            <a href="https://www.w3schools.com/sql/" target="_blank" rel="noopener noreferrer"
+                                className="text-blue-400 hover:underline">W3Schools SQL Tutorial
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://sqlzoo.net/" target="_blank" rel="noopener noreferrer"
+                                className="text-blue-400 hover:underline">SQLZoo - Interactive SQL Tutorials
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://mode.com/sql-tutorial/" target="_blank" rel="noopener noreferrer"
+                                className="text-blue-400 hover:underline">Mode SQL Tutorial for Analysts
+                            </a>
+                        </li>
+                    </ul>
+                </p>
+
+                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">Keep learning,
+                    keep practicing, and most importantly, keep building! ✨</div>
+            </div>
         </div>
     )
 }
