@@ -1,12 +1,100 @@
-# React + Vite
+# 📘 Learn SQL – Interactive SQL Guide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **Learn SQL**, a beginner-friendly interactive website that explains SQL concepts in a structured and visually engaging way. This project was built using **React JS** and **Tailwind CSS**, combining educational content with a responsive and modern UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📸 Screenshots
 
-## Expanding the ESLint configuration
+### 🏠 Home Page  
+![Home Page](/public/images/image.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🌐 Live Demo  
+
+The project is live and can be viewed here: [LearnSQL](https://learn-sql-eight.vercel.app/sql-intro)
+
+---
+
+## 🧠 About the Project
+
+I created this project while learning SQL through the [Apna College SQL One Shot Tutorial](https://www.youtube.com/watch?v=hlGoQC332VM&t=11487s). The website presents SQL theory in a clear and structured manner, including topics like:
+
+- SQL Commands (DDL, DML, DQL, DCL, TCL)
+- SQL Data Types
+- Joins
+- Aggregate Functions
+- Subqueries
+- Projects and more!
+
+The content is curated from Apna College’s material and enhanced with my own understanding and design techniques.
+
+---
+
+## ✨ Features
+
+- Simple and clean design with Tailwind CSS
+- Fully responsive layout for all screen sizes
+- Organized by topic for easy navigation
+- Scroll-to-top functionality
+- Optimized for learners and revision
+
+---
+
+## 🛠️ Tech Stack
+
+- ⚛️ React JS
+- 🎨 Tailwind CSS
+- 🗂️ React Router DOM
+- ⚛️ React icons
+
+---
+
+## 🧰 How to Run Locally
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/TonyStark-19/LearnSQL.git
+
+# 2. Move into the project folder
+cd LearnSQL
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server
+npm run dev
+
+```
+> ⚠️ Make sure you have Node.js and npm installed on your system.
+
+---
+
+## 📚 Recommended Practice Platforms
+
+To master SQL, theory isn't enough — practice is key! I recommend:
+
+-  [HackerRank – SQL Domain](https://www.hackerrank.com/domains/sql)
+-  [LeetCode – SQL Questions](https://leetcode.com/problemset/database/)
+-  [W3Schools – SQL Tutorial](https://www.w3schools.com/sql/)
+-  [SQLZoo](https://sqlzoo.net/)
+-  [Mode SQL Tutorial](https://mode.com/sql-tutorial/)
+
+---
+
+## 🧑‍🏫 Credits
+
+- 🎓 [Apna College SQL One Shot Tutorial](https://www.youtube.com/watch?v=hlGoQC332VM&t=11487s)
+- 💡 Additional content and design by me.
+
+---
+
+## 🤝 Contributing
+Contributions are welcome!
+If you'd like to improve this project, feel free to fork the repo, make changes, and submit a pull request.
+
+---
+
+Made with ❤️ by Aditya chandel
+
