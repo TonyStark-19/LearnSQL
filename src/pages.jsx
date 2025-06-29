@@ -11,25 +11,24 @@ export function Page1() {
             <div className="text-gray-200 pt-5">
                 <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">What is SQL?</div>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-7">
-                    <li className="pt-7">SQL stands for <span className="font-bold">Structured Query Language</span>.</li>
-                    <li className="pt-3">It is not a database itself, but a language used to communicate with databases.</li>
-                    <li className="pt-3">SQL is a powerful language used to interact with <span className="font-bold">
-                        relational databases</span>.</li>
-                    <li className="pt-3">It allows us to <span className="font-bold">store</span>, <span className="font-bold">
-                        manipulate</span>, and <span className="font-bold">retrieve</span> data efficiently.</li>
+                <div className="min-a:text-2xl max-a:text-xl list-disc pb-2">
+                    <p className="pt-7">SQL stands for <span className="font-bold">Structured Query Language</span>.</p>
+                    <p className="pt-3">It is not a database itself, but a language used to communicate with databases</p>
+                    <p className="pt-3">SQL is a powerful language used to interact with <span className="font-bold">
+                        relational databases</span>.</p>
+                    <p className="pt-3">It allows us to <span className="font-bold">store</span>, <span className="font-bold">
+                        manipulate</span>, and <span className="font-bold">retrieve</span> data efficiently.</p>
+                    <p className="pt-3">SQL is primarily used to perform <span className="font-bold">CRUD</span> operations:</p>
+                </div>
 
-                    <li className="pt-3">SQL is primarily used to perform <span className="font-bold">CRUD</span> operations:
-                        <ul className="min-a:text-2xl max-a:text-xl list-disc list-inside">
-                            <li className="pt-3"><span className="font-bold">C</span>reate – To create databases,
-                                tables, and insert data.</li>
-                            <li className="pt-3"><span className="font-bold">R</span>ead – To read or retrieve data
-                                from databases.</li>
-                            <li className="pt-3"><span className="font-bold">U</span>pdate – To modify existing data.</li>
-                            <li className="pt-3"><span className="font-bold">D</span>elete – To remove data, tables, or
-                                even entire databases.</li>
-                        </ul>
-                    </li>
+                <ul className="min-a:text-2xl max-a:text-xl list-disc list-inside pb-7">
+                    <li className="pt-3"><span className="font-bold">C</span>reate – To create databases,
+                        tables, and insert data.</li>
+                    <li className="pt-3"><span className="font-bold">R</span>ead – To read or retrieve data
+                        from databases.</li>
+                    <li className="pt-3"><span className="font-bold">U</span>pdate – To modify existing data.</li>
+                    <li className="pt-3"><span className="font-bold">D</span>elete – To remove data, tables, or
+                        even entire databases.</li>
                 </ul>
 
                 <div className="min-a:text-2xl max-a:text-xl pt-1 border-l-4 border-slate-700 pl-3">
@@ -40,7 +39,7 @@ export function Page1() {
 
                 <div className="pt-7 font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">SQL vs MySQL</div>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-5 pb-5">
+                <div className="min-a:text-2xl max-a:text-xl py-5">
                     <span className="font-bold">SQL</span> is the standard language used to interact with relational databases.
                     <br />
                     <span className="font-bold">MySQL</span>, on the other hand, is a popular <span className="font-bold">
@@ -67,7 +66,7 @@ export function Page2() {
                 <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">What is a Database?</div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">A database is a structured collection of interrelated data.</li>
+                    <li className="pt-5">A database is a structured collection of interrelated data.</li>
                     <li className="pt-3">It stores information in a format that can be easily accessed, managed,
                         and updated digitally.</li>
                 </ul>
@@ -75,7 +74,7 @@ export function Page2() {
                 <div className="pt-5 font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">What is DBMS?</div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
+                    <li className="pt-5">
                         DBMS stands for <span className="font-bold">Database Management System</span>.
                     </li>
                     <li className="pt-3">
@@ -87,7 +86,7 @@ export function Page2() {
                     </li>
                 </ul>
 
-                <div className="pt-5 font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">Types of Databases</div>
+                <div className="pt-3 font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">Types of Databases</div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
 
@@ -103,7 +102,7 @@ export function Page2() {
                         </div>
                     </li>
 
-                    <li className="pt-7 pb-3">
+                    <li className="pt-7 pb-2">
                         <span className="font-bold">Non-Relational Databases</span> (NoSQL)
                         <ul className="min-a:text-2xl max-a:text-xl list-disc pl-8">
                             <li className="pt-3">Do not use tables for storing data.</li>
@@ -142,19 +141,20 @@ export function Page3() {
 
                 <div className="pt-5 font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">Installing MySQL</div>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
+                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-3">
                     <li className="pt-7">If you haven't installed MySQL yet, download it from the official website:</li>
-                    <li className="pt-3">
-                        <a
-                            className="hover:underline text-blue-400"
-                            href="https://www.mysql.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Download MySQL
-                        </a>
-                    </li>
                 </ul>
+
+                <div className="min-a:text-2xl max-a:text-xl pb-4 pl-5">
+                    <a
+                        className="hover:underline text-blue-400"
+                        href="https://www.mysql.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Download MySQL
+                    </a>
+                </div>
 
                 <div className="min-a:text-2xl max-a:text-xl pt-1 pl-3 border-l-4 border-slate-700">
                     <span className="font-bold">Note:</span> It’s recommended to follow a video or article tutorial during
@@ -245,7 +245,7 @@ export function Page4() {
                     <li className="pt-5">
                         🎉 Congratulations! You’ve successfully created your first database.
                     </li>
-                    <li className="pt-5">
+                    <li className="pt-7">
                         To start using the database we created for writing queries, we use the following syntax:
                     </li>
                 </ul>
@@ -284,7 +284,7 @@ export function Page4() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2 pt-2">
-                    <li className="pt-3">
+                    <li className="pt-5">
                         If you ever want to delete your database, we use the following syntax:
                     </li>
                 </ul>
@@ -382,7 +382,7 @@ export function Page6() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
-                    <li className="pt-7">
+                    <li className="pt-5">
                         Now you might be curious about the terms like "INT", "NOT NULL", "PRIMARY KEY", "VARCHAR(50)", etc.
                         Don’t worry — we’ll explore each of these in detail in the upcoming pages.
                     </li>
@@ -513,7 +513,7 @@ export function Page8() {
                     </li>
                     <li className="pt-3">
                         Common DDL commands include:
-                        <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
+                        <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
                             <li className="pt-3 list-inside">CREATE TABLE</li>
                             <li className="pt-3 list-inside">ALTER TABLE</li>
                             <li className="pt-3 list-inside">DROP TABLE</li>
@@ -535,7 +535,7 @@ export function Page8() {
                     </li>
                     <li className="pt-3">
                         Common DQL commands and clauses include:
-                        <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
+                        <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
                             <li className="pt-3 list-inside">SELECT</li>
                             <li className="pt-3 list-inside">WHERE</li>
                             <li className="pt-3 list-inside">AND, OR, NOT</li>
@@ -561,7 +561,7 @@ export function Page8() {
                     </li>
                     <li className="pt-3">
                         Common DML commands include:
-                        <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
+                        <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
                             <li className="pt-3 list-inside">INSERT</li>
                             <li className="pt-3 list-inside">UPDATE</li>
                             <li className="pt-3 list-inside">DELETE</li>
@@ -580,7 +580,7 @@ export function Page8() {
                     </li>
                     <li className="pt-3">
                         Common DCL commands include:
-                        <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
+                        <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
                             <li className="pt-3 list-inside">GRANT</li>
                             <li className="pt-3 list-inside">REVOKE</li>
                         </ul>
@@ -700,7 +700,7 @@ export function Page9() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">
+                    <li className="pt-5">
                         As you can see above, it shows the list of databases created or present in my MySQL.
                     </li>
                 </ul>
@@ -721,7 +721,7 @@ export function Page9() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
-                    <li className="pt-3">
+                    <li className="pt-5">
                         As you can see above, it shows the list of tables and view created in the database
                         <span className="font-bold"> xyz.</span>
                     </li>
@@ -785,7 +785,7 @@ export function Page10() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
+                    <li className="pt-5">
                         As you can see, the table is empty for now. That’s because we haven’t inserted any data yet.
                     </li>
                     <li className="pt-3">
@@ -847,7 +847,7 @@ export function Page10() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
-                    <li className="pt-7">
+                    <li className="pt-5">
                         Congratulations! 🎉 You’ve not only created your first table but also learned how to
                         insert and view data in it.
                     </li>
@@ -902,7 +902,7 @@ export function Page11() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7"><span className="font-bold">Foreign key : </span>
+                    <li className="pt-5"><span className="font-bold">Foreign key : </span>
                         it is a column (or set of columns) in a table that refers to the Primary key in another table.</li>
                     <li className="pt-3">There can be multiple Foreign keys.</li>
                     <li className="pt-3">Foreign keys can have duplicate and null values.</li>
@@ -1008,7 +1008,7 @@ export function Page12() {
                 </ul>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7"><span className="font-bold">FOREIGN KEY : </span>
+                    <li className="pt-5"><span className="font-bold">FOREIGN KEY : </span>
                         prevents action that would destroy links between tables</li>
                 </ul>
 
@@ -1029,7 +1029,7 @@ export function Page12() {
                 </ul>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7"><span className="font-bold">DEFAULT : </span>
+                    <li className="pt-5"><span className="font-bold">DEFAULT : </span>
                         sets the default value of a column</li>
                 </ul>
 
@@ -1043,7 +1043,7 @@ export function Page12() {
                 </ul>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7"><span className="font-bold">CHECK : </span>
+                    <li className="pt-5"><span className="font-bold">CHECK : </span>
                         it can limit the values allowed in a column.</li>
                 </ul>
 
@@ -1063,7 +1063,7 @@ export function Page12() {
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
                     <li className="pt-3">Here we defined a constraint age_check which skips the values which have
                         age greater or equal to 18 and where city is delhi.</li>
-                    <li className="pt-7">Let's take another example :</li>
+                    <li className="pt-5">Let's take another example :</li>
                 </ul>
 
                 <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
@@ -1110,8 +1110,11 @@ export function Page13() {
                     SELECT * FROM student;
                 </div>
 
+                <div className="min-a:text-2xl max-a:text-xl pt-4 pb-2">
+                    Let’s break it down:
+                </div>
+
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5 pb-2 list-none font-semibold">Let’s break it down:</li>
                     <li className="pt-3"><span className="font-bold">SELECT</span>: Keyword used to specify the columns
                         to retrieve.</li>
                     <li className="pt-3"><span className="font-bold">* </span>: A wildcard character that means "all columns".</li>
@@ -1144,7 +1147,7 @@ export function Page13() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">As you can see, only the id and name columns are displayed.</li>
+                    <li className="pt-5">As you can see, only the id and name columns are displayed.</li>
                     <li className="pt-3">You can also select just one column if needed. For example:</li>
                 </ul>
 
@@ -1283,7 +1286,7 @@ export function Page14() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
-                    <li className="pt-7">Now you’ve learned how to filter data using the WHERE clause.</li>
+                    <li className="pt-5">Now you’ve learned how to filter data using the WHERE clause.</li>
                     <li className="pt-3">You can combine it with different types of operators to define complex conditions.</li>
                 </ul>
 
@@ -1306,7 +1309,7 @@ export function Page15() {
                 <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">
                     Let’s learn about different types of SQL Operators</div>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
+                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
                     <li className="pt-7">
                         <span className="font-bold">Arithmetic Operators:</span> + (Addition), - (Subtraction),
                         * (Multiplication), / (Division), % (Modulus)
@@ -1323,11 +1326,10 @@ export function Page15() {
                     </li>
                 </ul>
 
+                <div className="font-semibold min-md:text-3xl max-md:text-3xl max-sm:text-3xl">
+                    Let’s explore some Logical Operators with examples:</div>
+
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5 list-none">
-                        <span className="font-semibold min-md:text-3xl max-md:text-3xl max-sm:text-3xl">
-                            Let’s explore some Logical Operators with examples:</span>
-                    </li>
                     <li className="pt-7 font-semibold">1. Logical AND (returns rows where both conditions are true):</li>
                     <li className="pt-3">Let's see an example:</li>
                 </ul>
@@ -1348,7 +1350,7 @@ export function Page15() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7 font-semibold">2. Logical OR (returns rows where at least one condition is true):</li>
+                    <li className="pt-5 font-semibold">2. Logical OR (returns rows where at least one condition is true):</li>
                     <li className="pt-3">Let's see an example:</li>
                 </ul>
 
@@ -1368,7 +1370,7 @@ export function Page15() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7 font-semibold">3. Logical BETWEEN (returns rows within a given range):</li>
+                    <li className="pt-5 font-semibold">3. Logical BETWEEN (returns rows within a given range):</li>
                     <li className="pt-3">Let's see an example:</li>
                 </ul>
 
@@ -1393,7 +1395,7 @@ export function Page15() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7 font-semibold">4. Logical IN (returns rows that match any value from a list):</li>
+                    <li className="pt-5 font-semibold">4. Logical IN (returns rows that match any value from a list):</li>
                     <li className="pt-3">Let's see an example:</li>
                 </ul>
 
@@ -1411,7 +1413,7 @@ export function Page15() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7 font-semibold">5. Logical NOT (negates the given condition):</li>
+                    <li className="pt-5 font-semibold">5. Logical NOT (negates the given condition):</li>
                     <li className="pt-3">Let's see an example:</li>
                 </ul>
 
@@ -1503,7 +1505,7 @@ export function Page16() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
-                    <li className="pt-7">As you can see, there’s a clear difference in the output.</li>
+                    <li className="pt-5">As you can see, there’s a clear difference in the output.</li>
                     <li className="pt-3">The first query returned all rows, while the second limited the output
                         to only 3 rows using the <span className="font-mono font-bold">LIMIT</span> clause.</li>
                 </ul>
@@ -1577,7 +1579,7 @@ export function Page17() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
-                    <li className="pt-7">As you can see, the rows are sorted alphabetically by city in ascending order.</li>
+                    <li className="pt-5">As you can see, the rows are sorted alphabetically by city in ascending order.</li>
                     <li className="pt-3">That’s why the city “Delhi” appears at the top, and “Pune” appears last.</li>
                     <li className="pt-3">You can also use the <span className="font-bold">ORDER BY</span> clause to sort
                         by other columns like <span className="font-mono font-bold">rollno</span>, <span className="
@@ -1633,7 +1635,7 @@ export function Page18() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
+                    <li className="pt-5">
                         <span className="font-bold">MAX()</span>: Returns the highest value from a column.
                     </li>
                     <li className="pt-3">Let's understand it with an example:</li>
@@ -1673,7 +1675,7 @@ export function Page18() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
+                    <li className="pt-5">
                         <span className="font-bold">SUM()</span>: Returns the total sum of a numeric column.
                     </li>
                     <li className="pt-3">Let's understand it with an example:</li>
@@ -1853,7 +1855,7 @@ export function Page20() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
-                    <li className="pt-7">
+                    <li className="pt-5">
                         This result shows that only the cities <span className="font-bold">Mumbai</span> and <span className=
                             "font-bold">Delhi</span> have students whose maximum marks are greater than 90.
                     </li>
@@ -1956,7 +1958,7 @@ export function Page22() {
                 </pre>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">Let's understand in with an example :</li>
+                    <li className="pt-3">Let's understand it with an example :</li>
                 </ul>
 
                 <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
@@ -2002,7 +2004,7 @@ export function Page22() {
                 </pre>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">Let's understand in with an example :</li>
+                    <li className="pt-3">Let's understand it with an example :</li>
                 </ul>
 
                 <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
@@ -2024,7 +2026,7 @@ export function Page22() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7"><span className="font-bold">Alter : </span>
+                    <li className="pt-5"><span className="font-bold">Alter : </span>
                         to change the schema</li>
                     <li className="pt-3">It has follwing types :</li>
                     <li className="pt-7"><span className="font-bold">ADD Column :</span> used to add a column.</li>
@@ -2041,7 +2043,7 @@ export function Page22() {
                 </pre>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">Let's understand in with an example :</li>
+                    <li className="pt-3">Let's understand it with an example :</li>
                 </ul>
 
                 <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
@@ -2064,7 +2066,7 @@ export function Page22() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7"><span className="font-bold">DROP Column :</span> used to delete a column</li>
+                    <li className="pt-5"><span className="font-bold">DROP Column :</span> used to delete a column</li>
                     <li className="pt-3">We use the following syntax :</li>
                 </ul>
 
@@ -2077,7 +2079,7 @@ export function Page22() {
                 </pre>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">Let's understand in with an example :</li>
+                    <li className="pt-3">Let's understand it with an example :</li>
                 </ul>
 
                 <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
@@ -2097,7 +2099,7 @@ export function Page22() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7"><span className="font-bold">RENAME Table :</span> used to rename a table.</li>
+                    <li className="pt-5"><span className="font-bold">RENAME Table :</span> used to rename a table.</li>
                     <li className="pt-3">We use the following syntax :</li>
                 </ul>
 
@@ -2110,7 +2112,7 @@ export function Page22() {
                 </pre>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">Let's understand in with an example :</li>
+                    <li className="pt-3">Let's understand it with an example :</li>
                 </ul>
 
                 <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
@@ -2126,7 +2128,7 @@ export function Page22() {
                 </ul>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7"><span className="font-bold">CHANGE </span>Column (rename)</li>
+                    <li className="pt-5"><span className="font-bold">CHANGE </span>Column (rename)</li>
                     <li className="pt-3">We use the following syntax :</li>
                 </ul>
 
@@ -2140,7 +2142,7 @@ export function Page22() {
                 </pre>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">Let's understand in with an example :</li>
+                    <li className="pt-3">Let's understand it with an example :</li>
                 </ul>
 
                 <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
@@ -2162,7 +2164,7 @@ export function Page22() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7"><span className="font-bold">MODIFY </span>Column (modify datatype/ constraint)</li>
+                    <li className="pt-5"><span className="font-bold">MODIFY </span>Column (modify datatype/ constraint)</li>
                     <li className="pt-3">We use the following syntax :</li>
                 </ul>
 
@@ -2176,7 +2178,7 @@ export function Page22() {
                 </pre>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">Let's understand in with an example :</li>
+                    <li className="pt-3">Let's understand it with an example :</li>
                 </ul>
 
                 <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
@@ -2192,7 +2194,7 @@ export function Page22() {
                 </ul>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7"><span className="font-bold">TRUNCATE : </span>to delete table's data</li>
+                    <li className="pt-5"><span className="font-bold">TRUNCATE : </span>to delete table's data</li>
                     <li className="pt-3">We use the following syntax :</li>
                 </ul>
 
@@ -2202,7 +2204,7 @@ export function Page22() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">Let's understand in with an example :</li>
+                    <li className="pt-3">Let's understand it with an example :</li>
                 </ul>
 
                 <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
@@ -2256,7 +2258,7 @@ export function Page23() {
                 </pre>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">Now let's insert sample data:</li>
+                    <li className="pt-5">Now let's insert sample data:</li>
                 </ul>
 
                 <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
@@ -2286,7 +2288,7 @@ export function Page23() {
                 </pre>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">Now let's insert sample data:</li>
+                    <li className="pt-5">Now let's insert sample data:</li>
                 </ul>
 
                 <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
@@ -2303,7 +2305,7 @@ export function Page23() {
                 </pre>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">Now let's dive into the types of joins in SQL:</li>
+                    <li className="pt-5">Now let's dive into the types of joins in SQL:</li>
                 </ul>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
@@ -2345,7 +2347,7 @@ export function Page23() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7"><span className="font-bold">Left Join : </span>
+                    <li className="pt-5"><span className="font-bold">Left Join : </span>
                         returns all records from the left table, and the matched records from the right table.</li>
                     <li className="pt-3">It has the following syntax :</li>
                 </ul>
@@ -2383,7 +2385,7 @@ export function Page23() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7"><span className="font-bold">Right Join : </span>
+                    <li className="pt-5"><span className="font-bold">Right Join : </span>
                         returns all records from the right table, and the matched records from the left table.</li>
                     <li className="pt-3">It has the following syntax :</li>
                 </ul>
@@ -2421,7 +2423,7 @@ export function Page23() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7"><span className="font-bold">Full Join : </span>
+                    <li className="pt-5"><span className="font-bold">Full Join : </span>
                         returns all records when there is a match in either left or right side.</li>
                     <li className="pt-3">It has the following syntax :</li>
                 </ul>
@@ -2463,7 +2465,7 @@ export function Page23() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">Before learning Self join we have to make another sample table for it's better
+                    <li className="pt-5">Before learning Self join we have to make another sample table for it's better
                         understanding.</li>
                     <li className="pt-3">Let's create the table employee</li>
                 </ul>
@@ -2480,7 +2482,7 @@ export function Page23() {
                 </pre>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">Now let's insert sample data:</li>
+                    <li className="pt-5">Now let's insert sample data:</li>
                 </ul>
 
                 <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
@@ -2497,7 +2499,7 @@ export function Page23() {
                 </pre>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">Now let's dive into self join:</li>
+                    <li className="pt-5">Now let's dive into self join:</li>
                     <li className="pt-5"><span className="font-bold">Self Join : </span>
                         it is a regular join but the table is joined with itself.</li>
                     <li className="pt-3">It has the following syntax :</li>
@@ -2538,8 +2540,8 @@ export function Page23() {
 
                 <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl pt-5">Union in SQL</div>
 
-                <ul className="text-2xl list-disc pl-6 pb-2">
-                    <li className="pt-7">It is used to combine the result of the set of two or more SELECT statements.</li>
+                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
+                    <li className="pt-5">It is used to combine the result of the set of two or more SELECT statements.</li>
                     <li className="pt-3">To use it :</li>
                     <li className="pt-3 list-inside">every SELECT should have same number of columns</li>
                     <li className="pt-3 list-inside">columns must have similar datatypes</li>
@@ -2593,7 +2595,7 @@ export function Page24() {
                 </pre>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">Let's understand Sub-queries with some examples:</li>
+                    <li className="pt-5">Let's understand Sub-queries with some examples:</li>
                     <li className="pt-5"><span className="font-bold">Example 1:</span> get names of all students who
                         scrored more than the class average.</li>
                     <li className="pt-3">It can be solved using sub-queires like this:</li>
@@ -2626,7 +2628,7 @@ export function Page24() {
                 </div>
 
                 <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7"><span className="font-bold">Example 2:</span> get names of all students who
+                    <li className="pt-5"><span className="font-bold">Example 2:</span> get names of all students who
                         have even roll numbers.</li>
                     <li className="pt-3">It can be solved using sub-queires like this:</li>
                 </ul>
@@ -2749,9 +2751,8 @@ export function Page26() {
                     <span className="text-yellow-400 italic">Coming soon...</span>
                 </p>
 
-                <p className="pt-6 border-t-2 border-slate-700">
-                    Stay tuned! The projects will be published here once they're complete. 🚀
-                </p>
+                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">Stay tuned! The
+                    projects will be published here once they're complete. 🚀</div>
             </div>
         </div>
     )
