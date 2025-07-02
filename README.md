@@ -13,7 +13,7 @@ Welcome to **Learn SQL**, a beginner-friendly interactive website that explains 
 
 ## 🌐 Live Demo  
 
-The project is live and can be viewed here: [LearnSQL](https://learn-sql-eight.vercel.app/sql-intro)
+The project is live and can be viewed here: [LearnSQL](https://learn-sql-eight.vercel.app)
 
 ---
 
