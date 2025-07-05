@@ -2748,11 +2748,56 @@ export function Page26() {
 
                 <p>
                     🔗 <span className="text-slate-400 italic">GitHub Repository Link:</span>{' '}
-                    <span className="text-yellow-400 italic">Coming soon...</span>
+                    <a
+                        href="https://github.com/TonyStark-19/SQL-Projects"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-yellow-400 italic underline"
+                    >
+                        sql-projects
+                    </a>
+                    <br />
+                    <span className="text-sm text-slate-400">
+                        This is the main repository containing all of my SQL-based learning projects and practice files.
+                    </span>
                 </p>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">Stay tuned! The
-                    projects will be published here once they're complete. 🚀</div>
+                <p>
+                    📘 <span className="text-slate-400 italic">SQL Syntax Examples:</span>{' '}
+                    <a
+                        href="https://github.com/TonyStark-19/SQL-Projects/blob/main/SQL-Syntax.sql"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-yellow-400 italic underline"
+                    >
+                        sql_syntax.sql
+                    </a>
+                    <br />
+                    <span className="text-sm text-slate-400">
+                        A compilation of commonly used SQL commands and syntax examples — great for quick revision or reference.
+                    </span>
+                </p>
+
+                <p>
+                    📁 <span className="text-slate-400 italic">Student Management System Project:</span>{' '}
+                    <a
+                        href="https://github.com/TonyStark-19/SQL-Projects/blob/main/Project1.sql"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-yellow-400 italic underline"
+                    >
+                        student-management-system4
+                    </a>
+                    <br />
+                    <span className="text-sm text-slate-400">
+                        A simple database project that manages student records using SQL queries — including table 
+                        creation, data insertion, updates, and filtering.
+                    </span>
+                </p>
+
+                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">
+                    Stay tuned! More projects will be published here as they are completed. 🚀
+                </div>
             </div>
         </div>
     )

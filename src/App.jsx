@@ -44,8 +44,10 @@ function MainPage({ scrollRef }) {
   return (
     <>
       <Navbar setMenuOpen={setMenuOpen} />
+
       <div className="w-full h-screen pt-16 flex flex-row">
         <Left menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+
         <div ref={scrollRef} className="flex-1 h-full overflow-y-auto pt-4 min-sm:px-5 max-sm:px-3 
         scrollbar-transparent bg-[#0F172A]">
           <div className="text-slate-400 text-xl pb-2 font-semibold uppercase">Learn sql</div>
