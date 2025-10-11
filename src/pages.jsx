@@ -2790,7 +2790,7 @@ export function Page26() {
                     </a>
                     <br />
                     <span className="text-sm text-slate-400">
-                        A simple database project that manages student records using SQL queries — including table 
+                        A simple database project that manages student records using SQL queries — including table
                         creation, data insertion, updates, and filtering.
                     </span>
                 </p>
