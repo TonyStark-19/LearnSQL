@@ -21,6 +21,8 @@ import {
   Page15, Page16, Page17, Page18, Page19, Page20, Page21, Page22, Page23, Page24, Page25, Page26, Page27
 } from "./pages";
 
+import Home from "./Home";
+
 // main app
 export default function App() {
   // use ref for scroll to top
