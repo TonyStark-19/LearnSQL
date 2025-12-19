@@ -1,55 +1,134 @@
+// import resuable components
+import CodeBlock from "./Components/CodeBlock";
+import NoteBox from "./Components/NoteBox";
+import ImageBlock from "./Components/ImageBlock";
+
 // Content for each page
 
 // Get started pages
 // page 1
 export function Page1() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">SQL Introduction</h1>
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-10">
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">What is SQL?</div>
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800 min-lg:text-8xl max-lg:text-7xl
+            max-md:text-6xl max-sm:text-5xl">
+                SQL Introduction
+            </h1>
 
-                <div className="min-a:text-2xl max-a:text-xl list-disc pb-2">
-                    <p className="pt-7">SQL stands for <span className="font-bold">Structured Query Language</span>.</p>
-                    <p className="pt-3">It is not a database itself, but a language used to communicate with databases</p>
-                    <p className="pt-3">SQL is a powerful language used to interact with <span className="font-bold">
-                        relational databases</span>.</p>
-                    <p className="pt-3">It allows us to <span className="font-bold">store</span>, <span className="font-bold">
-                        manipulate</span>, and <span className="font-bold">retrieve</span> data efficiently.</p>
-                    <p className="pt-3">SQL is primarily used to perform <span className="font-bold">CRUD</span> operations:</p>
-                </div>
+            <div className="text-slate-300 pt-8 space-y-10">
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc list-inside pb-7">
-                    <li className="pt-3"><span className="font-bold">C</span>reate – To create databases,
-                        tables, and insert data.</li>
-                    <li className="pt-3"><span className="font-bold">R</span>ead – To read or retrieve data
-                        from databases.</li>
-                    <li className="pt-3"><span className="font-bold">U</span>pdate – To modify existing data.</li>
-                    <li className="pt-3"><span className="font-bold">D</span>elete – To remove data, tables, or
-                        even entire databases.</li>
-                </ul>
+                {/* SECTION: WHAT IS SQL */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        What is SQL?
+                    </h2>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-1 border-l-4 border-slate-700 pl-3">
-                    <span className="font-bold">Note:</span> SQL keywords are not case-sensitive. For example,
-                    <code className="font-mono text-green-300"> select</code> and <code className="font-mono
-                    text-green-300">SELECT</code> are treated the same.
-                </div>
+                    <div className="mt-6 space-y-4 leading-relaxed min-a:text-2xl max-a:text-xl">
+                        <p>
+                            SQL stands for{" "}
+                            <span className="font-semibold text-slate-100">
+                                Structured Query Language
+                            </span>.
+                        </p>
 
-                <div className="pt-7 font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">SQL vs MySQL</div>
+                        <p>
+                            SQL is <span className="font-semibold">not a database</span>.
+                            Instead, it is a standard language used to communicate with databases.
+                        </p>
 
-                <div className="min-a:text-2xl max-a:text-xl py-5">
-                    <span className="font-bold">SQL</span> is the standard language used to interact with relational databases.
-                    <br />
-                    <span className="font-bold">MySQL</span>, on the other hand, is a popular <span className="font-bold">
-                        Relational Database Management System (RDBMS)</span> that uses SQL to manage and query data.
-                </div>
+                        <p>
+                            It is mainly used with{" "}
+                            <span className="font-semibold text-slate-100">
+                                relational databases
+                            </span>{" "}
+                            where data is stored in tables consisting of rows and columns.
+                        </p>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Now that you understand what SQL is, let’s dive into the world of <span className="font-bold">
-                        Database Management Systems (DBMS)</span> on the next page.
-                </div>
+                        <p>
+                            SQL allows us to efficiently{" "}
+                            <span className="font-semibold">store</span>,{" "}
+                            <span className="font-semibold">manipulate</span>, and{" "}
+                            <span className="font-semibold">retrieve</span> data.
+                        </p>
+                    </div>
+                </section>
+
+                {/* SECTION: CRUD */}
+                <section>
+                    <p className="min-a:text-2xl max-a:text-xl">
+                        Most SQL operations revolve around{" "}
+                        <span className="font-semibold text-slate-100">CRUD</span> actions:
+                    </p>
+
+                    <ul className="mt-4 space-y-3 min-a:text-2xl max-a:text-xl list-disc list-inside">
+                        <li>
+                            <span className="font-semibold text-emerald-400">Create</span> – Create
+                            databases, tables, and insert new data.
+                        </li>
+                        <li>
+                            <span className="font-semibold text-emerald-400">Read</span> – Retrieve
+                            data from databases.
+                        </li>
+                        <li>
+                            <span className="font-semibold text-emerald-400">Update</span> – Modify
+                            existing records.
+                        </li>
+                        <li>
+                            <span className="font-semibold text-emerald-400">Delete</span> – Remove
+                            data, tables, or entire databases.
+                        </li>
+                    </ul>
+                </section>
+
+                {/* NOTE BOX */}
+                <NoteBox>
+                    SQL keywords are <span className="font-semibold">not case-sensitive</span>.
+                    This means{" "}
+                    <code className="mx-1 px-2 py-0.5 rounded bg-slate-900 text-emerald-300 font-mono">
+                        select
+                    </code>
+                    and{" "}
+                    <code className="mx-1 px-2 py-0.5 rounded bg-slate-900 text-emerald-300 font-mono">
+                        SELECT
+                    </code>
+                    behave the same.
+                </NoteBox>
+
+                {/* SECTION: SQL VS MYSQL */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        SQL vs MySQL
+                    </h2>
+
+                    <div className="mt-5 space-y-3 min-a:text-2xl max-a:text-xl leading-relaxed">
+                        <p>
+                            <span className="font-semibold text-slate-100">SQL</span> is a
+                            programming language used to query and manage relational databases.
+                        </p>
+
+                        <p>
+                            <span className="font-semibold text-slate-100">MySQL</span> is a popular{" "}
+                            <span className="font-semibold">
+                                Relational Database Management System (RDBMS)
+                            </span>{" "}
+                            that uses SQL to store, manage, and retrieve data.
+                        </p>
+                    </div>
+                </section>
+
+                {/* NEXT PAGE */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Now that you understand what SQL is, let’s move forward and explore{" "}
+                        <span className="font-semibold text-slate-100">
+                            Database Management Systems (DBMS)
+                        </span>{" "}
+                        in the next section.
+                    </p>
+                </section>
+
             </div>
         </div>
     );
@@ -58,64 +137,147 @@ export function Page1() {
 // page 2
 export function Page2() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">DBMS</h1>
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-10">
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">What is a Database?</div>
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800 min-lg:text-8xl max-lg:text-7xl\
+            max-md:text-6xl max-sm:text-5xl">
+                DBMS
+            </h1>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">A database is a structured collection of interrelated data.</li>
-                    <li className="pt-3">It stores information in a format that can be easily accessed, managed,
-                        and updated digitally.</li>
-                </ul>
+            <div className="text-slate-300 pt-8 space-y-12">
 
-                <div className="pt-5 font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">What is DBMS?</div>
+                {/* WHAT IS DATABASE */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        What is a Database?
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
-                        DBMS stands for <span className="font-bold">Database Management System</span>.
-                    </li>
-                    <li className="pt-3">
-                        It is a software used to create, manage, organize, and control access to databases.
-                    </li>
-                    <li className="pt-3">
-                        DBMS provides a systematic way to perform operations like storing, modifying, retrieving,
-                        and deleting data.
-                    </li>
-                </ul>
+                    <ul className="mt-6 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside">
+                        <li>
+                            A database is a structured collection of{" "}
+                            <span className="font-semibold text-slate-100">
+                                interrelated data
+                            </span>.
+                        </li>
+                        <li>
+                            It stores information in a way that allows easy{" "}
+                            <span className="font-semibold">access</span>,{" "}
+                            <span className="font-semibold">management</span>, and{" "}
+                            <span className="font-semibold">updates</span> using digital systems.
+                        </li>
+                    </ul>
+                </section>
 
-                <div className="pt-3 font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">Types of Databases</div>
+                {/* WHAT IS DBMS */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        What is DBMS?
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
+                    <ul className="mt-6 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside">
+                        <li>
+                            DBMS stands for{" "}
+                            <span className="font-semibold text-slate-100">
+                                Database Management System
+                            </span>.
+                        </li>
+                        <li>
+                            It is software used to{" "}
+                            <span className="font-semibold">
+                                create, manage, organize, and control access
+                            </span>{" "}
+                            to databases.
+                        </li>
+                        <li>
+                            A DBMS provides a structured way to{" "}
+                            <span className="font-semibold">
+                                store, retrieve, update, and delete
+                            </span>{" "}
+                            data efficiently.
+                        </li>
+                    </ul>
+                </section>
 
-                    <li className="pt-7">
-                        <span className="font-bold">Relational Databases</span> (RDBMS)
-                        <ul className="min-a:text-2xl max-a:text-xl list-disc pl-8 pb-5">
-                            <li className="pt-3">Based on the concept of tables (rows and columns).</li>
-                            <li className="pt-3">Data is organized in a structured and consistent format.</li>
-                            <li className="pt-3">Examples: MySQL, PostgreSQL, Oracle, SQL Server.</li>
-                        </ul>
-                        <div className="min-a:text-2xl max-a:text-xl pt-1 pl-3 border-l-4 border-slate-700">
-                            <span className="font-bold">Note:</span> SQL is used to interact with relational databases.
+                {/* TYPES OF DATABASES */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Types of Databases
+                    </h2>
+
+                    <div className="mt-8 space-y-10 min-a:text-2xl max-a:text-xl">
+
+                        {/* RELATIONAL */}
+                        <div>
+                            <h3 className="font-semibold text-slate-100 text-2xl">
+                                Relational Databases (RDBMS)
+                            </h3>
+
+                            <ul className="mt-4 space-y-3 list-disc list-inside">
+                                <li>
+                                    Data is stored in{" "}
+                                    <span className="font-semibold">
+                                        tables (rows and columns)
+                                    </span>.
+                                </li>
+                                <li>
+                                    Information follows a structured and consistent schema.
+                                </li>
+                                <li>
+                                    Examples:{" "}
+                                    <span className="font-semibold">
+                                        MySQL, PostgreSQL, Oracle, SQL Server
+                                    </span>.
+                                </li>
+                            </ul>
+
+                            {/* NOTE */}
+
+                            <NoteBox>
+                                SQL is used to interact with relational databases.
+                            </NoteBox>
                         </div>
-                    </li>
 
-                    <li className="pt-7 pb-2">
-                        <span className="font-bold">Non-Relational Databases</span> (NoSQL)
-                        <ul className="min-a:text-2xl max-a:text-xl list-disc pl-8">
-                            <li className="pt-3">Do not use tables for storing data.</li>
-                            <li className="pt-3">Can store data as key-value pairs, documents, graphs, or wide-columns.</li>
-                            <li className="pt-3">Example: MongoDB.</li>
-                        </ul>
-                    </li>
-                </ul>
+                        {/* NON RELATIONAL */}
+                        <div>
+                            <h3 className="font-semibold text-slate-100 text-2xl">
+                                Non-Relational Databases (NoSQL)
+                            </h3>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Now that you understand what DBMS is, let's explore <span className="font-bold">MySQL</span> —
-                    a popular relational database system that we’ll use to learn SQL in the next page.
-                </div>
+                            <ul className="mt-4 space-y-3 list-disc list-inside">
+                                <li>
+                                    Do not rely on traditional tables for storing data.
+                                </li>
+                                <li>
+                                    Data can be stored as{" "}
+                                    <span className="font-semibold">
+                                        key-value pairs, documents, graphs, or wide-columns
+                                    </span>.
+                                </li>
+                                <li>
+                                    Example:{" "}
+                                    <span className="font-semibold">
+                                        MongoDB
+                                    </span>.
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </section>
+
+                {/* NEXT PAGE */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Now that you understand what a DBMS is, let’s explore{" "}
+                        <span className="font-semibold text-slate-100">
+                            MySQL
+                        </span>{" "}
+                        — a popular relational database system we’ll use to learn SQL
+                        in the next section.
+                    </p>
+                </section>
+
             </div>
         </div>
     );
@@ -124,61 +286,120 @@ export function Page2() {
 // page 3
 export function Page3() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">MySQL</h1>
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-10">
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">What is MySQL?</div>
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800
+            min-lg:text-8xl max-lg:text-7xl max-md:text-6xl max-sm:text-5xl">
+                MySQL
+            </h1>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">MySQL is an open-source Relational Database Management System (RDBMS).</li>
-                    <li className="pt-3">It uses SQL (Structured Query Language) to manage and manipulate data in relational
-                        databases.</li>
-                    <li className="pt-3">Throughout this course, we'll use MySQL to practice and learn SQL concepts and
-                        commands.</li>
-                </ul>
+            <div className="text-slate-300 pt-8 space-y-12">
 
-                <div className="pt-5 font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">Installing MySQL</div>
+                {/* SECTION: WHAT IS MYSQL */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        What is MySQL?
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-3">
-                    <li className="pt-7">If you haven't installed MySQL yet, download it from the official website:</li>
-                </ul>
+                    <ul className="mt-6 space-y-4 leading-relaxed min-a:text-2xl max-a:text-xl list-disc list-inside">
+                        <li>
+                            MySQL is an{" "}
+                            <span className="font-semibold text-slate-100">
+                                open-source Relational Database Management System (RDBMS)
+                            </span>.
+                        </li>
 
-                <div className="min-a:text-2xl max-a:text-xl pb-4 pl-5">
+                        <li>
+                            It uses{" "}
+                            <span className="font-semibold text-slate-100">
+                                SQL (Structured Query Language)
+                            </span>{" "}
+                            to manage and manipulate data.
+                        </li>
+
+                        <li>
+                            In this course, we’ll use MySQL to practice and understand SQL concepts
+                            in a{" "}
+                            <span className="font-semibold">hands-on</span> manner.
+                        </li>
+                    </ul>
+                </section>
+
+                {/* SECTION: INSTALLING MYSQL */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Installing MySQL
+                    </h2>
+
+                    <p className="mt-5 leading-relaxed min-a:text-2xl max-a:text-xl">
+                        If MySQL is not installed on your system yet, you can download it directly
+                        from the official website:
+                    </p>
+
                     <a
-                        className="hover:underline text-blue-400"
                         href="https://www.mysql.com/"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="inline-block mt-4 font-semibold text-emerald-400 hover:text-emerald-300 transition min-a:text-2xl max-a:text-xl"
                     >
-                        Download MySQL
+                        → Download MySQL
                     </a>
-                </div>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-1 pl-3 border-l-4 border-slate-700">
-                    <span className="font-bold">Note:</span> It’s recommended to follow a video or article tutorial during
-                    installation to ensure proper setup of both MySQL and MySQL Workbench.
-                </div>
+                    {/* NOTE BOX */}
+                    <NoteBox>
+                        While installing, make sure to properly set up both{" "}
+                        <span className="font-semibold">MySQL Server</span> and{" "}
+                        <span className="font-semibold">MySQL Workbench</span>.
+                        Following a video tutorial is highly recommended.
+                    </NoteBox>
+                </section>
 
-                <div className="pt-7 font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">What is MySQL Workbench?</div>
+                {/* SECTION: MYSQL WORKBENCH */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        What is MySQL Workbench?
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-7">
-                    <li className="pt-7">MySQL Workbench is an integrated development environment (IDE) used to work with
-                        MySQL databases.</li>
-                    <li className="pt-3">It provides a graphical interface where we will write and execute all our SQL
-                        queries.</li>
-                    <li className="pt-3">Below is a preview image of the MySQL Workbench:</li>
-                </ul>
+                    <ul className="mt-6 space-y-4 leading-relaxed min-a:text-2xl max-a:text-xl list-disc list-inside">
+                        <li>
+                            MySQL Workbench is an{" "}
+                            <span className="font-semibold text-slate-100">IDE</span>{" "}
+                            used to work with MySQL databases.
+                        </li>
 
-                <div className="rounded-lg overflow-hidden pb-5">
-                    <img src="/images/workbench.png" alt="MySQL Workbench Preview" />
-                </div>
+                        <li>
+                            It provides a graphical interface to{" "}
+                            <span className="font-semibold">
+                                write, execute, and manage SQL queries
+                            </span>.
+                        </li>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">
-                    That’s it for the MySQL introduction! Let’s begin writing our first <span className="font-bold">
-                        SQL command</span> in the next page.
-                </div>
+                        <li>
+                            Throughout this course, we’ll use MySQL Workbench to run all our SQL
+                            commands.
+                        </li>
+                    </ul>
+
+                    {/* IMAGE */}
+                    <ImageBlock
+                        src="/images/workbench.png"
+                        alt="MySQL Workbench Interface"
+                    />
+                </section>
+
+                {/* NEXT PAGE */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        You’re all set! 🚀
+                        Let’s write our first{" "}
+                        <span className="font-semibold text-slate-100">
+                            SQL command
+                        </span>{" "}
+                        on the next page.
+                    </p>
+                </section>
+
             </div>
         </div>
     );
@@ -188,133 +409,255 @@ export function Page3() {
 // page 4
 export function Page4() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">Create Database</h1>
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-10">
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">Creating Your First Database</div>
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800
+            min-lg:text-8xl max-lg:text-7xl max-md:text-6xl max-sm:text-5xl">
+                Create Database
+            </h1>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
-                        To create your first database in MySQL, we use the following syntax:
-                    </li>
-                </ul>
+            <div className="text-slate-300 pt-8 space-y-12">
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    CREATE DATABASE database_name;
-                </div>
+                {/* SECTION: INTRO */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Creating Your First Database
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
-                        Let's create a <span className="font-bold">xyz</span> database as an example in MySQL Workbench:
-                    </li>
-                </ul>
+                    <ul className="mt-6 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            To create a database in MySQL, we use the following syntax:
+                        </li>
+                    </ul>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md my-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    CREATE DATABASE xyz;
-                </div>
+                    <CodeBlock>
+                        CREATE DATABASE database_name;
+                    </CodeBlock>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
-                    <li className="pt-3">
-                        After writing the command, select it and click on the second bolt icon at the top of Workbench to run it.
-                    </li>
-                </ul>
+                {/* SECTION: EXAMPLE */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Let’s create a database named{" "}
+                            <span className="font-semibold text-slate-100">xyz</span>:
+                        </li>
+                    </ul>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-1 pl-3 border-l-4 border-slate-700">
-                    <span className="font-bold">Note:</span> The second bolt icon runs only the selected portion of the
-                    code, while the first bolt runs the entire file.
-                    It’s recommended to use the second one when executing specific queries. The first one should only be
-                    used when no code has been run from that file, otherwise it may throw an error.
-                </div>
+                    <CodeBlock>
+                        CREATE DATABASE xyz;
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-3 pt-2">
-                    <li className="pt-3">
-                        Now, refresh the <span className="font-bold">Schemas</span> section on the
-                        left pane of Workbench to see your newly created database.
-                    </li>
-                </ul>
+                    <ul className="mt-4 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside">
+                        <li>
+                            Select the query and click the{" "}
+                            <span className="font-semibold">second lightning (⚡) icon</span>
+                            in MySQL Workbench to execute it.
+                        </li>
+                    </ul>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img1.png" alt="Workbench schema preview" />
-                </div>
+                    <NoteBox>
+                        The second lightning icon runs only the selected query,
+                        while the first one executes the entire file.
+                        Use the first icon only when the file hasn’t been executed before.
+                    </NoteBox>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
-                        🎉 Congratulations! You’ve successfully created your first database.
-                    </li>
-                    <li className="pt-7">
-                        To start using the database we created for writing queries, we use the following syntax:
-                    </li>
-                </ul>
+                {/* SECTION: VERIFY DATABASE */}
+                <section>
+                    <ul className="min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Refresh the{" "}
+                            <span className="font-semibold text-slate-100">Schemas</span>{" "}
+                            panel to see your newly created database.
+                        </li>
+                    </ul>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md my-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    USE database_name;
-                </div>
+                    <ImageBlock
+                        src="/images/img1.png"
+                        alt="Workbench schema preview"
+                    />
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">
-                        To start using the <span className="font-bold">xyz</span> database for writing queries
-                        , run the following command:
-                    </li>
-                </ul>
+                {/* SECTION: USE DATABASE */}
+                <section>
+                    <ul className="min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed space-y-4">
+                        <li>
+                            🎉 Congratulations! Your database is created successfully.
+                        </li>
+                        <li>
+                            To start using a database, use the following syntax:
+                        </li>
+                    </ul>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md my-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    USE xyz;
-                </div>
+                    <CodeBlock>
+                        USE database_name;
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">
-                        After running this, the <span className="font-bold">xyz</span> database will be highlighted
-                        — you can now run queries in it. As you can see below:
-                    </li>
-                </ul>
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside">
+                        <li>
+                            Activate the{" "}
+                            <span className="font-semibold text-slate-100">xyz</span>{" "}
+                            database:
+                        </li>
+                    </ul>
 
-                <div className="pt-3 pl-3 pb-4 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img2.png" alt="Workbench active database" />
-                </div>
+                    <CodeBlock>
+                        USE xyz;
+                    </CodeBlock>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-1 pl-3 border-l-4 border-slate-700">
-                    <span className="font-bold">Note:</span> If you close and reopen MySQL Workbench, you will need to
-                    run the <span className="font-bold">USE xyz;</span> command again to activate your database.
-                </div>
+                    <ImageBlock
+                        src="/images/img2.png"
+                        alt="Workbench active database"
+                    />
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2 pt-2">
-                    <li className="pt-5">
-                        If you ever want to delete your database, we use the following syntax:
-                    </li>
-                </ul>
+                    <NoteBox>
+                        If you close and reopen MySQL Workbench, you must run{" "}
+                        <span className="font-semibold">USE xyz;</span> again
+                        to activate the database.
+                    </NoteBox>
+                </section>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md my-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    DROP DATABASE database_name;
-                </div>
+                {/* SECTION: DROP DATABASE */}
+                <section>
+                    <ul className="min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed space-y-4">
+                        <li>
+                            To delete a database, use the following syntax:
+                        </li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">
-                        So, If you ever want to delete your database <span className="font-bold">xyz</span>,
-                        you can do so with the following command:
-                    </li>
-                </ul>
+                    <CodeBlock>
+                        DROP DATABASE database_name;
+                    </CodeBlock>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md my-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    DROP DATABASE xyz;
-                </div>
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside">
+                        <li>
+                            Delete the{" "}
+                            <span className="font-semibold text-slate-100">xyz</span>{" "}
+                            database:
+                        </li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
-                    <li className="pt-3">
-                        You can recreate it anytime by using the <span className="font-bold">CREATE DATABASE</span> command again.
-                    </li>
-                </ul>
+                    <CodeBlock>
+                        DROP DATABASE xyz;
+                    </CodeBlock>
+                </section>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Up next — let’s explore the most important part of a database: <span className="font-bold">TABLES!</span>
-                </div>
+                {/* NEXT PAGE */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Up next — let’s explore the most important part of a database:{" "}
+                        <span className="font-semibold text-slate-100">Tables</span> 🚀
+                    </p>
+                </section>
+
+            </div>
+        </div>
+    );
+}
+
+// page 5
+export function Page5() {
+    return (
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-10">
+
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800 min-lg:text-8xl max-lg:text-7xl
+            max-md:text-6xl max-sm:text-5xl">
+                Create Table
+            </h1>
+
+            <div className="text-slate-300 pt-8 space-y-12">
+
+                {/* SECTION: INTRO */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Creating Your First Table
+                    </h2>
+
+                    <ul className="mt-6 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            To create a table in MySQL, we use the following syntax:
+                        </li>
+                    </ul>
+
+                    <CodeBlock>
+                        {`CREATE TABLE table_name (
+  column_name1 datatype constraint,
+  column_name2 datatype constraint,
+  column_name3 datatype constraint
+);`}
+                    </CodeBlock>
+                </section>
+
+                {/* SECTION: REAL EXAMPLE */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            You can add as many columns as required based on your data needs.
+                        </li>
+                        <li>
+                            Let’s create our first real table in MySQL Workbench:
+                        </li>
+                    </ul>
+
+                    <CodeBlock>
+                        {`CREATE TABLE student (
+  id INT PRIMARY KEY,
+  name VARCHAR(50),
+  age INT NOT NULL
+);`}
+                    </CodeBlock>
+
+                    <ul className="mt-4 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside">
+                        <li>
+                            Select the full query and execute it using the{" "}
+                            <span className="font-semibold">second lightning (⚡) icon</span>.
+                        </li>
+                        <li>
+                            Refresh the{" "}
+                            <span className="font-semibold text-slate-100">Schemas</span>{" "}
+                            panel to see your newly created table.
+                        </li>
+                    </ul>
+
+                    <ImageBlock
+                        src="/images/img3.png"
+                        alt="Workbench preview of created table"
+                    />
+                </section>
+
+                {/* SECTION: CLARIFICATION */}
+                <section>
+                    <ul className="min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            You might be wondering what terms like{" "}
+                            <span className="font-semibold">INT</span>,{" "}
+                            <span className="font-semibold">VARCHAR(50)</span>,{" "}
+                            <span className="font-semibold">NOT NULL</span>, and{" "}
+                            <span className="font-semibold">PRIMARY KEY</span>{" "}
+                            mean.
+                        </li>
+                        <li>
+                            Don’t worry — we’ll explore all of these concepts in detail
+                            in the upcoming sections.
+                        </li>
+                    </ul>
+                </section>
+
+                {/* NEXT PAGE */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Great! 🎉 Your first table is ready.
+                        Up next — let’s understand the different{" "}
+                        <span className="font-semibold text-slate-100">
+                            data types
+                        </span>{" "}
+                        used in SQL.
+                    </p>
+                </section>
+
             </div>
         </div>
     );
@@ -323,75 +666,110 @@ export function Page4() {
 // page 6
 export function Page6() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">Create Table</h1>
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-10">
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">Creating Your First Table</div>
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800 min-lg:text-8xl max-lg:text-7xl
+            max-md:text-6xl max-sm:text-5xl">
+                SQL Datatypes
+            </h1>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
-                        To create a table in MySQL, we use the following syntax:
-                    </li>
-                </ul>
+            <div className="text-slate-300 pt-8 space-y-12">
 
-                <pre className="bg-gray-800 text-green-400 font-mono py-3 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full min-a:px-5 max-a:px-3">
-                    <code>
-                        CREATE TABLE table_name ({"\n"}
-                        &nbsp;&nbsp;column_name1 datatype constraint,{"\n"}
-                        &nbsp;&nbsp;column_name2 datatype constraint,{"\n"}
-                        &nbsp;&nbsp;column_name3 datatype constraint{"\n"}
-                        );
-                    </code>
-                </pre>
+                {/* SECTION: INTRO */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Understanding SQL Data Types
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
-                        You can add as many columns as needed, based on your requirements.
-                    </li>
-                    <li className="pt-3">
-                        Now let’s create our first real table in your MySQL Workbench:
-                    </li>
-                </ul>
+                    <p className="mt-6 leading-relaxed min-a:text-2xl max-a:text-xl">
+                        SQL data types define the kind of data that can be stored in a table column.
+                        Choosing the correct data type ensures efficient storage, accuracy, and
+                        better query performance.
+                    </p>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        CREATE TABLE student ({"\n"}
-                        &nbsp;&nbsp;id INT PRIMARY KEY,{"\n"}
-                        &nbsp;&nbsp;name VARCHAR(50),{"\n"}
-                        &nbsp;&nbsp;age INT NOT NULL{"\n"}
-                        );
-                    </code>
-                </pre>
+                    <p className="mt-4 min-a:text-2xl max-a:text-xl">
+                        Below are the most commonly used SQL data types, grouped by category.
+                    </p>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
-                        After writing the above code, select all of it and click the second bolt icon to run it.
-                    </li>
-                    <li className="pt-3">
-                        Then, refresh the <span className="font-bold">Schemas</span> section. You’ll see your table
-                        created under the selected database, as shown below:
-                    </li>
-                </ul>
+                {/* SECTION: NUMERIC */}
+                <section>
+                    <h3 className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        Numeric Data Types
+                    </h3>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img3.png" alt="Workbench preview of created table" />
-                </div>
+                    <ul className="mt-4 space-y-3 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li><span className="font-semibold">INT</span> – Integer values (e.g. 1, 100, -23)</li>
+                        <li><span className="font-semibold">SMALLINT</span> – Smaller range of integers</li>
+                        <li><span className="font-semibold">BIGINT</span> – Larger range of integers</li>
+                        <li><span className="font-semibold">DECIMAL(p,s)</span> – Fixed-point numbers</li>
+                        <li><span className="font-semibold">FLOAT / REAL</span> – Approximate floating-point values</li>
+                    </ul>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
-                    <li className="pt-5">
-                        Now you might be curious about the terms like "INT", "NOT NULL", "PRIMARY KEY", "VARCHAR(50)", etc.
-                        Don’t worry — we’ll explore each of these in detail in the upcoming pages.
-                    </li>
-                </ul>
+                {/* SECTION: STRING */}
+                <section>
+                    <h3 className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        Character / String Data Types
+                    </h3>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Great! Your first table is ready. Let's move ahead and understand the different <span className=
-                        "font-bold">data types</span> used in SQL.
-                </div>
+                    <ul className="mt-4 space-y-3 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li><span className="font-semibold">CHAR(n)</span> – Fixed-length string</li>
+                        <li><span className="font-semibold">VARCHAR(n)</span> – Variable-length string</li>
+                        <li><span className="font-semibold">TEXT</span> – Large variable-length text</li>
+                    </ul>
+                </section>
+
+                {/* SECTION: DATE TIME */}
+                <section>
+                    <h3 className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        Date and Time Data Types
+                    </h3>
+
+                    <ul className="mt-4 space-y-3 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li><span className="font-semibold">DATE</span> – Stores date (YYYY-MM-DD)</li>
+                        <li><span className="font-semibold">TIME</span> – Stores time (HH:MM:SS)</li>
+                        <li><span className="font-semibold">DATETIME</span> – Stores date and time</li>
+                        <li><span className="font-semibold">TIMESTAMP</span> – Date & time with timezone handling</li>
+                    </ul>
+                </section>
+
+                {/* SECTION: BOOLEAN */}
+                <section>
+                    <h3 className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        Boolean Data Type
+                    </h3>
+
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li><span className="font-semibold">BOOLEAN</span> – Stores TRUE or FALSE</li>
+                    </ul>
+                </section>
+
+                {/* SECTION: BINARY */}
+                <section>
+                    <h3 className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        Binary Data Types
+                    </h3>
+
+                    <ul className="mt-4 space-y-3 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li><span className="font-semibold">BINARY(n)</span> – Fixed-length binary data</li>
+                        <li><span className="font-semibold">VARBINARY(n)</span> – Variable-length binary data</li>
+                        <li><span className="font-semibold">BLOB</span> – Binary Large Object (images, files, etc.)</li>
+                    </ul>
+                </section>
+
+                {/* NEXT PAGE */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Understanding data types is essential for building efficient and reliable databases.
+                        Up next — let’s learn about{" "}
+                        <span className="font-semibold text-slate-100">
+                            SQL commands
+                        </span> 🚀
+                    </p>
+                </section>
+
             </div>
         </div>
     );
@@ -400,92 +778,154 @@ export function Page6() {
 // page 7
 export function Page7() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">
-                SQL Datatypes
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-3">
+            {/* Page Title */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800 min-lg:text-8xl max-lg:text-7xl
+            max-md:text-6xl max-sm:text-5xl">
+                SQL Commands
             </h1>
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3x">Understanding SQL Data Types</div>
+            <div className="text-gray-200 pt-8 space-y-10">
+                {/* Intro */}
+                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">
+                    Understanding the Types of SQL Commands
+                </div>
 
-                <p className="min-a:text-2xl max-a:text-xl pt-6 pb-2">
-                    SQL data types define the kind of data that can be stored in a table column. Choosing the correct
-                    data type ensures efficient storage, accuracy, and better performance in queries.
-                </p>
+                {/* DDL */}
+                <div className="space-y-4">
+                    <div className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        DDL (Data Definition Language)
+                    </div>
+                    <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 space-y-3">
+                        <li>
+                            Used for defining and managing the structure of database objects such as
+                            tables, indexes, and constraints.
+                        </li>
+                        <li>
+                            Helps create, modify, and delete database structures.
+                        </li>
+                        <li>
+                            Common DDL commands:
+                            <ul className="list-disc pl-6 pt-3 space-y-2">
+                                <li className="list-inside">CREATE TABLE</li>
+                                <li className="list-inside">ALTER TABLE</li>
+                                <li className="list-inside">DROP TABLE</li>
+                                <li className="list-inside">TRUNCATE TABLE</li>
+                                <li className="list-inside">CREATE INDEX</li>
+                                <li className="list-inside">DROP INDEX</li>
+                                <li className="list-inside">CREATE CONSTRAINT</li>
+                                <li className="list-inside">DROP CONSTRAINT</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
 
-                <p className="min-a:text-2xl max-a:text-xl pb-2">
-                    Here are the most commonly used SQL data types, grouped by category:
-                </p>
+                {/* DQL */}
+                <div className="space-y-4">
+                    <div className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        DQL (Data Query Language)
+                    </div>
+                    <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 space-y-3">
+                        <li>
+                            Focuses on retrieving data from one or more tables.
+                        </li>
+                        <li>
+                            The core command is <span className="font-bold">SELECT</span>, used to extract
+                            specific records.
+                        </li>
+                        <li>
+                            Common DQL commands and clauses:
+                            <ul className="list-disc pl-6 pt-3 space-y-2">
+                                <li className="list-inside">SELECT</li>
+                                <li className="list-inside">WHERE</li>
+                                <li className="list-inside">AND / OR / NOT</li>
+                                <li className="list-inside">DISTINCT</li>
+                                <li className="list-inside">LIKE</li>
+                                <li className="list-inside">IN</li>
+                                <li className="list-inside">BETWEEN</li>
+                                <li className="list-inside">IS NULL</li>
+                                <li className="list-inside">AS</li>
+                                <li className="list-inside">ORDER BY</li>
+                                <li className="list-inside">GROUP BY</li>
+                                <li className="list-inside">
+                                    Aggregate Functions (COUNT, SUM, AVG)
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-6">
-                    <li className="pt-4">
-                        <span className="font-bold">Numeric Data Types:</span> Used to store numbers, both integers
-                        and floating points.
-                        <ul className="pl-6 list-disc pt-2">
-                            <li className="pt-2 list-inside"><span className="font-bold">INT</span> – Integer values
-                                (e.g., 1, 100, -23)</li>
-                            <li className="pt-2 list-inside"><span className="font-bold">SMALLINT</span> – Smaller
-                                range of integers</li>
-                            <li className="pt-2 list-inside"><span className="font-bold">BIGINT</span> – Larger
-                                range of integers</li>
-                            <li className="pt-2 list-inside"><span className="font-bold">DECIMAL(p,s)</span> – Fixed-point
-                                number with precision and scale</li>
-                            <li className="pt-2 list-inside"><span className="font-bold">FLOAT</span> /
-                                <span className="font-bold">REAL</span> – Approximate floating-point numbers</li>
-                        </ul>
-                    </li>
+                {/* DML */}
+                <div className="space-y-4">
+                    <div className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        DML (Data Manipulation Language)
+                    </div>
+                    <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 space-y-3">
+                        <li>
+                            Used to manage data stored inside tables.
+                        </li>
+                        <li>
+                            Allows inserting, updating, and deleting records to maintain data accuracy.
+                        </li>
+                        <li>
+                            Common DML commands:
+                            <ul className="list-disc pl-6 pt-3 space-y-2">
+                                <li className="list-inside">INSERT</li>
+                                <li className="list-inside">UPDATE</li>
+                                <li className="list-inside">DELETE</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
 
-                    <li className="pt-6">
-                        <span className="font-bold">Character/String Data Types:</span> Used to store text and characters.
-                        <ul className="pl-6 list-disc pt-2">
-                            <li className="pt-2 list-inside"><span className="font-bold">CHAR(n)</span> – Fixed-length string</li>
-                            <li className="pt-2 list-inside"><span className="font-bold">VARCHAR(n)</span> – Variable-length
-                                string</li>
-                            <li className="pt-2 list-inside"><span className="font-bold">TEXT</span> – Large variable-length
-                                string</li>
-                        </ul>
-                    </li>
+                {/* DCL */}
+                <div className="space-y-4">
+                    <div className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        DCL (Data Control Language)
+                    </div>
+                    <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 space-y-3">
+                        <li>
+                            Manages user access rights and permissions in a database.
+                        </li>
+                        <li>
+                            Essential for database security and controlled access.
+                        </li>
+                        <li>
+                            Common DCL commands:
+                            <ul className="list-disc pl-6 pt-3 space-y-2">
+                                <li className="list-inside">GRANT</li>
+                                <li className="list-inside">REVOKE</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
 
-                    <li className="pt-6">
-                        <span className="font-bold">Date and Time Data Types:</span> Used to store temporal values.
-                        <ul className="pl-6 list-disc pt-2">
-                            <li className="pt-2 list-inside"><span className="font-bold">DATE</span> – Stores only the date
-                                (YYYY-MM-DD)</li>
-                            <li className="pt-2 list-inside"><span className="font-bold">TIME</span> – Stores time of day
-                                (HH:MM:SS)</li>
-                            <li className="pt-2 list-inside"><span className="font-bold">DATETIME</span> – Stores date and
-                                time together</li>
-                            <li className="pt-2 list-inside"><span className="font-bold">TIMESTAMP</span> – Stores date and
-                                time with automatic time zone conversion</li>
-                        </ul>
-                    </li>
+                {/* TCL */}
+                <div className="space-y-4">
+                    <div className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        TCL (Transaction Control Language)
+                    </div>
+                    <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 space-y-3">
+                        <li>
+                            Controls database transactions to ensure data integrity.
+                        </li>
+                        <li>
+                            Helps commit or roll back changes based on transaction success.
+                        </li>
+                        <li>
+                            Common TCL commands:
+                            <ul className="list-disc pl-6 pt-3 space-y-2">
+                                <li className="list-inside">COMMIT</li>
+                                <li className="list-inside">ROLLBACK</li>
+                                <li className="list-inside">SAVEPOINT</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
 
-                    <li className="pt-6">
-                        <span className="font-bold">Boolean Data Type:</span>
-                        <ul className="pl-6 list-disc pt-2">
-                            <li className="pt-2 list-inside"><span className="font-bold">BOOLEAN</span> – Stores TRUE or
-                                FALSE values</li>
-                        </ul>
-                    </li>
-
-                    <li className="pt-6">
-                        <span className="font-bold">Binary Data Types:</span> Used to store raw binary data such as files,
-                        images, etc.
-                        <ul className="pl-6 list-disc pt-2">
-                            <li className="pt-2 list-inside"><span className="font-bold">BINARY(n)</span> – Fixed-length
-                                binary data</li>
-                            <li className="pt-2 list-inside"><span className="font-bold">VARBINARY(n)</span> – Variable-
-                                length binary data</li>
-                            <li className="pt-2 list-inside"><span className="font-bold">BLOB</span> – Binary Large
-                                Object</li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Understanding these data types is essential for building efficient and reliable databases.
-                    Now let’s move on to learn about <span className="font-bold">SQL commands</span> on the next page.
+                {/* Footer Note */}
+                <div className="min-a:text-2xl max-a:text-xl pt-6 pb-8 border-t-2 border-slate-700">
+                    Now let’s explore more <span className="font-bold">database-related queries</span> on the next page.
                 </div>
             </div>
         </div>
@@ -494,130 +934,6 @@ export function Page7() {
 
 // page 8
 export function Page8() {
-    return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">SQL Commands</h1>
-
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">
-                    Understanding the Types of SQL Commands</div>
-
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
-                    <li className="pt-7">
-                        <span className="font-bold">DDL</span> (Data Definition Language): A subset of SQL
-                        used for defining and managing the structure of database objects such as tables, indexes, and constraints.
-                    </li>
-                    <li className="pt-3">
-                        DDL commands are used to create, modify, and delete database structures.
-                    </li>
-                    <li className="pt-3">
-                        Common DDL commands include:
-                        <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                            <li className="pt-3 list-inside">CREATE TABLE</li>
-                            <li className="pt-3 list-inside">ALTER TABLE</li>
-                            <li className="pt-3 list-inside">DROP TABLE</li>
-                            <li className="pt-3 list-inside">CREATE INDEX</li>
-                            <li className="pt-3 list-inside">DROP INDEX</li>
-                            <li className="pt-3 list-inside">CREATE CONSTRAINT</li>
-                            <li className="pt-3 list-inside">DROP CONSTRAINT</li>
-                            <li className="pt-3 list-inside">TRUNCATE TABLE</li>
-                        </ul>
-                    </li>
-
-                    <li className="pt-3">
-                        <span className="font-bold">DQL</span> (Data Query Language): Focuses on retrieving
-                        data from the database.
-                    </li>
-                    <li className="pt-3">
-                        The primary command in DQL is <span className="font-bold">SELECT</span>, which is used to
-                        extract specific data from one or more tables.
-                    </li>
-                    <li className="pt-3">
-                        Common DQL commands and clauses include:
-                        <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                            <li className="pt-3 list-inside">SELECT</li>
-                            <li className="pt-3 list-inside">WHERE</li>
-                            <li className="pt-3 list-inside">AND, OR, NOT</li>
-                            <li className="pt-3 list-inside">DISTINCT</li>
-                            <li className="pt-3 list-inside">LIKE</li>
-                            <li className="pt-3 list-inside">IN</li>
-                            <li className="pt-3 list-inside">BETWEEN</li>
-                            <li className="pt-3 list-inside">IS NULL</li>
-                            <li className="pt-3 list-inside">AS</li>
-                            <li className="pt-3 list-inside">ORDER BY</li>
-                            <li className="pt-3 list-inside">GROUP BY</li>
-                            <li className="pt-3 list-inside">Aggregate Functions (e.g., COUNT, SUM, AVG)</li>
-                        </ul>
-                    </li>
-
-                    <li className="pt-3">
-                        <span className="font-bold">DML</span> (Data Manipulation Language): Deals with managing data
-                        within tables.
-                    </li>
-                    <li className="pt-3">
-                        DML commands allow you to insert, update, and delete records, helping maintain data accuracy
-                        and consistency.
-                    </li>
-                    <li className="pt-3">
-                        Common DML commands include:
-                        <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                            <li className="pt-3 list-inside">INSERT</li>
-                            <li className="pt-3 list-inside">UPDATE</li>
-                            <li className="pt-3 list-inside">DELETE</li>
-                        </ul>
-                    </li>
-
-                    <li className="pt-3">
-                        <span className="font-bold">DCL</span> (Data Control Language): Manages access rights and
-                        permissions for users in a database.
-                    </li>
-                    <li className="pt-3">
-                        DCL commands help control who can access or modify the database and perform administrative tasks.
-                    </li>
-                    <li className="pt-3">
-                        These commands are essential for maintaining data security and privacy.
-                    </li>
-                    <li className="pt-3">
-                        Common DCL commands include:
-                        <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                            <li className="pt-3 list-inside">GRANT</li>
-                            <li className="pt-3 list-inside">REVOKE</li>
-                        </ul>
-                    </li>
-
-                    <li className="pt-3">
-                        <span className="font-bold">TCL</span> (Transaction Control Language): Focuses on managing
-                        transactions in a database.
-                    </li>
-                    <li className="pt-3">
-                        TCL commands ensure that a group of operations (a transaction) are completed successfully before
-                        the data is saved permanently.
-                    </li>
-                    <li className="pt-3">
-                        These commands help maintain data integrity by allowing operations to be committed or rolled back
-                        based on the outcome.
-                    </li>
-                    <li className="pt-3">
-                        Common TCL commands include:
-                        <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6">
-                            <li className="pt-3 list-inside">COMMIT</li>
-                            <li className="pt-3 list-inside">ROLLBACK</li>
-                            <li className="pt-3 list-inside">SAVEPOINT</li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Now let's explore more <span className="font-bold">database-related queries</span> on the next page.
-                </div>
-            </div>
-        </div>
-    );
-}
-
-// page 9
-export function Page9() {
     return (
         <div className="min-h-full w-full lg:px-4 md:px-2">
             <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
@@ -736,8 +1052,8 @@ export function Page9() {
     );
 }
 
-// page 10
-export function Page10() {
+// page 9
+export function Page9() {
     return (
         <div className="min-h-full w-full lg:px-4 md:px-2">
             <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
@@ -861,8 +1177,8 @@ export function Page10() {
     );
 }
 
-// page 11
-export function Page11() {
+// page 10
+export function Page10() {
     return (
         <div className="min-h-full w-full lg:px-4 md:px-2">
             <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
@@ -943,8 +1259,8 @@ export function Page11() {
     )
 }
 
-// page 12
-export function Page12() {
+// page 11
+export function Page11() {
     return (
         <div className="min-h-full w-full lg:px-4 md:px-2">
             <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
@@ -1088,8 +1404,8 @@ export function Page12() {
     )
 }
 
-// page 13
-export function Page13() {
+// page 12
+export function Page12() {
     return (
         <div className="min-h-full w-full lg:px-4 md:px-2">
             <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
@@ -1169,8 +1485,8 @@ export function Page13() {
     );
 }
 
-// page 14
-export function Page14() {
+// page 13
+export function Page13() {
     return (
         <div className="min-h-full w-full lg:px-4 md:px-2">
             <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
@@ -1298,8 +1614,8 @@ export function Page14() {
     );
 }
 
-// page 15
-export function Page15() {
+// page 14
+export function Page14() {
     return (
         <div className="min-h-full w-full lg:px-4 md:px-2">
             <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
@@ -1440,8 +1756,8 @@ export function Page15() {
     );
 }
 
-// page 16
-export function Page16() {
+// page 15
+export function Page15() {
     return (
         <div className="min-h-full w-full lg:px-4 md:px-2">
             <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
@@ -1518,8 +1834,8 @@ export function Page16() {
     );
 }
 
-// page 17
-export function Page17() {
+// page 16
+export function Page16() {
     return (
         <div className="min-h-full w-full lg:px-4 md:px-2">
             <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
@@ -1595,8 +1911,8 @@ export function Page17() {
     );
 }
 
-// page 18
-export function Page18() {
+// page 17
+export function Page17() {
     return (
         <div className="min-h-full w-full lg:px-4 md:px-2">
             <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
@@ -1723,8 +2039,8 @@ export function Page18() {
     );
 }
 
-// page 19
-export function Page19() {
+// page 18
+export function Page18() {
     return (
         <div className="min-h-full w-full lg:px-4 md:px-2">
             <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
@@ -1792,8 +2108,8 @@ export function Page19() {
     );
 }
 
-// page 20
-export function Page20() {
+// page 19
+export function Page19() {
     return (
         <div className="min-h-full w-full lg:px-4 md:px-2">
             <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
@@ -1870,8 +2186,8 @@ export function Page20() {
     );
 }
 
-// page 21
-export function Page21() {
+// page 20
+export function Page20() {
     return (
         <div className="min-h-full w-full lg:px-4 md:px-2">
             <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
@@ -1930,8 +2246,8 @@ export function Page21() {
     );
 }
 
-// page 22
-export function Page22() {
+// page 21
+export function Page21() {
     return (
         <div className="min-h-full w-full lg:px-4 md:px-2">
             <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
@@ -2229,8 +2545,8 @@ export function Page22() {
     )
 }
 
-// page 23
-export function Page23() {
+// page 22
+export function Page22() {
     return (
         <div className="min-h-full w-full lg:px-4 md:px-2">
             <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
@@ -2567,8 +2883,8 @@ export function Page23() {
     )
 }
 
-// page 24
-export function Page24() {
+// page 23
+export function Page23() {
     return (
         <div className="min-h-full w-full lg:px-4 md:px-2">
             <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
@@ -2667,8 +2983,8 @@ export function Page24() {
     )
 }
 
-// page 25
-export function Page25() {
+// page 24
+export function Page24() {
     return (
         <div className="min-h-full w-full lg:px-4 md:px-2">
             <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
@@ -2722,8 +3038,8 @@ export function Page25() {
 }
 
 // Resources pages
-// page 26
-export function Page26() {
+// page 25
+export function Page25() {
     return (
         <div className="min-h-full w-full lg:px-4 md:px-2">
             <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
@@ -2803,8 +3119,8 @@ export function Page26() {
     )
 }
 
-// page 27
-export function Page27() {
+// page 26
+export function Page26() {
     return (
         <div className="min-h-full w-full lg:px-4 md:px-2">
             <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700

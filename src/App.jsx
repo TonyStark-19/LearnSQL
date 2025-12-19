@@ -9,8 +9,8 @@ import { Navigate } from 'react-router-dom';
 
 // import pages
 import {
-  Page1, Page2, Page3, Page4, Page6, Page7, Page8, Page9, Page10, Page11, Page12, Page13, Page14,
-  Page15, Page16, Page17, Page18, Page19, Page20, Page21, Page22, Page23, Page24, Page25, Page26, Page27
+  Page1, Page2, Page3, Page4, Page5, Page6, Page7, Page8, Page9, Page10, Page11, Page12, Page13, Page14,
+  Page15, Page16, Page17, Page18, Page19, Page20, Page21, Page22, Page23, Page24, Page25, Page26
 } from "./pages";
 
 // home components
@@ -64,28 +64,28 @@ function Docs({ scrollRef }) {
             <Route path="dbms" element={<Page2 />} />
             <Route path="mysql" element={<Page3 />} />
             <Route path="create-DB" element={<Page4 />} />
-            <Route path="create-table" element={<Page6 />} />
-            <Route path="datatypes" element={<Page7 />} />
-            <Route path="commands" element={<Page8 />} />
-            <Route path="queries-DB" element={<Page9 />} />
-            <Route path="queries-tables" element={<Page10 />} />
-            <Route path="keys" element={<Page11 />} />
-            <Route path="constraints" element={<Page12 />} />
-            <Route path="select" element={<Page13 />} />
-            <Route path="where-cl" element={<Page14 />} />
-            <Route path="operators" element={<Page15 />} />
-            <Route path="limit-cl" element={<Page16 />} />
-            <Route path="order-by" element={<Page17 />} />
-            <Route path="aggregate" element={<Page18 />} />
-            <Route path="group-by" element={<Page19 />} />
-            <Route path="having-cl" element={<Page20 />} />
-            <Route path="cascading" element={<Page21 />} />
-            <Route path="More-queries" element={<Page22 />} />
-            <Route path="joins" element={<Page23 />} />
-            <Route path="sub-queries" element={<Page24 />} />
-            <Route path="views" element={<Page25 />} />
-            <Route path="projects" element={<Page26 />} />
-            <Route path="links" element={<Page27 />} />
+            <Route path="create-table" element={<Page5 />} />
+            <Route path="datatypes" element={<Page6 />} />
+            <Route path="commands" element={<Page7 />} />
+            <Route path="queries-DB" element={<Page8 />} />
+            <Route path="queries-tables" element={<Page9 />} />
+            <Route path="keys" element={<Page10 />} />
+            <Route path="constraints" element={<Page11 />} />
+            <Route path="select" element={<Page12 />} />
+            <Route path="where-cl" element={<Page13 />} />
+            <Route path="operators" element={<Page14 />} />
+            <Route path="limit-cl" element={<Page15 />} />
+            <Route path="order-by" element={<Page16 />} />
+            <Route path="aggregate" element={<Page17 />} />
+            <Route path="group-by" element={<Page18 />} />
+            <Route path="having-cl" element={<Page19 />} />
+            <Route path="cascading" element={<Page20 />} />
+            <Route path="More-queries" element={<Page21 />} />
+            <Route path="joins" element={<Page22 />} />
+            <Route path="sub-queries" element={<Page23 />} />
+            <Route path="views" element={<Page24 />} />
+            <Route path="projects" element={<Page25 />} />
+            <Route path="links" element={<Page26 />} />
           </Routes>
 
           <div className="text-slate-500 py-4 text-sm">
