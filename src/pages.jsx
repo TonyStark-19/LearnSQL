@@ -935,118 +935,157 @@ export function Page7() {
 // page 8
 export function Page8() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">
-                Database Related Queries</h1>
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-10">
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">
-                    Common SQL Queries for Databases</div>
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800
+            min-lg:text-8xl max-lg:text-7xl max-md:text-6xl max-sm:text-5xl">
+                Database Related Queries
+            </h1>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
-                        We created our first database <span className="font-bold">xyz</span> using the following command:
-                    </li>
-                </ul>
+            <div className="text-slate-300 pt-8 space-y-12">
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    CREATE DATABASE xyz;
-                </div>
+                {/* SECTION: INTRO */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Common SQL Queries for Databases
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">
-                        To avoid errors in the Action Output tab (especially when a database already exists), it's a
-                        good practice to use this command instead:
-                    </li>
-                </ul>
+                    <ul className="mt-6 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            In the previous sections, we created our first database named{" "}
+                            <span className="font-semibold text-slate-100">xyz</span>.
+                        </li>
+                        <li>
+                            Let’s now explore the most commonly used SQL queries for managing databases.
+                        </li>
+                    </ul>
+                </section>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    CREATE DATABASE IF NOT EXISTS xyz;
-                </div>
+                {/* SECTION: CREATE DATABASE */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            To create a database, we use the following command:
+                        </li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">
-                        This command checks if a database named <span className="font-bold">xyz </span>
-                        already exists. If it doesn't, it creates one; otherwise, it does nothing—thus preventing an error.
-                    </li>
-                    <li className="pt-7">
-                        Similarly, we can safely delete a database using this basic command:
-                    </li>
-                </ul>
+                    <CodeBlock>
+                        {`CREATE DATABASE xyz;`}
+                    </CodeBlock>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    DROP DATABASE xyz;
-                </div>
+                    <ul className="mt-4 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside">
+                        <li>
+                            If the database already exists, this command may throw an error.
+                        </li>
+                        <li>
+                            To safely avoid such errors, it’s recommended to use:
+                        </li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">
-                        Again, to avoid errors when deleting a database that may not exist, it's recommended to use:
-                    </li>
-                </ul>
+                    <CodeBlock>
+                        {`CREATE DATABASE IF NOT EXISTS xyz;`}
+                    </CodeBlock>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    DROP DATABASE IF EXISTS xyz;
-                </div>
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            This command checks whether the database exists before creating it.
+                        </li>
+                    </ul>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">
-                        This command checks whether the database <span className="font-bold">xyz </span> exists.
-                        If it does, it deletes it. If not, it does nothing and avoids throwing an error.
-                    </li>
-                    <li className="pt-7">
-                        You can also view all existing databases and tables using built-in SQL commands.
-                    </li>
-                    <li className="pt-3">
-                        To see a list of all databases:
-                    </li>
-                </ul>
+                {/* SECTION: DROP DATABASE */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            To delete an existing database, use:
+                        </li>
+                    </ul>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SHOW DATABASES;
-                </div>
+                    <CodeBlock>
+                        {`DROP DATABASE xyz;`}
+                    </CodeBlock>
 
-                <div className="pt-5 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img20.png" alt="workbench preview" />
-                </div>
+                    <ul className="mt-4 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside">
+                        <li>
+                            Similar to creation, this command may cause errors if the database does not exist.
+                        </li>
+                        <li>
+                            A safer version is:
+                        </li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
-                        As you can see above, it shows the list of databases created or present in my MySQL.
-                    </li>
-                </ul>
+                    <CodeBlock>
+                        {`DROP DATABASE IF EXISTS xyz;`}
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
-                        To view all tables within the currently selected database:
-                    </li>
-                </ul>
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            This prevents errors by deleting the database only if it exists.
+                        </li>
+                    </ul>
+                </section>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SHOW TABLES;
-                </div>
+                {/* SECTION: SHOW DATABASES */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            To view all databases available in MySQL, use:
+                        </li>
+                    </ul>
 
-                <div className="pt-5 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img21.png" alt="workbench preview" />
-                </div>
+                    <CodeBlock>
+                        {`SHOW DATABASES;`}
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
-                    <li className="pt-5">
-                        As you can see above, it shows the list of tables and view created in the database
-                        <span className="font-bold"> xyz.</span>
-                    </li>
-                </ul>
+                    <ImageBlock
+                        src="/images/img20.png"
+                        alt="MySQL Workbench showing databases"
+                    />
 
-                <div className="min-a:text-2xl max-a:text-xl pt-2 pb-7 border-t-2 border-slate-700">
-                    Great! Now let’s move ahead and learn more about <span className="font-bold">table-related queries </span>
-                    in the next page.
-                </div>
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            This displays all databases created or present in your MySQL server.
+                        </li>
+                    </ul>
+                </section>
+
+                {/* SECTION: SHOW TABLES */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            To view all tables inside the currently selected database, use:
+                        </li>
+                    </ul>
+
+                    <CodeBlock>
+                        {`SHOW TABLES;`}
+                    </CodeBlock>
+
+                    <ImageBlock
+                        src="/images/img21.png"
+                        alt="MySQL Workbench showing tables"
+                    />
+
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            This command lists all tables and views created inside the{" "}
+                            <span className="font-semibold text-slate-100">xyz</span> database.
+                        </li>
+                    </ul>
+                </section>
+
+                {/* NEXT PAGE */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Awesome! 🚀 You now know how to manage databases using SQL.
+                        Up next — we’ll dive deeper into{" "}
+                        <span className="font-semibold text-slate-100">
+                            table-related queries
+                        </span>.
+                    </p>
+                </section>
+
             </div>
         </div>
     );
@@ -1055,123 +1094,154 @@ export function Page8() {
 // page 9
 export function Page9() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">Table Related Queries</h1>
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-10">
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">Working with Tables in SQL</div>
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800
+            min-lg:text-8xl max-lg:text-7xl max-md:text-6xl max-sm:text-5xl">
+                Table Related Queries
+            </h1>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
-                        We created our first table using the following command:
-                    </li>
-                </ul>
+            <div className="text-slate-300 pt-8 space-y-12">
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        CREATE TABLE student ({"\n"}
-                        &nbsp;&nbsp;id INT PRIMARY KEY,{"\n"}
-                        &nbsp;&nbsp;name VARCHAR(50),{"\n"}
-                        &nbsp;&nbsp;age INT NOT NULL{"\n"}
-                        );
-                    </code>
-                </pre>
+                {/* SECTION: INTRO */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Working with Tables in SQL
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
-                        To view the table we created, run the following query:
-                    </li>
-                </ul>
+                    <ul className="mt-6 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Earlier, we created our first table named{" "}
+                            <span className="font-semibold text-slate-100">student</span>.
+                        </li>
+                        <li>
+                            Now let’s learn how to view, insert, and retrieve data from a table.
+                        </li>
+                    </ul>
+                </section>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SELECT * FROM student;
-                </div>
+                {/* SECTION: CREATE TABLE (RECAP) */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            This is the command we used to create the table:
+                        </li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
-                        This will open a result grid showing the contents of the table, like this:
-                    </li>
-                </ul>
+                    <CodeBlock>
+                        {`CREATE TABLE student (
+  id INT PRIMARY KEY,
+  name VARCHAR(50),
+  age INT NOT NULL
+);`}
+                    </CodeBlock>
+                </section>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img4.png" alt="workbench preview" />
-                </div>
+                {/* SECTION: VIEW TABLE DATA */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            To view all records from a table, we use:
+                        </li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
-                        As you can see, the table is empty for now. That’s because we haven’t inserted any data yet.
-                    </li>
-                    <li className="pt-3">
-                        To insert data, we use the following syntax:
-                    </li>
-                </ul>
+                    <CodeBlock>
+                        {`SELECT * FROM student;`}
+                    </CodeBlock>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        INSERT INTO table_name{"\n"}
-                        (colname1, colname2){"\n"}
-                        VALUES{"\n"}
-                        (col1_v1, col2_v1),{"\n"}
-                        (col1_v2, col2_v2);
-                    </code>
-                </pre>
+                    <ImageBlock
+                        src="/images/img4.png"
+                        alt="Empty student table in MySQL Workbench"
+                    />
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
-                        Let’s understand this with a practical example:
-                    </li>
-                </ul>
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            The result grid is empty because no data has been inserted yet.
+                        </li>
+                    </ul>
+                </section>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        INSERT INTO student{"\n"}
-                        (id, name, age){"\n"}
-                        VALUES{"\n"}
-                        (101, "karan", 20),{"\n"}
-                        (102, "arjun", 21);
-                    </code>
-                </pre>
+                {/* SECTION: INSERT DATA */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            To insert data into a table, we use the following syntax:
+                        </li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
-                        After writing this query, select and run it. If the Action Output tab shows a green tick,
-                        it means the data was successfully inserted.
-                    </li>
-                    <li className="pt-3">
-                        Now let’s check the data again using:
-                    </li>
-                </ul>
+                    <CodeBlock>
+                        {`INSERT INTO table_name
+(column_name1, column_name2)
+VALUES
+(value1, value2),
+(value3, value4);`}
+                    </CodeBlock>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SELECT * FROM student;
-                </div>
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Let’s apply this using a real example:
+                        </li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
-                        This time, you should see the following result in the result grid:
-                    </li>
-                </ul>
+                    <CodeBlock>
+                        {`INSERT INTO student
+(id, name, age)
+VALUES
+(101, "karan", 20),
+(102, "arjun", 21);`}
+                    </CodeBlock>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img5.png" alt="workbench preview" />
-                </div>
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            If you see a green tick in the Action Output tab, the data was inserted successfully.
+                        </li>
+                    </ul>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
-                    <li className="pt-5">
-                        Congratulations! 🎉 You’ve not only created your first table but also learned how to
-                        insert and view data in it.
-                    </li>
-                </ul>
+                {/* SECTION: VIEW INSERTED DATA */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Run the SELECT query again to verify the inserted data:
+                        </li>
+                    </ul>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Let’s move ahead and learn about <span className="font-bold">SQL Keys</span> in the next page.
-                </div>
+                    <CodeBlock>
+                        {`SELECT * FROM student;`}
+                    </CodeBlock>
+
+                    <ImageBlock
+                        src="/images/img5.png"
+                        alt="Student table with inserted data"
+                    />
+
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            You can now see the records stored inside the table.
+                        </li>
+                    </ul>
+                </section>
+
+                {/* CONCLUSION */}
+                <section>
+                    <ul className="min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Congratulations! 🎉 You’ve learned how to create a table, insert data, and retrieve it using SQL.
+                        </li>
+                    </ul>
+                </section>
+
+                {/* NEXT PAGE */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Up next — we’ll explore an important concept in SQL:{" "}
+                        <span className="font-semibold text-slate-100">
+                            SQL Keys
+                        </span>.
+                    </p>
+                </section>
+
             </div>
         </div>
     );
@@ -1180,306 +1250,485 @@ export function Page9() {
 // page 10
 export function Page10() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">SQL Keys</h1>
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-10">
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">
-                    Let's learn about types of keys</div>
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800
+            min-lg:text-8xl max-lg:text-7xl max-md:text-6xl max-sm:text-5xl">
+                SQL Keys
+            </h1>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7"><span className="font-bold">Primary key : </span>
-                        it is a column (or set of columns) in a table that uniquely identifies each row.</li>
-                    <li className="pt-3">It is a unique id. There is only one Primary key and it should be NOT null.</li>
-                    <li className="pt-3">To understand how we declare Primary key, you can see the following example:</li>
-                </ul>
+            <div className="text-slate-300 pt-8 space-y-12">
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        CREATE TABLE student ({"\n"}
-                        &nbsp;&nbsp;id INT PRIMARY KEY,{"\n"}
-                        &nbsp;&nbsp;name VARCHAR(50),{"\n"}
-                        &nbsp;&nbsp;age INT NOT NULL{"\n"}
-                        );
-                    </code>
-                </pre>
+                {/* SECTION: INTRO */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Types of Keys in SQL
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">In the above example we declared <span className="font-bold">id</span> as
-                        the Priamry key of <span className="font-bold">type INT</span>.</li>
-                    <li className="pt-3">As you can see below, the <span className="font-bold">column rollno</span> is
-                        an example of primary key:</li>
-                </ul>
+                    <ul className="mt-6 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Keys are used in SQL to uniquely identify records and create relationships between tables.
+                        </li>
+                        <li>
+                            The two most commonly used keys are{" "}
+                            <span className="font-semibold text-slate-100">Primary Key</span> and{" "}
+                            <span className="font-semibold text-slate-100">Foreign Key</span>.
+                        </li>
+                    </ul>
+                </section>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img22.png" alt="workbench preview" />
-                </div>
+                {/* SECTION: PRIMARY KEY */}
+                <section>
+                    <h3 className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        Primary Key
+                    </h3>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5"><span className="font-bold">Foreign key : </span>
-                        it is a column (or set of columns) in a table that refers to the Primary key in another table.</li>
-                    <li className="pt-3">There can be multiple Foreign keys.</li>
-                    <li className="pt-3">Foreign keys can have duplicate and null values.</li>
-                    <li className="pt-3">To understand how we declare Foreign key, you can see the following example:</li>
-                </ul>
+                    <ul className="mt-6 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            A <span className="font-semibold">Primary Key</span> uniquely identifies each row in a table.
+                        </li>
+                        <li>
+                            A table can have only <span className="font-semibold">one</span> primary key.
+                        </li>
+                        <li>
+                            Primary key values must be <span className="font-semibold">unique</span> and{" "}
+                            <span className="font-semibold">NOT NULL</span>.
+                        </li>
+                        <li>
+                            Let’s see how a primary key is declared:
+                        </li>
+                    </ul>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        CREATE TABLE student ( {"\n"}
-                        &nbsp;&nbsp;id INT PRIMARY KEY, {"\n"}
-                        &nbsp;&nbsp;courseID INT, {"\n"}
-                        &nbsp;&nbsp;FOREIGN KEY (courseID)  {"\n"}
-                        &nbsp;&nbsp;REFERENCES course(id) {"\n"}
-                        &nbsp;&nbsp;&nbsp;&nbsp;ON DELETE CASCADE {"\n"}
-                        &nbsp;&nbsp;&nbsp;&nbsp;ON UPDATE CASCADE {"\n"}
-                        );
-                    </code>
-                </pre>
+                    <CodeBlock>
+                        {`CREATE TABLE student (
+  id INT PRIMARY KEY,
+  name VARCHAR(50),
+  age INT NOT NULL
+);`}
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">In the above example we declared <span className="font-bold">courseId</span> as
-                        the Foreign key of <span className="font-bold">type INT</span> which points to the
-                        primary key <span className="font-bold">id</span> of the table <span className="font-bold">course.</span>
-                    </li>
-                    <li className="pt-3">And as you can see below, the column <span className="font-bold">departmentId</span> is
-                        an example of foreign key.</li>
-                </ul>
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            In this example, the column{" "}
+                            <span className="font-semibold text-slate-100">id</span> is the primary key.
+                        </li>
+                    </ul>
 
-                <div className="pt-3 pl-3 pb-5 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img23.png" alt="workbench preview" />
-                </div>
+                    <ImageBlock
+                        src="/images/img22.png"
+                        alt="Primary key example in MySQL Workbench"
+                    />
+                </section>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about
-                    <span className="font-bold"> SQL Constraints</span> in the next page.</div>
+                {/* SECTION: FOREIGN KEY */}
+                <section>
+                    <h3 className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        Foreign Key
+                    </h3>
+
+                    <ul className="mt-6 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            A <span className="font-semibold">Foreign Key</span> is used to link one table with another.
+                        </li>
+                        <li>
+                            It refers to the <span className="font-semibold">Primary Key</span> of another table.
+                        </li>
+                        <li>
+                            A table can have <span className="font-semibold">multiple</span> foreign keys.
+                        </li>
+                        <li>
+                            Foreign keys can contain <span className="font-semibold">duplicate</span> and{" "}
+                            <span className="font-semibold">NULL</span> values.
+                        </li>
+                        <li>
+                            Let’s see how a foreign key is declared:
+                        </li>
+                    </ul>
+
+                    <CodeBlock>
+                        {`CREATE TABLE student (
+  id INT PRIMARY KEY,
+  courseID INT,
+  FOREIGN KEY (courseID)
+    REFERENCES course(id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);`}
+                    </CodeBlock>
+
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Here,{" "}
+                            <span className="font-semibold text-slate-100">courseID</span> is a foreign key.
+                        </li>
+                        <li>
+                            It references the primary key{" "}
+                            <span className="font-semibold text-slate-100">id</span> of the{" "}
+                            <span className="font-semibold text-slate-100">course</span> table.
+                        </li>
+                    </ul>
+
+                    <ImageBlock
+                        src="/images/img23.png"
+                        alt="Foreign key example in MySQL Workbench"
+                    />
+                </section>
+
+                {/* NEXT PAGE */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Great work! 🎯 Now that you understand SQL keys,
+                        let’s move ahead and learn about{" "}
+                        <span className="font-semibold text-slate-100">
+                            SQL Constraints
+                        </span>.
+                    </p>
+                </section>
+
             </div>
         </div>
-    )
+    );
 }
 
 // page 11
 export function Page11() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">SQL Constraints</h1>
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-10">
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">
-                    Let's learn about SQL Constraints and it's types</div>
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800
+            min-lg:text-8xl max-lg:text-7xl max-md:text-6xl max-sm:text-5xl">
+                SQL Constraints
+            </h1>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">SQL Constraints are used to specify rules for data in a table.</li>
-                    <li className="pt-3">Let's see the types of SQL Constraints:</li>
-                    <li className="pt-7"><span className="font-bold">NOT NULL : </span>
-                        columns cannot have a null value</li>
-                </ul>
+            <div className="text-slate-300 pt-8 space-y-12">
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    col1 INT NOT NULL;
-                </div>
+                {/* SECTION: INTRO */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Understanding SQL Constraints
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7"><span className="font-bold">UNIQUE : </span>
-                        all values in column are different</li>
-                </ul>
+                    <ul className="mt-6 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            SQL constraints are used to apply rules on the data stored in a table.
+                        </li>
+                        <li>
+                            They help maintain the accuracy, reliability, and integrity of the data.
+                        </li>
+                        <li>
+                            Let’s explore the most commonly used SQL constraints.
+                        </li>
+                    </ul>
+                </section>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    col1 INT UNIQUE;
-                </div>
+                {/* SECTION: NOT NULL */}
+                <section>
+                    <h3 className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        NOT NULL
+                    </h3>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7"><span className="font-bold">PRIMARY KEY : </span>
-                        makes a column unique and not null but used only for one.</li>
-                    <li className="pt-3">It can be written in two of the following syntax :</li>
-                </ul>
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Ensures that a column cannot contain <span className="font-semibold">NULL</span> values.
+                        </li>
+                    </ul>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    id INT PRIMARY KEY;
-                </div>
+                    <CodeBlock>
+                        {`col1 INT NOT NULL;`}
+                    </CodeBlock>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">It the first one, we declare it in a single line, specifiy the Primary key id.
-                        Now let's see the second syntax :</li>
-                </ul>
+                {/* SECTION: UNIQUE */}
+                <section>
+                    <h3 className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        UNIQUE
+                    </h3>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        CREATE TABLE temp ( {"\n"}
-                        &nbsp;&nbsp;id INT NOT NULL, {"\n"}
-                        &nbsp;&nbsp;PRIMARY KEY (id) {"\n"}
-                        );
-                    </code>
-                </pre>
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Ensures that all values in a column are different.
+                        </li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">It the second one, we declare it in two lines. In the first line we declare id
-                        as int type and not null and in the second line we make it (id) a Primary key.</li>
-                </ul>
+                    <CodeBlock>
+                        {`col1 INT UNIQUE;`}
+                    </CodeBlock>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5"><span className="font-bold">FOREIGN KEY : </span>
-                        prevents action that would destroy links between tables</li>
-                </ul>
+                {/* SECTION: PRIMARY KEY */}
+                <section>
+                    <h3 className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        PRIMARY KEY
+                    </h3>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        CREATE TABLE temp ( {"\n"}
-                        &nbsp;&nbsp;cust_id INT, {"\n"}
-                        &nbsp;&nbsp;FOREIGN KEY (cust_id) {"\n"}
-                        &nbsp;&nbsp;REFERENCES customer(id) {"\n"}
-                        );
-                    </code>
-                </pre>
+                    <ul className="mt-4 space-y-3 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Combines <span className="font-semibold">UNIQUE</span> and{" "}
+                            <span className="font-semibold">NOT NULL</span>.
+                        </li>
+                        <li>
+                            A table can have only <span className="font-semibold">one</span> primary key.
+                        </li>
+                        <li>
+                            It can be declared in two ways.
+                        </li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">Here cust_id is a foreign key which refers to primary kry (id) of the customer
-                        table.</li>
-                </ul>
+                    <CodeBlock>
+                        {`id INT PRIMARY KEY;`}
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5"><span className="font-bold">DEFAULT : </span>
-                        sets the default value of a column</li>
-                </ul>
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Another way to define a primary key:
+                        </li>
+                    </ul>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    salary INT DEFAULT 25000;
-                </div>
+                    <CodeBlock>
+                        {`CREATE TABLE temp (
+  id INT NOT NULL,
+  PRIMARY KEY (id)
+);`}
+                    </CodeBlock>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">Here 25000 is set to be the default value for the salary column.</li>
-                </ul>
+                {/* SECTION: FOREIGN KEY */}
+                <section>
+                    <h3 className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        FOREIGN KEY
+                    </h3>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5"><span className="font-bold">CHECK : </span>
-                        it can limit the values allowed in a column.</li>
-                </ul>
+                    <ul className="mt-4 space-y-3 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Maintains a relationship between two tables.
+                        </li>
+                        <li>
+                            Prevents actions that would break links between tables.
+                        </li>
+                    </ul>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        CREATE TABLE city ( {"\n"}
-                        &nbsp;&nbsp;id INT PRIMARY KEY, {"\n"}
-                        &nbsp;&nbsp;city VARCHAR(50), {"\n"}
-                        &nbsp;&nbsp;age INT, {"\n"}
-                        &nbsp;&nbsp;CONSTRAINT age_check CHECK {"\n"}
-                        &nbsp;&nbsp;(age &gt;= 18 AND city="Delhi") {"\n"}
-                        );
-                    </code>
-                </pre>
+                    <CodeBlock>
+                        {`CREATE TABLE temp (
+  cust_id INT,
+  FOREIGN KEY (cust_id)
+    REFERENCES customer(id)
+);`}
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">Here we defined a constraint age_check which skips the values which have
-                        age greater or equal to 18 and where city is delhi.</li>
-                    <li className="pt-5">Let's take another example :</li>
-                </ul>
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Here, <span className="font-semibold text-slate-100">cust_id</span> refers to the primary key{" "}
+                            <span className="font-semibold text-slate-100">id</span> of the{" "}
+                            <span className="font-semibold text-slate-100">customer</span> table.
+                        </li>
+                    </ul>
+                </section>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        CREATE TABLE newTab ( {"\n"}
-                        &nbsp;&nbsp;age INT CHECK (age &gt;= 18), {"\n"}
-                        );
-                    </code>
-                </pre>
+                {/* SECTION: DEFAULT */}
+                <section>
+                    <h3 className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        DEFAULT
+                    </h3>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
-                    <li className="pt-3">Here we are creating a table newTab in which column age will fill age values
-                        greater or equal to 18 only.</li>
-                </ul>
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Sets a default value for a column when no value is provided.
+                        </li>
+                    </ul>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about
-                    <span className="font-bold"> Select</span> query in
-                    detail in the next page.</div>
+                    <CodeBlock>
+                        {`salary INT DEFAULT 25000;`}
+                    </CodeBlock>
+                </section>
+
+                {/* SECTION: CHECK */}
+                <section>
+                    <h3 className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        CHECK
+                    </h3>
+
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Limits the range of values allowed in a column.
+                        </li>
+                    </ul>
+
+                    <CodeBlock>
+                        {`CREATE TABLE city (
+  id INT PRIMARY KEY,
+  city VARCHAR(50),
+  age INT,
+  CONSTRAINT age_check
+  CHECK (age >= 18 AND city = "Delhi")
+);`}
+                    </CodeBlock>
+
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            This ensures only users aged 18+ from Delhi can be inserted.
+                        </li>
+                        <li>
+                            Another simple example:
+                        </li>
+                    </ul>
+
+                    <CodeBlock>
+                        {`CREATE TABLE newTab (
+  age INT CHECK (age >= 18)
+);`}
+                    </CodeBlock>
+                </section>
+
+                {/* NEXT PAGE */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Excellent! 🎯 You’ve learned all major SQL constraints.
+                        Next up — we’ll dive deep into the{" "}
+                        <span className="font-semibold text-slate-100">
+                            SELECT query
+                        </span>{" "}
+                        and data retrieval.
+                    </p>
+                </section>
+
             </div>
         </div>
-    )
+    );
 }
 
 // page 12
 export function Page12() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">SQL SELECT</h1>
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-10">
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">Understanding the SELECT Query</div>
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800
+            min-lg:text-8xl max-lg:text-7xl max-md:text-6xl max-sm:text-5xl">
+                SQL SELECT
+            </h1>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">The <span className="font-bold">SELECT</span> statement is used to
-                        retrieve data from a database.</li>
-                    <li className="pt-3">Earlier, we used <span className="font-bold">SELECT </span>
-                        to fetch all data from our table using this command:</li>
-                </ul>
+            <div className="text-slate-300 pt-8 space-y-12">
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SELECT * FROM student;
-                </div>
+                {/* SECTION: INTRO */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Understanding the SELECT Query
+                    </h2>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-4 pb-2">
-                    Let’s break it down:
-                </div>
+                    <ul className="mt-6 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            The <span className="font-semibold text-slate-100">SELECT</span> statement is used to
+                            retrieve data from a database.
+                        </li>
+                        <li>
+                            We’ve already used SELECT to fetch all records from a table.
+                        </li>
+                    </ul>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3"><span className="font-bold">SELECT</span>: Keyword used to specify the columns
-                        to retrieve.</li>
-                    <li className="pt-3"><span className="font-bold">* </span>: A wildcard character that means "all columns".</li>
-                    <li className="pt-3"><span className="font-bold">FROM</span>: Specifies the table to retrieve data from.</li>
-                    <li className="pt-3">So this query means: "Select all columns from the student table".</li>
-                    <li className="pt-7">But what if you want to fetch only specific columns instead of the entire table?
-                        You can do that using this syntax:</li>
-                </ul>
+                {/* SECTION: SELECT ALL */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            This query retrieves all columns and all rows from the table:
+                        </li>
+                    </ul>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SELECT col1, col2 FROM table_name;
-                </div>
+                    <CodeBlock>
+                        {`SELECT * FROM student;`}
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Here’s a practical example:</li>
-                </ul>
+                    <ul className="mt-4 space-y-3 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            <span className="font-semibold">SELECT</span> — specifies which columns to retrieve
+                        </li>
+                        <li>
+                            <span className="font-semibold">*</span> — wildcard meaning “all columns”
+                        </li>
+                        <li>
+                            <span className="font-semibold">FROM</span> — specifies the table name
+                        </li>
+                        <li>
+                            In simple words: <em>“Select everything from the student table.”</em>
+                        </li>
+                    </ul>
+                </section>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SELECT id, name FROM student;
-                </div>
+                {/* SECTION: SELECT SPECIFIC COLUMNS */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Often, you don’t need all columns.
+                        </li>
+                        <li>
+                            You can fetch only specific columns using this syntax:
+                        </li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Run the above query and you’ll see the following result:</li>
-                </ul>
+                    <CodeBlock>
+                        {`SELECT column1, column2 FROM table_name;`}
+                    </CodeBlock>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img6.png" alt="workbench preview" />
-                </div>
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Let’s see a practical example:
+                        </li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">As you can see, only the id and name columns are displayed.</li>
-                    <li className="pt-3">You can also select just one column if needed. For example:</li>
-                </ul>
+                    <CodeBlock>
+                        {`SELECT id, name FROM student;`}
+                    </CodeBlock>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SELECT name FROM student;
-                </div>
+                    <ImageBlock
+                        src="/images/img6.png"
+                        alt="Selecting specific columns in MySQL Workbench"
+                    />
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
-                    <li className="pt-5">Now only the name column will be shown. You can try the same with id or age.</li>
-                </ul>
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Only the <span className="font-semibold text-slate-100">id</span> and{" "}
+                            <span className="font-semibold text-slate-100">name</span> columns are displayed.
+                        </li>
+                    </ul>
+                </section>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Great job! Now let’s move forward and learn about the <span className="font-bold">WHERE </span>
-                    clause in the next page.
-                </div>
+                {/* SECTION: SELECT SINGLE COLUMN */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            You can also retrieve just a single column:
+                        </li>
+                    </ul>
+
+                    <CodeBlock>
+                        {`SELECT name FROM student;`}
+                    </CodeBlock>
+
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            This query returns only the names of students.
+                        </li>
+                        <li>
+                            You can try the same with other columns like{" "}
+                            <span className="font-semibold">id</span> or{" "}
+                            <span className="font-semibold">age</span>.
+                        </li>
+                    </ul>
+                </section>
+
+                {/* NEXT PAGE */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Great job! 🎉 You now know how to retrieve data using SELECT.
+                        Up next — we’ll learn how to filter records using the{" "}
+                        <span className="font-semibold text-slate-100">
+                            WHERE clause
+                        </span>.
+                    </p>
+                </section>
+
             </div>
         </div>
     );
@@ -1488,127 +1737,160 @@ export function Page12() {
 // page 13
 export function Page13() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">WHERE Clause</h1>
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-10">
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">
-                    Before we learn about the WHERE clause, let's first create a sample database:
-                </div>
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800
+            min-lg:text-8xl max-lg:text-7xl max-md:text-6xl max-sm:text-5xl">
+                WHERE Clause
+            </h1>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">Create a database named <code>college</code>:</li>
-                </ul>
+            <div className="text-slate-300 pt-8 space-y-12">
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        CREATE DATABASE college;{"\n"}
-                        USE college;
-                    </code>
-                </pre>
+                {/* SECTION: INTRO & SETUP */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Setting Up Sample Data
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Now create a table inside this database:</li>
-                </ul>
+                    <ul className="mt-6 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Before learning the <span className="font-semibold">WHERE</span> clause,
+                            let’s create a sample database and table.
+                        </li>
+                        <li>
+                            We’ll use this data in upcoming lessons as well.
+                        </li>
+                    </ul>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        CREATE TABLE studenttable ({"\n"}
-                        &nbsp;&nbsp;rollno INT PRIMARY KEY,{"\n"}
-                        &nbsp;&nbsp;name VARCHAR(50),{"\n"}
-                        &nbsp;&nbsp;marks INT NOT NULL,{"\n"}
-                        &nbsp;&nbsp;grade VARCHAR(1),{"\n"}
-                        &nbsp;&nbsp;city VARCHAR(20){"\n"}
-                        );
-                    </code>
-                </pre>
+                    <CodeBlock>
+                        {`CREATE DATABASE college;
+USE college;`}
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Now let's insert some sample data into this table:</li>
-                </ul>
+                    <CodeBlock>
+                        {`CREATE TABLE studenttable (
+  rollno INT PRIMARY KEY,
+  name VARCHAR(50),
+  marks INT NOT NULL,
+  grade VARCHAR(1),
+  city VARCHAR(20)
+);`}
+                    </CodeBlock>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full min-a:px-5 max-a:px-3">
-                    <code>
-                        INSERT INTO studenttable {"\n"}
-                        (rollno, name, marks, grade, city){"\n"}
-                        VALUES{"\n"}
-                        (101, "anil", 78, "C", "Pune"),{"\n"}
-                        (102, "bhumika", 93, "A", "Mumbai"),{"\n"}
-                        (103, "chetan", 85, "B", "Mumbai"),{"\n"}
-                        (104, "dhruv", 96, "A", "Delhi"),{"\n"}
-                        (105, "emanuel", 12, "F", "Delhi"),{"\n"}
-                        (106, "farah", 82, "B", "Delhi");
-                    </code>
-                </pre>
+                    <CodeBlock>
+                        {`INSERT INTO studenttable
+(rollno, name, marks, grade, city)
+VALUES
+(101, "anil", 78, "C", "Pune"),
+(102, "bhumika", 93, "A", "Mumbai"),
+(103, "chetan", 85, "B", "Mumbai"),
+(104, "dhruv", 96, "A", "Delhi"),
+(105, "emanuel", 12, "F", "Delhi"),
+(106, "farah", 82, "B", "Delhi");`}
+                    </CodeBlock>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">We'll continue using this table in upcoming lessons to explore SQL concepts.</li>
-                    <li className="pt-3">Now let’s dive into the WHERE clause.</li>
-                </ul>
+                {/* SECTION: WHAT IS WHERE */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        What is the WHERE Clause?
+                    </h2>
 
-                <div className="pt-5 font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">What is the WHERE Clause?</div>
+                    <ul className="mt-6 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            The <span className="font-semibold">WHERE</span> clause is used to filter records.
+                        </li>
+                        <li>
+                            It returns only rows that satisfy a given condition.
+                        </li>
+                        <li>
+                            Basic syntax:
+                        </li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">The <span className="font-bold">WHERE</span> clause is used to specify
-                        conditions for filtering data.</li>
-                    <li className="pt-3">It returns only those records that meet the defined conditions.</li>
-                    <li className="pt-3">Here’s the basic syntax:</li>
-                </ul>
+                    <CodeBlock>
+                        {`SELECT column1, column2
+FROM table_name
+WHERE condition;`}
+                    </CodeBlock>
+                </section>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        SELECT col1, col2 FROM table_name{"\n"}
-                        WHERE condition;
-                    </code>
-                </pre>
+                {/* SECTION: WHERE WITH NUMBERS */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Example: Fetch students who scored more than 80 marks.
+                        </li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Let's understand it with an example:</li>
-                </ul>
+                    <CodeBlock>
+                        {`SELECT *
+FROM studenttable
+WHERE marks > 80;`}
+                    </CodeBlock>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SELECT * FROM studenttable WHERE marks &gt; 80;
-                </div>
+                    <ImageBlock
+                        src="/images/img9.png"
+                        alt="Students with marks greater than 80"
+                    />
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">This query returns only those students who scored more than 80 marks:</li>
-                </ul>
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Only students whose marks are greater than 80 are returned.
+                        </li>
+                    </ul>
+                </section>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img9.png" alt="students with marks > 80" />
-                </div>
+                {/* SECTION: WHERE WITH TEXT */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Example: Fetch students who belong to a specific city.
+                        </li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Let’s try another example:</li>
-                </ul>
+                    <CodeBlock>
+                        {`SELECT *
+FROM studenttable
+WHERE city = "Mumbai";`}
+                    </CodeBlock>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SELECT * FROM studenttable WHERE city = "Mumbai";
-                </div>
+                    <ImageBlock
+                        src="/images/img10.png"
+                        alt="Students from Mumbai"
+                    />
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">This query returns all students who are from Mumbai:</li>
-                </ul>
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            This query returns only students from Mumbai.
+                        </li>
+                    </ul>
+                </section>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img10.png" alt="students from Mumbai" />
-                </div>
+                {/* CONCLUSION */}
+                <section>
+                    <ul className="min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            You can use the WHERE clause to filter data using numbers, text, or conditions.
+                        </li>
+                        <li>
+                            WHERE becomes even more powerful when combined with operators.
+                        </li>
+                    </ul>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
-                    <li className="pt-5">Now you’ve learned how to filter data using the WHERE clause.</li>
-                    <li className="pt-3">You can combine it with different types of operators to define complex conditions.</li>
-                </ul>
+                {/* NEXT PAGE */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Well done! 🎯 Next, we’ll explore SQL{" "}
+                        <span className="font-semibold text-slate-100">
+                            Operators
+                        </span>{" "}
+                        to build more complex conditions.
+                    </p>
+                </section>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Up next, we’ll learn about SQL <span className="font-bold">Operators</span> in detail.
-                </div>
             </div>
         </div>
     );
@@ -1617,140 +1899,173 @@ export function Page13() {
 // page 14
 export function Page14() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">SQL Operators</h1>
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-10">
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">
-                    Let’s learn about different types of SQL Operators</div>
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800
+            min-lg:text-8xl max-lg:text-7xl max-md:text-6xl max-sm:text-5xl">
+                SQL Operators
+            </h1>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
-                    <li className="pt-7">
-                        <span className="font-bold">Arithmetic Operators:</span> + (Addition), - (Subtraction),
-                        * (Multiplication), / (Division), % (Modulus)
-                    </li>
-                    <li className="pt-5">
-                        <span className="font-bold">Comparison Operators:</span> = (Equal to), != (Not equal to),
-                        &gt;, &gt;=, &lt;, &lt;=
-                    </li>
-                    <li className="pt-5">
-                        <span className="font-bold">Logical Operators:</span> AND, OR, NOT, IN, BETWEEN, ALL, LIKE, ANY
-                    </li>
-                    <li className="pt-5">
-                        <span className="font-bold">Bitwise Operators:</span> & (Bitwise AND), | (Bitwise OR)
-                    </li>
-                </ul>
+            <div className="text-slate-300 pt-8 space-y-12">
 
-                <div className="font-semibold min-md:text-3xl max-md:text-3xl max-sm:text-3xl">
-                    Let’s explore some Logical Operators with examples:</div>
+                {/* SECTION: INTRO */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Types of SQL Operators
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7 font-semibold">1. Logical AND (returns rows where both conditions are true):</li>
-                    <li className="pt-3">Let's see an example:</li>
-                </ul>
+                    <ul className="mt-6 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            SQL operators are used to perform operations on data and define conditions.
+                        </li>
+                        <li>
+                            The most commonly used operator categories are:
+                        </li>
+                        <li>
+                            <span className="font-semibold">Arithmetic Operators:</span>{" "}
+                            +, −, *, /, %
+                        </li>
+                        <li>
+                            <span className="font-semibold">Comparison Operators:</span>{" "}
+                            =, !=, &gt;, &gt;=, &lt;, &lt;=
+                        </li>
+                        <li>
+                            <span className="font-semibold">Logical Operators:</span>{" "}
+                            AND, OR, NOT, IN, BETWEEN, LIKE
+                        </li>
+                        <li>
+                            <span className="font-semibold">Bitwise Operators:</span>{" "}
+                            &, |
+                        </li>
+                    </ul>
+                </section>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SELECT * FROM studenttable WHERE marks &gt; 80 AND city = "Mumbai";
-                </div>
+                {/* SECTION: LOGICAL OPERATORS */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Logical Operators (with Examples)
+                    </h2>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">This query returns rows where marks are greater than 80 and the city is Mumbai.
-                        As you can see below:
-                    </li>
-                </ul>
+                {/* AND */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            <span className="font-semibold">1. AND</span> — returns rows where{" "}
+                            <em>all conditions are true</em>.
+                        </li>
+                    </ul>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img24.png" alt="workbench preview full table" />
-                </div>
+                    <CodeBlock>
+                        {`SELECT *
+FROM studenttable
+WHERE marks > 80 AND city = "Mumbai";`}
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5 font-semibold">2. Logical OR (returns rows where at least one condition is true):</li>
-                    <li className="pt-3">Let's see an example:</li>
-                </ul>
+                    <ImageBlock
+                        src="/images/img24.png"
+                        alt="AND operator example"
+                    />
+                </section>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SELECT * FROM studenttable WHERE marks &gt; 90 OR city = "Mumbai";
-                </div>
+                {/* OR */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            <span className="font-semibold">2. OR</span> — returns rows where{" "}
+                            <em>at least one condition is true</em>.
+                        </li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">This returns rows where marks are greater than 90 or the city is Mumbai.
-                        As you can see below:
-                    </li>
-                </ul>
+                    <CodeBlock>
+                        {`SELECT *
+FROM studenttable
+WHERE marks > 90 OR city = "Mumbai";`}
+                    </CodeBlock>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img25.png" alt="workbench preview full table" />
-                </div>
+                    <ImageBlock
+                        src="/images/img25.png"
+                        alt="OR operator example"
+                    />
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5 font-semibold">3. Logical BETWEEN (returns rows within a given range):</li>
-                    <li className="pt-3">Let's see an example:</li>
-                </ul>
+                {/* BETWEEN */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            <span className="font-semibold">3. BETWEEN</span> — filters values within a range.
+                        </li>
+                    </ul>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SELECT * FROM studenttable WHERE marks BETWEEN 80 AND 90;
-                </div>
+                    <CodeBlock>
+                        {`SELECT *
+FROM studenttable
+WHERE marks BETWEEN 80 AND 90;`}
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-3">
-                    <li className="pt-5">This query returns rows where marks are between 80 and 90 (inclusive).
-                        As you can see below:
-                    </li>
-                </ul>
+                    <ImageBlock
+                        src="/images/img26.png"
+                        alt="BETWEEN operator example"
+                    />
 
-                <div className="pt-3 pl-3 pb-5 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img26.png" alt="workbench preview full table" />
-                </div>
+                    <p className="min-a:text-2xl max-a:text-xl border-l-4 border-slate-700 pl-4">
+                        <span className="font-semibold">Note:</span> The <code>AND</code> here is part of the
+                        BETWEEN syntax, not a logical AND operator.
+                    </p>
+                </section>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-1 pl-3 border-l-4 border-slate-700">
-                    <span className="font-bold">Note:</span> Here, <code>AND</code> is not the logical AND operator —
-                    it's part of the BETWEEN syntax.
-                </div>
+                {/* IN */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            <span className="font-semibold">4. IN</span> — matches values from a given list.
+                        </li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5 font-semibold">4. Logical IN (returns rows that match any value from a list):</li>
-                    <li className="pt-3">Let's see an example:</li>
-                </ul>
+                    <CodeBlock>
+                        {`SELECT *
+FROM studenttable
+WHERE city IN ("Delhi", "Mumbai");`}
+                    </CodeBlock>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SELECT * FROM studenttable WHERE city IN ("Delhi", "Mumbai");
-                </div>
+                    <ImageBlock
+                        src="/images/img27.png"
+                        alt="IN operator example"
+                    />
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Returns all students whose city is either Delhi or Mumbai. As you can see below:</li>
-                </ul>
+                {/* NOT */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            <span className="font-semibold">5. NOT</span> — negates a condition.
+                        </li>
+                    </ul>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img27.png" alt="workbench preview full table" />
-                </div>
+                    <CodeBlock>
+                        {`SELECT *
+FROM studenttable
+WHERE city NOT IN ("Delhi", "Mumbai");`}
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5 font-semibold">5. Logical NOT (negates the given condition):</li>
-                    <li className="pt-3">Let's see an example:</li>
-                </ul>
+                    <ImageBlock
+                        src="/images/img28.png"
+                        alt="NOT operator example"
+                    />
+                </section>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SELECT * FROM studenttable WHERE city NOT IN ("Delhi", "Mumbai");
-                </div>
+                {/* NEXT PAGE */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Excellent work! 🎯 You’ve learned how operators help filter data.
+                        Up next — we’ll explore the{" "}
+                        <span className="font-semibold text-slate-100">
+                            LIMIT clause
+                        </span>.
+                    </p>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">This query returns rows where the city is neither Delhi nor Mumbai. As you can
-                        see below:
-                    </li>
-                </ul>
-
-                <div className="pt-3 pl-3 pb-5 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img28.png" alt="workbench preview full table" />
-                </div>
-
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Up next, we’ll learn about another useful clause — the <span className="font-bold">LIMIT</span> clause.
-                </div>
             </div>
         </div>
     );
@@ -1759,76 +2074,107 @@ export function Page14() {
 // page 15
 export function Page15() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">LIMIT Clause</h1>
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-10">
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">
-                    Let’s learn about the LIMIT Clause</div>
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800
+            min-lg:text-8xl max-lg:text-7xl max-md:text-6xl max-sm:text-5xl">
+                LIMIT Clause
+            </h1>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">The <span className="font-bold">LIMIT</span> clause is used to set an upper
-                        limit on the number of rows returned in the result.</li>
-                    <li className="pt-3">Even if the query matches more rows, the LIMIT clause restricts the output
-                        to the specified number.</li>
-                    <li className="pt-3">You can use the LIMIT clause with the following syntax:</li>
-                </ul>
+            <div className="text-slate-300 pt-8 space-y-12">
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        SELECT col1, col2 FROM table_name {"\n"}
-                        LIMIT number;
-                    </code>
-                </pre>
+                {/* INTRO */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Understanding the LIMIT Clause
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Let’s understand this with an example.</li>
-                    <li className="pt-3">First, run the <span className="font-mono font-bold">SELECT *</span> query
-                        to view the entire table:</li>
-                </ul>
+                    <ul className="mt-6 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            The <span className="font-semibold">LIMIT</span> clause is used to restrict
+                            the number of rows returned by a query.
+                        </li>
+                        <li>
+                            Even if more rows match the query conditions, only the specified
+                            number of rows will be displayed.
+                        </li>
+                        <li>
+                            Basic syntax:
+                        </li>
+                    </ul>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SELECT * FROM studenttable;
-                </div>
+                    <CodeBlock>
+                        {`SELECT col1, col2
+FROM table_name
+LIMIT number;`}
+                    </CodeBlock>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">This will return the entire table as shown below:</li>
-                </ul>
+                {/* FULL TABLE */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            First, let’s view the complete table:
+                        </li>
+                    </ul>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img7.png" alt="workbench preview full table" />
-                </div>
+                    <CodeBlock>
+                        {`SELECT *
+FROM studenttable;`}
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Now, let’s run the same query but with a <span className="font-mono font-bold">
-                        LIMIT</span> of 3 rows:</li>
-                </ul>
+                    <ImageBlock
+                        src="/images/img7.png"
+                        alt="Full table output"
+                    />
+                </section>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SELECT * FROM studenttable LIMIT 3;
-                </div>
+                {/* LIMIT EXAMPLE */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Now apply the <span className="font-mono font-semibold">LIMIT</span> clause to
+                            return only 3 rows:
+                        </li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">This will return only the first 3 rows from the result set:</li>
-                </ul>
+                    <CodeBlock>
+                        {`SELECT *
+FROM studenttable
+LIMIT 3;`}
+                    </CodeBlock>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img8.png" alt="workbench preview limited table" />
-                </div>
+                    <ImageBlock
+                        src="/images/img8.png"
+                        alt="LIMIT clause output"
+                    />
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
-                    <li className="pt-5">As you can see, there’s a clear difference in the output.</li>
-                    <li className="pt-3">The first query returned all rows, while the second limited the output
-                        to only 3 rows using the <span className="font-mono font-bold">LIMIT</span> clause.</li>
-                </ul>
+                {/* EXPLANATION */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            The first query returned all rows from the table.
+                        </li>
+                        <li>
+                            The second query restricted the output to only 3 rows using
+                            the <span className="font-mono font-semibold">LIMIT</span> clause.
+                        </li>
+                    </ul>
+                </section>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Up next, we’ll learn about another useful clause — the <span className="font-bold">ORDER BY</span> clause.
-                </div>
+                {/* NEXT PAGE */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Nice work! 🎉 You now know how to control result size.
+                        Up next — we’ll explore the{" "}
+                        <span className="font-semibold text-slate-100">
+                            ORDER BY clause
+                        </span>.
+                    </p>
+                </section>
+
             </div>
         </div>
     );
@@ -1837,75 +2183,121 @@ export function Page15() {
 // page 16
 export function Page16() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">ORDER BY Clause</h1>
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-10">
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">
-                    Let’s learn about the ORDER BY clause</div>
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800
+            min-lg:text-8xl max-lg:text-7xl max-md:text-6xl max-sm:text-5xl">
+                ORDER BY Clause
+            </h1>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
-                        The <span className="font-bold">ORDER BY</span> clause is used to sort the result in either
-                        ascending (<span className="font-mono font-bold">ASC</span>) or descending (<span className=
-                            "font-mono font-bold">DESC</span>) order.
-                    </li>
-                    <li className="pt-3">
-                        This means you can arrange your results based on a specific column — either from smallest to
-                        largest (ASC) or largest to smallest (DESC).
-                    </li>
-                    <li className="pt-3">
-                        You can use the <span className="font-bold">ORDER BY</span> clause with the following syntax:
-                    </li>
-                </ul>
+            <div className="text-slate-300 pt-8 space-y-12">
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 mb-6 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        SELECT col1, col2 FROM table_name {"\n"}
-                        ORDER BY col_name ASC;
-                    </code>
-                </pre>
+                {/* INTRO */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Understanding the ORDER BY Clause
+                    </h2>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-1 pl-3 border-l-4 border-slate-700">
-                    <span className="font-bold">Note:</span> You don’t need to write <span className="font-mono font-bold">
-                        ASC</span> explicitly for ascending order. It is the default. However, you must write <span
-                            className="font-mono font-bold">DESC</span> to sort in descending order.
-                </div>
+                    <ul className="mt-6 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            The <span className="font-semibold">ORDER BY</span> clause is used to sort
+                            query results.
+                        </li>
+                        <li>
+                            Data can be sorted in:
+                            <ul className="list-disc list-inside ml-6 mt-2">
+                                <li>
+                                    <span className="font-mono font-semibold">ASC</span> — ascending order
+                                </li>
+                                <li>
+                                    <span className="font-mono font-semibold">DESC</span> — descending order
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Sorting can be applied to any column such as numbers, text, or dates.
+                        </li>
+                        <li>
+                            Basic syntax:
+                        </li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">Let’s understand this with an example:</li>
-                </ul>
+                    <CodeBlock>
+                        {`SELECT col1, col2
+FROM table_name
+ORDER BY column_name ASC;`}
+                    </CodeBlock>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        SELECT * FROM studenttable {"\n"}
-                        ORDER BY city ASC;
-                    </code>
-                </pre>
+                    <div className="mt-6 pl-4 border-l-4 border-slate-700 min-a:text-2xl max-a:text-xl">
+                        <span className="font-semibold text-slate-100">Note:</span>{" "}
+                        <span className="font-mono">ASC</span> is the default order, so it can be omitted.
+                        To sort in descending order, you must explicitly use{" "}
+                        <span className="font-mono font-semibold">DESC</span>.
+                    </div>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">The above query will return the following result:</li>
-                </ul>
+                {/* EXAMPLE */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Let’s sort students by city in ascending order:
+                        </li>
+                    </ul>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img11.png" alt="MySQL sorted table preview by city ASC" />
-                </div>
+                    <CodeBlock>
+                        {`SELECT *
+FROM studenttable
+ORDER BY city ASC;`}
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
-                    <li className="pt-5">As you can see, the rows are sorted alphabetically by city in ascending order.</li>
-                    <li className="pt-3">That’s why the city “Delhi” appears at the top, and “Pune” appears last.</li>
-                    <li className="pt-3">You can also use the <span className="font-bold">ORDER BY</span> clause to sort
-                        by other columns like <span className="font-mono font-bold">rollno</span>, <span className="
-                     font-mono font-bold">name</span>, <span className="font-mono font-bold">marks</span>, or <span
-                            className="font-mono font-bold">grade</span> — in either ascending or descending order.</li>
-                </ul>
+                    <ImageBlock
+                        src="/images/img11.png"
+                        alt="Students sorted by city in ascending order"
+                    />
 
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Now let’s learn about <span className="font-bold">Aggregate Functions</span> in the next page.
-                </div>
+                    <ul className="mt-4 space-y-3 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            The rows are sorted alphabetically by the{" "}
+                            <span className="font-mono font-semibold">city</span> column.
+                        </li>
+                        <li>
+                            Cities like <span className="font-semibold">Delhi</span> appear first,
+                            while <span className="font-semibold">Pune</span> appears later.
+                        </li>
+                    </ul>
+                </section>
+
+                {/* ADDITIONAL INFO */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            You can sort by other columns such as:
+                        </li>
+                        <li className="ml-6">
+                            <span className="font-mono font-semibold">rollno</span>,{" "}
+                            <span className="font-mono font-semibold">name</span>,{" "}
+                            <span className="font-mono font-semibold">marks</span>,{" "}
+                            <span className="font-mono font-semibold">grade</span>
+                        </li>
+                        <li>
+                            Sorting can be done in either ascending or descending order
+                            depending on your requirement.
+                        </li>
+                    </ul>
+                </section>
+
+                {/* NEXT PAGE */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Excellent progress! 🎯 Next, we’ll explore{" "}
+                        <span className="font-semibold text-slate-100">
+                            Aggregate Functions
+                        </span>{" "}
+                        and learn how to summarize data.
+                    </p>
+                </section>
+
             </div>
         </div>
     );
@@ -1914,126 +2306,169 @@ export function Page16() {
 // page 17
 export function Page17() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">
-                Aggregate Functions</h1>
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-10">
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">
-                    Let’s learn about Aggregate Functions</div>
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800
+            min-lg:text-8xl max-lg:text-7xl max-md:text-6xl max-sm:text-5xl">
+                Aggregate Functions
+            </h1>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
-                        Aggregate functions perform a calculation on a set of values and return a single result.
-                    </li>
-                    <li className="pt-3">Here are the most commonly used aggregate functions:</li>
-                </ul>
+            <div className="text-slate-300 pt-8 space-y-12">
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
-                        <span className="font-bold">COUNT()</span>: Returns the total number of entries in a column.
-                    </li>
-                    <li className="pt-3">Let's understand it with an example:</li>
-                </ul>
+                {/* INTRO */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Understanding Aggregate Functions
+                    </h2>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SELECT COUNT(name) FROM studenttable;
-                </div>
+                    <ul className="mt-6 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Aggregate functions perform calculations on multiple rows and return a single value.
+                        </li>
+                        <li>
+                            They are commonly used to summarize data such as totals, averages, minimums, and maximums.
+                        </li>
+                        <li>
+                            Below are the most frequently used aggregate functions in SQL.
+                        </li>
+                    </ul>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">This will return the total number of students (non-null names):</li>
-                </ul>
+                {/* COUNT */}
+                <section>
+                    <h3 className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        COUNT()
+                    </h3>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img15.png" alt="COUNT(name) result preview" />
-                </div>
+                    <ul className="mt-4 space-y-3 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            <span className="font-semibold">COUNT()</span> returns the total number of non-NULL values
+                            in a column.
+                        </li>
+                        <li>Example:</li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
-                        <span className="font-bold">MAX()</span>: Returns the highest value from a column.
-                    </li>
-                    <li className="pt-3">Let's understand it with an example:</li>
-                </ul>
+                    <CodeBlock>
+                        {`SELECT COUNT(name)
+FROM studenttable;`}
+                    </CodeBlock>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SELECT MAX(marks) FROM studenttable;
-                </div>
+                    <ImageBlock
+                        src="/images/img15.png"
+                        alt="COUNT(name) result preview"
+                    />
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">This returns the highest marks from the table:</li>
-                </ul>
+                {/* MAX */}
+                <section>
+                    <h3 className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        MAX()
+                    </h3>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img16.png" alt="MAX(marks) result preview" />
-                </div>
+                    <ul className="mt-4 space-y-3 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            <span className="font-semibold">MAX()</span> returns the highest value from a column.
+                        </li>
+                        <li>Example:</li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
-                        <span className="font-bold">MIN()</span>: Returns the lowest value from a column.
-                    </li>
-                    <li className="pt-3">Let's understand it with an example:</li>
-                </ul>
+                    <CodeBlock>
+                        {`SELECT MAX(marks)
+FROM studenttable;`}
+                    </CodeBlock>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SELECT MIN(marks) FROM studenttable;
-                </div>
+                    <ImageBlock
+                        src="/images/img16.png"
+                        alt="MAX(marks) result preview"
+                    />
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">This will return the lowest marks in the table:</li>
-                </ul>
+                {/* MIN */}
+                <section>
+                    <h3 className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        MIN()
+                    </h3>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img17.png" alt="MIN(marks) result preview" />
-                </div>
+                    <ul className="mt-4 space-y-3 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            <span className="font-semibold">MIN()</span> returns the lowest value from a column.
+                        </li>
+                        <li>Example:</li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
-                        <span className="font-bold">SUM()</span>: Returns the total sum of a numeric column.
-                    </li>
-                    <li className="pt-3">Let's understand it with an example:</li>
-                </ul>
+                    <CodeBlock>
+                        {`SELECT MIN(marks)
+FROM studenttable;`}
+                    </CodeBlock>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SELECT SUM(marks) FROM studenttable;
-                </div>
+                    <ImageBlock
+                        src="/images/img17.png"
+                        alt="MIN(marks) result preview"
+                    />
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">This returns the total of all marks:</li>
-                </ul>
+                {/* SUM */}
+                <section>
+                    <h3 className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        SUM()
+                    </h3>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img18.png" alt="SUM(marks) result preview" />
-                </div>
+                    <ul className="mt-4 space-y-3 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            <span className="font-semibold">SUM()</span> returns the total of all values
+                            in a numeric column.
+                        </li>
+                        <li>Example:</li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
-                        <span className="font-bold">AVG()</span>: Returns the average value of a numeric column.
-                    </li>
-                    <li className="pt-3">Let's understand it with an example:</li>
-                </ul>
+                    <CodeBlock>
+                        {`SELECT SUM(marks)
+FROM studenttable;`}
+                    </CodeBlock>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SELECT AVG(marks) FROM studenttable;
-                </div>
+                    <ImageBlock
+                        src="/images/img18.png"
+                        alt="SUM(marks) result preview"
+                    />
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">This returns the average of all marks:</li>
-                </ul>
+                {/* AVG */}
+                <section>
+                    <h3 className="font-semibold text-slate-100 min-md:text-3xl max-md:text-2xl">
+                        AVG()
+                    </h3>
 
-                <div className="pt-3 pl-3 pb-5 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img19.png" alt="AVG(marks) result preview" />
-                </div>
+                    <ul className="mt-4 space-y-3 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            <span className="font-semibold">AVG()</span> returns the average value
+                            of a numeric column.
+                        </li>
+                        <li>Example:</li>
+                    </ul>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Now let’s move on to another important clause — the <span className="font-bold">GROUP BY </span>
-                    clause in the next page.
-                </div>
+                    <CodeBlock>
+                        {`SELECT AVG(marks)
+FROM studenttable;`}
+                    </CodeBlock>
+
+                    <ImageBlock
+                        src="/images/img19.png"
+                        alt="AVG(marks) result preview"
+                    />
+                </section>
+
+                {/* NEXT PAGE */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Great work! 🎉 Next, we’ll learn how to group records using the{" "}
+                        <span className="font-semibold text-slate-100">
+                            GROUP BY
+                        </span>{" "}
+                        clause.
+                    </p>
+                </section>
+
             </div>
         </div>
     );
@@ -2042,67 +2477,93 @@ export function Page17() {
 // page 18
 export function Page18() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">GROUP BY Clause</h1>
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-10">
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">
-                    Let’s learn about the GROUP BY clause</div>
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800
+            min-lg:text-8xl max-lg:text-7xl max-md:text-6xl max-sm:text-5xl">
+                GROUP BY Clause
+            </h1>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
-                    <li className="pt-7">
-                        <span className="font-bold">GROUP BY</span> is used to group rows that have the same values
-                        into summary rows.
-                    </li>
-                    <li className="pt-3">
-                        It collects data from multiple records and groups the result by one or more columns.
-                    </li>
-                </ul>
+            <div className="text-slate-300 pt-8 space-y-12">
 
-                <div className="min-a:text-2xl max-a:text-xl pt-1 pl-3 border-l-4 border-slate-700">
-                    <span className="font-bold">Note:</span> We usually use the <span className="font-bold">GROUP BY </span>
-                    clause along with aggregate functions like <span className="font-mono font-bold">COUNT()</span>,
-                    <span className="font-mono font-bold">SUM()</span>, etc.
-                </div>
+                {/* INTRO */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Understanding the GROUP BY Clause
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">Let’s understand the GROUP BY clause with an example:</li>
-                </ul>
+                    <ul className="mt-6 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            The <span className="font-semibold">GROUP BY</span> clause is used to group
+                            rows that share the same values.
+                        </li>
+                        <li>
+                            It combines multiple rows into summary rows based on one or more columns.
+                        </li>
+                        <li>
+                            GROUP BY is most commonly used with aggregate functions.
+                        </li>
+                    </ul>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        SELECT city, COUNT(name) {"\n"}
-                        FROM studenttable {"\n"}
-                        GROUP BY city;
-                    </code>
-                </pre>
+                    <div className="mt-6 pl-4 border-l-4 border-slate-700 min-a:text-2xl max-a:text-xl">
+                        <span className="font-semibold text-slate-100">Note:</span>{" "}
+                        GROUP BY is usually used with aggregate functions like{" "}
+                        <span className="font-mono font-semibold">COUNT()</span>,{" "}
+                        <span className="font-mono font-semibold">SUM()</span>,{" "}
+                        <span className="font-mono font-semibold">AVG()</span>, etc.
+                    </div>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
-                        In this query, we are selecting the <span className="font-mono font-bold">city</span> column
-                        and counting how many students belong to each city using <span className="font-mono font-bold">
-                            COUNT(name)</span>.
-                    </li>
-                    <li className="pt-3">
-                        The <span className="font-mono font-bold">COUNT(name)</span> function wouldn’t work meaningfully
-                        on its own in this case. So we group the data by <span className="font-mono font-bold">city </span>
-                        to make the count meaningful.
-                    </li>
-                    <li className="pt-3">
-                        As a result, we get the number of students in each city, like shown below:
-                    </li>
-                </ul>
+                {/* EXAMPLE */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Let’s see how GROUP BY works using a practical example:
+                        </li>
+                    </ul>
 
-                <div className="pt-3 pl-3 pb-5 overflow-hidden">
-                    <img className="rounded-lg" src="/images/image12.png" alt="GROUP BY result preview" />
-                </div>
+                    <CodeBlock>
+                        {`SELECT city, COUNT(name)
+FROM studenttable
+GROUP BY city;`}
+                    </CodeBlock>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Now let’s learn about another important clause — the <span className="font-bold">HAVING </span>
-                    clause in the next page.
-                </div>
+                    <ul className="mt-6 space-y-3 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            This query groups all students by their{" "}
+                            <span className="font-mono font-semibold">city</span>.
+                        </li>
+                        <li>
+                            <span className="font-mono font-semibold">COUNT(name)</span> calculates
+                            how many students belong to each city.
+                        </li>
+                        <li>
+                            Without <span className="font-mono font-semibold">GROUP BY city</span>,
+                            the count would not make sense per city.
+                        </li>
+                        <li>
+                            The final output shows one row per city with the total number of students.
+                        </li>
+                    </ul>
+
+                    <ImageBlock
+                        src="/images/image12.png"
+                        alt="GROUP BY city result preview"
+                    />
+                </section>
+
+                {/* NEXT PAGE */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Nice work! 👏 Next, we’ll learn about the{" "}
+                        <span className="font-semibold text-slate-100">
+                            HAVING
+                        </span>{" "}
+                        clause and how it filters grouped results.
+                    </p>
+                </section>
+
             </div>
         </div>
     );
@@ -2111,76 +2572,110 @@ export function Page18() {
 // page 19
 export function Page19() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">HAVING Clause</h1>
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-10">
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">
-                    Let’s learn about the HAVING Clause</div>
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800
+            min-lg:text-8xl max-lg:text-7xl max-md:text-6xl max-sm:text-5xl">
+                HAVING Clause
+            </h1>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
-                        The <span className="font-bold">HAVING</span> clause is similar to the <span className="font-bold">
-                            WHERE</span> clause because it is also used to filter data.
-                    </li>
-                    <li className="pt-3">
-                        However, <span className="font-bold">HAVING</span> is used to apply conditions on groups, not
-                        individual rows.
-                    </li>
-                    <li className="pt-3">
-                        In other words, when we group data using <span className="font-bold">GROUP BY</span>, and want to
-                        filter those groups, we use the <span className="font-bold">HAVING</span> clause.
-                    </li>
-                    <li className="pt-7">Let’s understand this better with an example:</li>
-                </ul>
+            <div className="text-slate-300 pt-8 space-y-12">
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        SELECT COUNT(name), city {'\n'}
-                        FROM studenttable {'\n'}
-                        GROUP BY city {'\n'}
-                        HAVING MAX(marks) &gt; 90;
-                    </code>
-                </pre>
+                {/* INTRO */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Understanding the HAVING Clause
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">
-                        In this query:
-                        <ul className="list-disc pl-6">
-                            <li className="pt-3">We are selecting the <span className="font-mono font-bold">city </span>
-                                column.</li>
-                            <li className="pt-3">
-                                We are using <span className="font-mono font-bold">COUNT(name)</span> to count how many
-                                students belong to each city.
-                            </li>
-                            <li className="pt-3">Then, we group the data by city using <span className="font-mono font-bold">
-                                GROUP BY city</span>.</li>
-                            <li className="pt-3">
-                                After grouping, we use the <span className="font-mono font-bold">HAVING</span> clause to
-                                filter only those cities where the maximum marks are greater than 90.
-                            </li>
-                        </ul>
-                    </li>
-                    <li className="pt-5">As a result, we get the following output:</li>
-                </ul>
+                    <ul className="mt-6 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            The <span className="font-semibold">HAVING</span> clause is used to filter grouped data.
+                        </li>
+                        <li>
+                            It is similar to the <span className="font-semibold">WHERE</span> clause,
+                            but they work at different stages.
+                        </li>
+                        <li>
+                            <span className="font-semibold">WHERE</span> filters individual rows
+                            <span className="font-semibold"> before grouping</span>.
+                        </li>
+                        <li>
+                            <span className="font-semibold">HAVING</span> filters grouped results
+                            <span className="font-semibold"> after GROUP BY</span>.
+                        </li>
+                    </ul>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img13.png" alt="HAVING clause result preview" />
-                </div>
+                    <div className="mt-6 pl-4 border-l-4 border-slate-700 min-a:text-2xl max-a:text-xl">
+                        <span className="font-semibold text-slate-100">Important:</span>{" "}
+                        Aggregate functions like{" "}
+                        <span className="font-mono font-semibold">COUNT()</span>,{" "}
+                        <span className="font-mono font-semibold">MAX()</span>,{" "}
+                        <span className="font-mono font-semibold">SUM()</span>{" "}
+                        cannot be used inside <span className="font-mono">WHERE</span>,
+                        so we use <span className="font-mono font-semibold">HAVING</span>.
+                    </div>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
-                    <li className="pt-5">
-                        This result shows that only the cities <span className="font-bold">Mumbai</span> and <span className=
-                            "font-bold">Delhi</span> have students whose maximum marks are greater than 90.
-                    </li>
-                </ul>
+                {/* EXAMPLE */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Let’s understand this with a practical example:
+                        </li>
+                    </ul>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Now let’s move on and learn about <span className="font-bold">Cascading in Foreign Keys</span> in the
-                    next page.
-                </div>
+                    <CodeBlock>
+                        {`SELECT city, COUNT(name)
+FROM studenttable
+GROUP BY city
+HAVING MAX(marks) > 90;`}
+                    </CodeBlock>
+
+                    <ul className="mt-6 space-y-3 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            The data is grouped by{" "}
+                            <span className="font-mono font-semibold">city</span>.
+                        </li>
+                        <li>
+                            <span className="font-mono font-semibold">COUNT(name)</span> counts the number
+                            of students in each city.
+                        </li>
+                        <li>
+                            The <span className="font-mono font-semibold">HAVING</span> clause filters
+                            only those cities where the{" "}
+                            <span className="font-mono font-semibold">maximum marks</span> are greater than 90.
+                        </li>
+                        <li>
+                            Cities that do not meet this condition are excluded from the result.
+                        </li>
+                    </ul>
+
+                    <ImageBlock
+                        src="/images/img13.png"
+                        alt="HAVING clause result preview"
+                    />
+
+                    <ul className="mt-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Only <span className="font-semibold">Mumbai</span> and{" "}
+                            <span className="font-semibold">Delhi</span> appear because
+                            they have students with marks greater than 90.
+                        </li>
+                    </ul>
+                </section>
+
+                {/* NEXT PAGE */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Great work! 🎯 Next, we’ll learn about{" "}
+                        <span className="font-semibold text-slate-100">
+                            Cascading in Foreign Keys
+                        </span>{" "}
+                        and how changes propagate across related tables.
+                    </p>
+                </section>
+
             </div>
         </div>
     );
@@ -2189,58 +2684,112 @@ export function Page19() {
 // page 20
 export function Page20() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">Cascading
-                for Foreign Key</h1>
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-10">
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">
-                    Let’s learn about Cascading for Foreign Keys</div>
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800
+            min-lg:text-8xl max-lg:text-7xl max-md:text-6xl max-sm:text-5xl">
+                Cascading in Foreign Keys
+            </h1>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">
-                        <span className="font-bold">ON DELETE CASCADE:</span> This ensures that if a row in the parent
-                        table is deleted, all related rows in the child table are also automatically deleted.
-                    </li>
-                    <li className="pt-5">
-                        <span className="font-bold">ON UPDATE CASCADE:</span> This ensures that if a value in the parent
-                        table (usually the primary key) is updated, the related values in the child table are also updated
-                        accordingly.
-                    </li>
-                    <li className="pt-5">
-                        Using both of these options when defining foreign keys is considered a best practice. It helps
-                        maintain data integrity and prevents errors when updating or deleting rows from the parent table.
-                    </li>
-                    <li className="pt-5">
-                        Let’s look at an example of how to use them in SQL:
-                    </li>
-                </ul>
+            <div className="text-slate-300 pt-8 space-y-12">
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        CREATE TABLE student ( {"\n"}
-                        &nbsp;&nbsp;id INT PRIMARY KEY, {"\n"}
-                        &nbsp;&nbsp;courseID INT, {"\n"}
-                        &nbsp;&nbsp;FOREIGN KEY (courseID) {"\n"}
-                        &nbsp;&nbsp;REFERENCES course(id) {"\n"}
-                        &nbsp;&nbsp;&nbsp;&nbsp;ON DELETE CASCADE {"\n"}
-                        &nbsp;&nbsp;&nbsp;&nbsp;ON UPDATE CASCADE {"\n"}
-                        );
-                    </code>
-                </pre>
+                {/* INTRO */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Understanding Cascading Behavior
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-5">
-                    <li className="pt-5">
-                        That’s it! Just by adding these two lines, we enable cascading behavior on our foreign key.
-                    </li>
-                </ul>
+                    <ul className="mt-6 space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Cascading is used with <span className="font-semibold">foreign keys</span>
+                            to automatically apply changes from a parent table to a child table.
+                        </li>
+                        <li>
+                            It helps maintain <span className="font-semibold">data consistency</span>
+                            between related tables.
+                        </li>
+                    </ul>
+                </section>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Now let’s move forward and explore more <span className="font-bold">table-related queries </span>
-                    in the next page.
-                </div>
+                {/* CASCADE TYPES */}
+                <section>
+                    <ul className="space-y-6 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            <span className="font-semibold text-slate-100">ON DELETE CASCADE</span>
+                            <br />
+                            If a row in the parent table is deleted, all related rows in the child table
+                            are automatically deleted as well.
+                        </li>
+
+                        <li>
+                            <span className="font-semibold text-slate-100">ON UPDATE CASCADE</span>
+                            <br />
+                            If the primary key value in the parent table changes, the corresponding
+                            foreign key values in the child table are automatically updated.
+                        </li>
+
+                        <li>
+                            Using cascading options prevents <span className="font-semibold">orphan records</span>
+                            and keeps relationships clean.
+                        </li>
+                    </ul>
+
+                    <div className="mt-6 pl-4 border-l-4 border-slate-700 min-a:text-2xl max-a:text-xl">
+                        <span className="font-semibold text-slate-100">Best Practice:</span>{" "}
+                        Cascading should be used thoughtfully—especially with{" "}
+                        <span className="font-mono font-semibold">ON DELETE CASCADE</span>—to avoid
+                        accidental data loss.
+                    </div>
+                </section>
+
+                {/* EXAMPLE */}
+                <section>
+                    <ul className="space-y-4 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            Let’s look at an example of a foreign key with cascading enabled:
+                        </li>
+                    </ul>
+
+                    <CodeBlock>
+                        {`CREATE TABLE student (
+    id INT PRIMARY KEY,
+    courseID INT,
+    FOREIGN KEY (courseID)
+    REFERENCES course(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);`}
+                    </CodeBlock>
+
+                    <ul className="mt-6 space-y-3 min-a:text-2xl max-a:text-xl list-disc list-inside leading-relaxed">
+                        <li>
+                            The <span className="font-mono font-semibold">student</span> table depends on the
+                            <span className="font-mono font-semibold"> course</span> table.
+                        </li>
+                        <li>
+                            Deleting a course will automatically delete all related students.
+                        </li>
+                        <li>
+                            Updating a course ID will automatically update it everywhere it’s referenced.
+                        </li>
+                        <li>
+                            This behavior is enabled by adding just two cascade lines.
+                        </li>
+                    </ul>
+                </section>
+
+                {/* NEXT PAGE */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Excellent progress! 🚀 Next, we’ll explore more{" "}
+                        <span className="font-semibold text-slate-100">
+                            table-related queries
+                        </span>{" "}
+                        and how to manage table structures efficiently.
+                    </p>
+                </section>
+
             </div>
         </div>
     );
@@ -2249,941 +2798,768 @@ export function Page20() {
 // page 21
 export function Page21() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">More Table
-                Related Queries</h1>
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-12">
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">
-                    Let's learn about more Table related Queries</div>
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800
+            min-lg:text-8xl max-lg:text-7xl max-md:text-6xl max-sm:text-5xl">
+                More Table Related Queries
+            </h1>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7"><span className="font-bold">Update : </span>
-                        to update existing rows</li>
-                    <li className="pt-3">We use the following syntax :</li>
-                </ul>
+            <div className="text-slate-300 pt-8 space-y-14">
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        UPDATE table_name {"\n"}
-                        SET col1 = val1, col2 = val2 {"\n"}
-                        WHERE condition; {"\n"}
-                    </code>
-                </pre>
+                {/* UPDATE */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        UPDATE — Modify Existing Rows
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">Let's understand it with an example :</li>
-                </ul>
+                    <ul className="mt-6 space-y-4 list-disc list-inside min-a:text-2xl max-a:text-xl">
+                        <li>Used to update existing records in a table.</li>
+                        <li>Always use a <span className="font-mono font-semibold">WHERE</span> clause to avoid
+                            updating all rows unintentionally.</li>
+                    </ul>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        UPDATE studenttable {"\n"}
-                        SET grade = "O" {"\n"}
-                        WHERE grade = "A"; {"\n"}
-                    </code>
-                </pre>
+                    <CodeBlock>
+                        {`UPDATE table_name
+SET col1 = value1, col2 = value2
+WHERE condition;`}
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">The above code replaces grade value to O where the value of grade is A. As you can
-                        see below:
-                    </li>
-                </ul>
+                    <CodeBlock>
+                        {`UPDATE studenttable
+SET grade = "O"
+WHERE grade = "A";`}
+                    </CodeBlock>
 
-                <div className="pt-3 pl-3 pb-5 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img29.png" alt="HAVING clause result preview" />
-                </div>
+                    <ImageBlock src="/images/img29.png" alt="UPDATE query result" />
 
-                <div className="min-a:text-2xl max-a:text-xl pt-1 border-l-4 border-slate-700 pl-3">
-                    <span className="font-bold">Note : </span>
-                    before running the above command in MySQL, you have to turn off the safe mode using the following code :</div>
+                    <div className="mt-6 pl-4 border-l-4 border-slate-700 min-a:text-2xl max-a:text-xl">
+                        <span className="font-semibold text-slate-100">MySQL Note:</span>{" "}
+                        Disable safe update mode before running UPDATE:
+                    </div>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-6 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SET SQL_SAFE_UPDATES = 0;
-                </div>
+                    <CodeBlock>{`SET SQL_SAFE_UPDATES = 0;`}</CodeBlock>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7"><span className="font-bold">Delete : </span>
-                        to delete existing rows</li>
-                    <li className="pt-3">We use the following syntax :</li>
-                </ul>
+                {/* DELETE */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        DELETE — Remove Rows
+                    </h2>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        DELETE FROM table_name {"\n"}
-                        WHERE condition; {"\n"}
-                    </code>
-                </pre>
+                    <CodeBlock>
+                        {`DELETE FROM table_name
+WHERE condition;`}
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">Let's understand it with an example :</li>
-                </ul>
+                    <CodeBlock>
+                        {`DELETE FROM studenttable
+WHERE marks < 33;`}
+                    </CodeBlock>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        DELETE FROM studenttable {"\n"}
-                        WHERE MARKS &lt; 33; {"\n"}
-                    </code>
-                </pre>
+                    <ImageBlock src="/images/img30.png" alt="DELETE query result" />
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">The above code delete rows where value of marks is less than 33. As you can
-                        see below:
-                    </li>
-                </ul>
+                {/* ALTER TABLE */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        ALTER TABLE — Modify Table Structure
+                    </h2>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img30.png" alt="HAVING clause result preview" />
-                </div>
+                    {/* ADD COLUMN */}
+                    <h3 className="mt-6 font-semibold text-slate-200 min-a:text-2xl max-a:text-xl">
+                        ADD COLUMN
+                    </h3>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5"><span className="font-bold">Alter : </span>
-                        to change the schema</li>
-                    <li className="pt-3">It has follwing types :</li>
-                    <li className="pt-7"><span className="font-bold">ADD Column :</span> used to add a column.</li>
-                    <li className="pt-3">We use the following syntax :</li>
-                </ul>
+                    <CodeBlock>
+                        {`ALTER TABLE studenttable
+ADD COLUMN age INT NOT NULL DEFAULT 19;`}
+                    </CodeBlock>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        ALTER TABLE table_name {"\n"}
-                        ADD COLUMN {"\n"}
-                        column_name datatype constraint; {"\n"}
-                    </code>
-                </pre>
+                    <ImageBlock src="/images/img31.png" alt="ADD column result" />
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">Let's understand it with an example :</li>
-                </ul>
+                    {/* DROP COLUMN */}
+                    <h3 className="mt-8 font-semibold text-slate-200 min-a:text-2xl max-a:text-xl">
+                        DROP COLUMN
+                    </h3>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        ALTER TABLE studenttable {"\n"}
-                        ADD COLUMN {"\n"}
-                        age INT NOT NULL DEFAULT 19; {"\n"}
-                    </code>
-                </pre>
+                    <CodeBlock>
+                        {`ALTER TABLE studenttable
+DROP COLUMN age;`}
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">The above code adds a column age of type int with 19 as default values. As you can
-                        see below:
-                    </li>
-                </ul>
+                    <ImageBlock src="/images/img30.png" alt="DROP column result" />
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img31.png" alt="HAVING clause result preview" />
-                </div>
+                    {/* RENAME TABLE */}
+                    <h3 className="mt-8 font-semibold text-slate-200 min-a:text-2xl max-a:text-xl">
+                        RENAME TABLE
+                    </h3>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5"><span className="font-bold">DROP Column :</span> used to delete a column</li>
-                    <li className="pt-3">We use the following syntax :</li>
-                </ul>
+                    <CodeBlock>
+                        {`ALTER TABLE studenttable
+RENAME TO student;`}
+                    </CodeBlock>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        ALTER TABLE table_name {"\n"}
-                        DROP COLUMN column_name; {"\n"}
-                    </code>
-                </pre>
+                    {/* CHANGE COLUMN */}
+                    <h3 className="mt-8 font-semibold text-slate-200 min-a:text-2xl max-a:text-xl">
+                        CHANGE COLUMN (Rename)
+                    </h3>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">Let's understand it with an example :</li>
-                </ul>
+                    <CodeBlock>
+                        {`ALTER TABLE studenttable
+CHANGE marks stu_marks INT;`}
+                    </CodeBlock>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        ALTER TABLE studenttable {"\n"}
-                        DROP COLUMN age; {"\n"}
-                    </code>
-                </pre>
+                    <ImageBlock src="/images/img32.png" alt="CHANGE column result" />
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">The above code deletes the column age. As you can see below:</li>
-                </ul>
+                    {/* MODIFY COLUMN */}
+                    <h3 className="mt-8 font-semibold text-slate-200 min-a:text-2xl max-a:text-xl">
+                        MODIFY COLUMN (Datatype / Constraint)
+                    </h3>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img30.png" alt="HAVING clause result preview" />
-                </div>
+                    <CodeBlock>
+                        {`ALTER TABLE studenttable
+MODIFY age VARCHAR(2);`}
+                    </CodeBlock>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5"><span className="font-bold">RENAME Table :</span> used to rename a table.</li>
-                    <li className="pt-3">We use the following syntax :</li>
-                </ul>
+                {/* TRUNCATE */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        TRUNCATE — Delete All Rows
+                    </h2>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        ALTER TABLE table_name {"\n"}
-                        RENAME TO new_table_name; {"\n"}
-                    </code>
-                </pre>
+                    <ul className="mt-6 list-disc list-inside min-a:text-2xl max-a:text-xl">
+                        <li>Deletes all records instantly.</li>
+                        <li>Cannot be rolled back.</li>
+                        <li>Much faster than DELETE.</li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">Let's understand it with an example :</li>
-                </ul>
+                    <CodeBlock>
+                        {`TRUNCATE studenttable;`}
+                    </CodeBlock>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        ALTER TABLE studenttable {"\n"}
-                        RENAME TO student; {"\n"}
-                    </code>
-                </pre>
+                    <ImageBlock src="/images/img33.png" alt="TRUNCATE result" />
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">The above code renames the table name from "studenttable" to "student".</li>
-                </ul>
+                {/* NEXT */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Excellent work! 🎯
+                        Up next, we’ll explore one of the most important concepts in SQL —
+                        <span className="font-semibold text-slate-100"> JOINS</span>.
+                    </p>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5"><span className="font-bold">CHANGE </span>Column (rename)</li>
-                    <li className="pt-3">We use the following syntax :</li>
-                </ul>
-
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full min-a:px-5 max-a:px-3">
-                    <code>
-                        ALTER TABLE table_name {"\n"}
-                        CHANGE COLUMN old_name  {"\n"}
-                        new_name new_datatype new_contraint;
-                    </code>
-                </pre>
-
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">Let's understand it with an example :</li>
-                </ul>
-
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        ALTER TABLE studenttable {"\n"}
-                        CHANGE marks stu_marks INT; {"\n"}
-                    </code>
-                </pre>
-
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">The above code renames the column name from "marks" to "stu_marks". As you can see
-                        below:
-                    </li>
-                </ul>
-
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img32.png" alt="HAVING clause result preview" />
-                </div>
-
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5"><span className="font-bold">MODIFY </span>Column (modify datatype/ constraint)</li>
-                    <li className="pt-3">We use the following syntax :</li>
-                </ul>
-
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        ALTER TABLE table_name {"\n"}
-                        MODIFY col_name {"\n"}
-                        new_datatype new_contraint; {"\n"}
-                    </code>
-                </pre>
-
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">Let's understand it with an example :</li>
-                </ul>
-
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        ALTER TABLE studenttable {"\n"}
-                        MODIFY age VARCHAR(2); {"\n"}
-                    </code>
-                </pre>
-
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">The above code modifies the column age from "type int" to "type VARCHAR(2)".</li>
-                </ul>
-
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5"><span className="font-bold">TRUNCATE : </span>to delete table's data</li>
-                    <li className="pt-3">We use the following syntax :</li>
-                </ul>
-
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    TRUNCATE table_name;
-                </div>
-
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-3">Let's understand it with an example :</li>
-                </ul>
-
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    TRUNCATE studenttable;
-                </div>
-
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6">
-                    <li className="pt-3">The above code deletes all data which was inserted in this table. As you can see
-                        below:
-                    </li>
-                </ul>
-
-                <div className="pt-3 pl-3 pb-5 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img33.png" alt="HAVING clause result preview" />
-                </div>
-
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about
-                    <span className="font-bold"> Joins in SQL</span> in the next page.</div>
             </div>
         </div>
-    )
+    );
 }
 
 // page 22
 export function Page22() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">Joins In SQL</h1>
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-12">
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">Let's learn about Joins in SQL</div>
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800
+            min-lg:text-8xl max-lg:text-7xl max-md:text-6xl max-sm:text-5xl">
+                Joins in SQL
+            </h1>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">Join is used to combine rows from two or more tables, based on a related
-                        column between them.</li>
-                    <li className="pt-3">Before learning types of joins, we will make sample tables to understand
-                        joins easily.</li>
-                    <li className="pt-5">Let's create first table student</li>
-                </ul>
+            <div className="text-slate-300 pt-8 space-y-16">
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        CREATE TABLE student ( {'\n'}
-                        &nbsp;&nbsp;student_id INT PRIMARY KEY, {'\n'}
-                        &nbsp;&nbsp;name VARCHAR(50) {'\n'}
-                        );
-                    </code>
-                </pre>
+                {/* INTRO */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        What are SQL Joins?
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Now let's insert sample data:</li>
-                </ul>
+                    <ul className="mt-6 space-y-4 list-disc list-inside min-a:text-2xl max-a:text-xl">
+                        <li>Joins are used to combine rows from two or more tables.</li>
+                        <li>The tables are joined using a related column.</li>
+                        <li>Joins help retrieve meaningful data spread across multiple tables.</li>
+                    </ul>
+                </section>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        INSERT INTO student  {'\n'}
-                        (student_id, name) {'\n'}
-                        VALUES {'\n'}
-                        (101, "adam"), {'\n'}
-                        (102, "bob"), {'\n'}
-                        (103, "casey");
-                    </code>
-                </pre>
+                {/* SAMPLE TABLES */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Sample Tables
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Now let's create second table course</li>
-                </ul>
+                    <CodeBlock>
+                        {`CREATE TABLE student (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(50)
+);`}
+                    </CodeBlock>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        CREATE TABLE course ( {'\n'}
-                        &nbsp;&nbsp;student_id INT PRIMARY KEY, {'\n'}
-                        &nbsp;&nbsp;course VARCHAR(50) {'\n'}
-                        );
-                    </code>
-                </pre>
+                    <CodeBlock>
+                        {`INSERT INTO student VALUES
+(101, "adam"),
+(102, "bob"),
+(103, "casey");`}
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Now let's insert sample data:</li>
-                </ul>
+                    <CodeBlock>
+                        {`CREATE TABLE course (
+    student_id INT,
+    course VARCHAR(50)
+);`}
+                    </CodeBlock>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        INSERT INTO course  {'\n'}
-                        (student_id, course) {'\n'}
-                        VALUES {'\n'}
-                        (102, "english"), {'\n'}
-                        (105, "math"), {'\n'}
-                        (103, "science"), {'\n'}
-                        (107, "computer science");
-                    </code>
-                </pre>
+                    <CodeBlock>
+                        {`INSERT INTO course VALUES
+(102, "english"),
+(105, "math"),
+(103, "science"),
+(107, "computer science");`}
+                    </CodeBlock>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Now let's dive into the types of joins in SQL:</li>
-                </ul>
+                {/* INNER JOIN */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        INNER JOIN
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5"><span className="font-bold">Inner Join : </span>
-                        returns records that have matching values in both tables.</li>
-                    <li className="pt-3">It has the following syntax :</li>
-                </ul>
+                    <p className="min-a:text-2xl max-a:text-xl mt-4">
+                        Returns records that have matching values in both tables.
+                    </p>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        SELECT column(s) {'\n'}
-                        FROM tableA AS a {'\n'}
-                        INNER JOIN tableB AS b {'\n'}
-                        ON a.col_name = b.col_name;
-                    </code>
-                </pre>
+                    <CodeBlock>
+                        {`SELECT *
+FROM student AS s
+INNER JOIN course AS c
+ON s.student_id = c.student_id;`}
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Let's understand this syntax with an example :</li>
-                </ul>
+                    <ImageBlock src="/images/img34.png" alt="INNER JOIN result" />
+                </section>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        SELECT * {'\n'}
-                        FROM student AS s {'\n'}
-                        INNER JOIN course AS c {'\n'}
-                        ON s.student_id = c.student_id;
-                    </code>
-                </pre>
+                {/* LEFT JOIN */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        LEFT JOIN
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">This code will have the follwing result:</li>
-                </ul>
+                    <p className="min-a:text-2xl max-a:text-xl mt-4">
+                        Returns all records from the left table and matched records from the right table.
+                    </p>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img34.png" alt="HAVING clause result preview" />
-                </div>
+                    <CodeBlock>
+                        {`SELECT *
+FROM student AS s
+LEFT JOIN course AS c
+ON s.student_id = c.student_id;`}
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5"><span className="font-bold">Left Join : </span>
-                        returns all records from the left table, and the matched records from the right table.</li>
-                    <li className="pt-3">It has the following syntax :</li>
-                </ul>
+                    <ImageBlock src="/images/img35.png" alt="LEFT JOIN result" />
+                </section>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        SELECT column(s) {'\n'}
-                        FROM tableA AS a {'\n'}
-                        LEFT JOIN tableB AS b {'\n'}
-                        ON a.col_name = b.col_name;
-                    </code>
-                </pre>
-
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Let's understand this syntax with an example :</li>
-                </ul>
-
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        SELECT * {'\n'}
-                        FROM student AS a {'\n'}
-                        LEFT JOIN course AS b {'\n'}
-                        ON a.student_id = b.student_id;
-                    </code>
-                </pre>
-
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">This code will have the follwing result:</li>
-                </ul>
-
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img35.png" alt="HAVING clause result preview" />
-                </div>
-
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5"><span className="font-bold">Right Join : </span>
-                        returns all records from the right table, and the matched records from the left table.</li>
-                    <li className="pt-3">It has the following syntax :</li>
-                </ul>
-
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        SELECT column(s) {'\n'}
-                        FROM tableA AS a {'\n'}
-                        RIGHT JOIN tableB AS b {'\n'}
-                        ON a.col_name = b.col_name;
-                    </code>
-                </pre>
-
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Let's understand this syntax with an example :</li>
-                </ul>
-
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        SELECT * {'\n'}
-                        FROM student AS a {'\n'}
-                        RIGHT JOIN course AS b {'\n'}
-                        ON a.student_id = b.student_id;
-                    </code>
-                </pre>
-
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">This code will have the follwing result:</li>
-                </ul>
-
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img36.png" alt="HAVING clause result preview" />
-                </div>
-
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5"><span className="font-bold">Full Join : </span>
-                        returns all records when there is a match in either left or right side.</li>
-                    <li className="pt-3">It has the following syntax :</li>
-                </ul>
-
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        LEFT JOIN {'\n'}
-                        UNION {'\n'}
+                {/* RIGHT JOIN */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
                         RIGHT JOIN
-                    </code>
-                </pre>
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Let's understand this syntax with an example :</li>
-                </ul>
+                    <p className="min-a:text-2xl max-a:text-xl mt-4">
+                        Returns all records from the right table and matched records from the left table.
+                    </p>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        SELECT * {'\n'}
-                        FROM student AS a {'\n'}
-                        LEFT JOIN course AS b {'\n'}
-                        ON a.student_id = b.student_id {'\n'}
-                        UNION {'\n'}
-                        SELECT * {'\n'}
-                        FROM student AS a {'\n'}
-                        RIGHT JOIN course AS b {'\n'}
-                        ON a.student_id = b.student_id;
-                    </code>
-                </pre>
+                    <CodeBlock>
+                        {`SELECT *
+FROM student AS s
+RIGHT JOIN course AS c
+ON s.student_id = c.student_id;`}
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">This code will have the follwing result:</li>
-                </ul>
+                    <ImageBlock src="/images/img36.png" alt="RIGHT JOIN result" />
+                </section>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img37.png" alt="HAVING clause result preview" />
-                </div>
+                {/* FULL JOIN */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        FULL JOIN (MySQL Workaround)
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Before learning Self join we have to make another sample table for it's better
-                        understanding.</li>
-                    <li className="pt-3">Let's create the table employee</li>
-                </ul>
+                    <p className="min-a:text-2xl max-a:text-xl mt-4">
+                        MySQL does not support FULL JOIN directly. We simulate it using UNION.
+                    </p>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        CREATE TABLE employee ( {'\n'}
-                        &nbsp;&nbsp;id INT PRIMARY KEY, {'\n'}
-                        &nbsp;&nbsp;name VARCHAR(50), {'\n'}
-                        &nbsp;&nbsp;manager_id INT {'\n'}
-                        );
-                    </code>
-                </pre>
+                    <CodeBlock>
+                        {`SELECT *
+FROM student AS s
+LEFT JOIN course AS c
+ON s.student_id = c.student_id
+UNION
+SELECT *
+FROM student AS s
+RIGHT JOIN course AS c
+ON s.student_id = c.student_id;`}
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Now let's insert sample data:</li>
-                </ul>
+                    <ImageBlock src="/images/img37.png" alt="FULL JOIN result" />
+                </section>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        INSERT INTO employee  {'\n'}
-                        (id, name, manager_id) {'\n'}
-                        VALUES {'\n'}
-                        (101, "adam", 103), {'\n'}
-                        (102, "bob", 104), {'\n'}
-                        (103, "casey", NULL), {'\n'}
-                        (104, "donald", 103);
-                    </code>
-                </pre>
+                {/* SELF JOIN */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        SELF JOIN
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Now let's dive into self join:</li>
-                    <li className="pt-5"><span className="font-bold">Self Join : </span>
-                        it is a regular join but the table is joined with itself.</li>
-                    <li className="pt-3">It has the following syntax :</li>
-                </ul>
+                    <p className="min-a:text-2xl max-a:text-xl mt-4">
+                        A self join is a regular join where a table is joined with itself.
+                    </p>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        SELECT column(s) {'\n'}
-                        FROM tableA AS a {'\n'}
-                        JOIN tableB AS b {'\n'}
-                        ON a.col_name = b.col_name;
-                    </code>
-                </pre>
+                    <CodeBlock>
+                        {`CREATE TABLE employee (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    manager_id INT
+);`}
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Let's understand this syntax with an example :</li>
-                </ul>
+                    <CodeBlock>
+                        {`INSERT INTO employee VALUES
+(101, "adam", 103),
+(102, "bob", 104),
+(103, "casey", NULL),
+(104, "donald", 103);`}
+                    </CodeBlock>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        SELECT {"\n"}
-                        a.name AS manager_name, b.name {'\n'}
-                        FROM employee AS a {'\n'}
-                        JOIN employee AS b {'\n'}
-                        ON a.id = b.manager_id {'\n'}
-                    </code>
-                </pre>
+                    <CodeBlock>
+                        {`SELECT
+a.name AS manager_name,
+b.name AS employee_name
+FROM employee AS a
+JOIN employee AS b
+ON a.id = b.manager_id;`}
+                    </CodeBlock>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">This code will have the follwing result:</li>
-                </ul>
+                    <ImageBlock src="/images/img38.png" alt="SELF JOIN result" />
+                </section>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img38.png" alt="HAVING clause result preview" />
-                </div>
+                {/* UNION */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        UNION in SQL
+                    </h2>
 
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl pt-5">Union in SQL</div>
+                    <ul className="mt-6 list-disc list-inside min-a:text-2xl max-a:text-xl space-y-3">
+                        <li>Combines results of two or more SELECT statements.</li>
+                        <li>Each SELECT must have the same number of columns.</li>
+                        <li>Column datatypes must be compatible.</li>
+                        <li>Column order must be the same.</li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">It is used to combine the result of the set of two or more SELECT statements.</li>
-                    <li className="pt-3">To use it :</li>
-                    <li className="pt-3 list-inside">every SELECT should have same number of columns</li>
-                    <li className="pt-3 list-inside">columns must have similar datatypes</li>
-                    <li className="pt-3 list-inside">columns in every SELECT should be in same order</li>
-                    <li className="pt-5">It has the following syntax :</li>
-                </ul>
+                    <CodeBlock>
+                        {`SELECT column(s) FROM tableA
+UNION
+SELECT column(s) FROM tableB;`}
+                    </CodeBlock>
+                </section>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        SELECT column(s) FROM tableA {'\n'}
-                        UNION {'\n'}
-                        SELECT column(s) FROM tableB
-                    </code>
-                </pre>
+                {/* NEXT */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Great progress! 🚀
+                        Next, we’ll explore powerful concepts called
+                        <span className="font-semibold text-slate-100"> SQL Subqueries</span>.
+                    </p>
+                </section>
 
-                <div className="pb-5"></div>
-
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about
-                    <span className="font-bold"> SQL sub queries</span> in the next page.</div>
             </div>
         </div>
-    )
+    );
 }
 
 // page 23
 export function Page23() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">SQL Sub-Queries</h1>
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-12">
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">
-                    Let's learn about SQL Sub-queries</div>
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800
+                min-lg:text-8xl max-lg:text-7xl max-md:text-6xl max-sm:text-5xl">
+                SQL Subqueries
+            </h1>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">A Subquery or inner query or a nested query within another SQL query.</li>
-                    <li className="pt-3">It involves two SELECT statements.</li>
-                    <li className="pt-3">It has the following syntax :</li>
-                </ul>
+            <div className="text-slate-300 pt-8 space-y-16">
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        SELECT column(s) {'\n'}
-                        FROM table_name {'\n'}
-                        WHERE col_name operator {'\n'}
-                        (Subquery);
-                    </code>
-                </pre>
+                {/* INTRO */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        What are SQL Subqueries?
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">Let's understand Sub-queries with some examples:</li>
-                    <li className="pt-5"><span className="font-bold">Example 1:</span> get names of all students who
-                        scrored more than the class average.</li>
-                    <li className="pt-3">It can be solved using sub-queires like this:</li>
-                </ul>
+                    <ul className="mt-6 space-y-4 list-disc list-inside min-a:text-2xl max-a:text-xl">
+                        <li>
+                            A <span className="font-bold">subquery</span> is a query written inside another SQL query.
+                        </li>
+                        <li>
+                            Also called an <span className="font-bold">inner query</span> or <span className="font-bold">nested query</span>.
+                        </li>
+                        <li>
+                            Subqueries usually involve two <span className="font-mono font-bold">SELECT</span> statements.
+                        </li>
+                        <li>Syntax of a subquery:</li>
+                    </ul>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        SELECT name, marks {'\n'}
-                        FROM studenttable {'\n'}
-                        WHERE marks &gt; {'\n'}
-                        (SELECT avg(marks) {"\n"}
-                        FROM studenttable);
-                    </code>
-                </pre>
+                    <CodeBlock>
+                        {`SELECT column(s)
+FROM table_name
+WHERE column_name operator
+(subquery);`}
+                    </CodeBlock>
+                </section>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">So what we did here?</li>
-                    <li className="pt-3">First we selected name, marks columns from the table, then added a condition that
-                        where marks are greater than (Subquery).
-                    </li>
-                    <li className="pt-3">In the Subquery we selected average marks from the table.</li>
-                    <li className="pt-3">So this complete statement means to select name, marks from table where marks are
-                        greater than the average makrs.</li>
-                    <li className="pt-3">It will give the following result:</li>
-                </ul>
+                {/* EXAMPLE 1 */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Example 1: Students Above Class Average
+                    </h2>
 
-                <div className="pt-3 pl-3 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img39.png" alt="HAVING clause result preview" />
-                </div>
+                    <p className="min-a:text-2xl max-a:text-xl mt-4">
+                        Get names of all students who scored more than the class average.
+                    </p>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5"><span className="font-bold">Example 2:</span> get names of all students who
-                        have even roll numbers.</li>
-                    <li className="pt-3">It can be solved using sub-queires like this:</li>
-                </ul>
+                    <CodeBlock>
+                        {`SELECT name, marks
+FROM studenttable
+WHERE marks > 
+(SELECT AVG(marks)
+ FROM studenttable);`}
+                    </CodeBlock>
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        SELECT name, rollno {'\n'}
-                        FROM studenttable {'\n'}
-                        WHERE rollno IN {'\n'}
-                        (SELECT rollno {"\n"}
-                        FROM studenttable {"\n"}
-                        WHERE rollno % 2 = 0);
-                    </code>
-                </pre>
+                    <ul className="mt-4 space-y-2 list-disc list-inside min-a:text-2xl max-a:text-xl">
+                        <li>Subquery calculates the class average.</li>
+                        <li>Main query selects students with marks greater than that average.</li>
+                        <li>Result: Students performing above average.</li>
+                    </ul>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">So what we did here?</li>
-                    <li className="pt-3">First we selected name, rollno columns from the table, then added a condition that
-                        where rollno IN (Subquery) Here rollno IN means that rollno in the list of (Subquery).
-                    </li>
-                    <li className="pt-3">In the Subquery we selected rollno from the table where rollno is even.</li>
-                    <li className="pt-3">So this complete statement means to select name, rollno from table where rollno is
-                        even.</li>
-                    <li className="pt-3">It will give the following result:</li>
-                </ul>
+                    <ImageBlock src="/images/img39.png" alt="Subquery average result" />
+                </section>
 
-                <div className="pt-3 pl-3 pb-5 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img40.png" alt="HAVING clause result preview" />
-                </div>
+                {/* EXAMPLE 2 */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Example 2: Students with Even Roll Numbers
+                    </h2>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">Now let's learn about
-                    <span className="font-bold"> MySQL Views</span> in the next page.</div>
+                    <p className="min-a:text-2xl max-a:text-xl mt-4">
+                        Get names of all students who have even roll numbers.
+                    </p>
+
+                    <CodeBlock>
+                        {`SELECT name, rollno
+FROM studenttable
+WHERE rollno IN
+(SELECT rollno
+ FROM studenttable
+ WHERE rollno % 2 = 0);`}
+                    </CodeBlock>
+
+                    <ul className="mt-4 space-y-2 list-disc list-inside min-a:text-2xl max-a:text-xl">
+                        <li>Subquery selects all even roll numbers.</li>
+                        <li>Main query selects students whose roll number exists in that list.</li>
+                        <li>Result: Students with even roll numbers.</li>
+                    </ul>
+
+                    <ImageBlock src="/images/img40.png" alt="Subquery even rollno result" />
+                </section>
+
+                {/* NEXT */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Excellent! 🚀 Next, we’ll explore <span className="font-semibold text-slate-100">MySQL Views</span>.
+                    </p>
+                </section>
+
             </div>
         </div>
-    )
+    );
 }
 
 // page 24
 export function Page24() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">MySQL Views</h1>
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-12">
 
-            <div className="text-gray-200 pt-5">
-                <div className="font-semibold min-md:text-4xl max-md:text-4xl max-sm:text-3xl">Let's learn about MySQL Views</div>
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800
+                min-lg:text-8xl max-lg:text-7xl max-md:text-6xl max-sm:text-5xl">
+                MySQL Views
+            </h1>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-7">A view is a virtual table based on the result-set of an SQL statement.</li>
-                    <li className="pt-3">A view always shows up-to-date data. The database engine recreates the view
-                        , every time a user queries it.</li>
-                    <li className="pt-7">Let's understand MySQL Views with an example :</li>
-                </ul>
+            <div className="text-slate-300 pt-8 space-y-16">
 
-                <pre className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    <code>
-                        CREATE VIEW view1 AS {'\n'}
-                        SELECT rollno, name {"\n"}
-                        FROM studenttable; {'\n'}
-                    </code>
-                </pre>
+                {/* INTRO */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        What are MySQL Views?
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">The above statemet create a MySQL View "view1".</li>
-                    <li className="pt-3">This "view1" is created on the statement "SELECT rollno, name FROM studenttable"
-                        which selects rollno and name column from the studenttable.</li>
-                    <li className="pt-3">Now to see thie MySQL View "view1" we can run this follwing code : </li>
-                </ul>
+                    <ul className="mt-6 space-y-4 list-disc list-inside min-a:text-2xl max-a:text-xl">
+                        <li>A <span className="font-bold">view</span> is a virtual table based on the result-set of an SQL statement.</li>
+                        <li>Views always show up-to-date data. The database engine recreates the view every time it is queried.</li>
+                        <li>Let’s understand MySQL Views with an example:</li>
+                    </ul>
+                </section>
 
-                <div className="bg-gray-800 text-green-400 font-mono p-3 pl-5 rounded-md mt-3 min-xl:w-[800px]
-                max-xl:w-full max-lg:w-full">
-                    SELECT * FROM view1;
-                </div>
+                {/* CREATE VIEW */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Creating a View
+                    </h2>
 
-                <ul className="min-a:text-2xl max-a:text-xl list-disc pl-6 pb-2">
-                    <li className="pt-5">This statement will give us the follwing result :</li>
-                </ul>
+                    <CodeBlock>
+                        {`CREATE VIEW view1 AS
+SELECT rollno, name
+FROM studenttable;`}
+                    </CodeBlock>
 
-                <div className="pt-3 pl-3 pb-5 overflow-hidden">
-                    <img className="rounded-lg" src="/images/img14.png" alt="workbench preview"></img>
-                </div>
+                    <ul className="mt-4 space-y-2 list-disc list-inside min-a:text-2xl max-a:text-xl">
+                        <li>This creates a MySQL View named <span className="font-bold">view1</span>.</li>
+                        <li>The view is based on the query <code>SELECT rollno, name FROM studenttable</code>.</li>
+                        <li>Now, we can query the view like a regular table.</li>
+                    </ul>
+                </section>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">This marks the end of the
-                    <span className="font-bold">SQL Learning</span> But i have some more <span className="font-bold">
-                        Resources</span> for you in the next two pages.</div>
+                {/* QUERY VIEW */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Querying the View
+                    </h2>
+
+                    <CodeBlock>
+                        {`SELECT * FROM view1;`}
+                    </CodeBlock>
+
+                    <ul className="mt-4 space-y-2 list-disc list-inside min-a:text-2xl max-a:text-xl">
+                        <li>This query retrieves all rows from the view <span className="font-bold">view1</span>.</li>
+                    </ul>
+
+                    <ImageBlock src="/images/img14.png" alt="MySQL view result preview" />
+                </section>
+
+                {/* NEXT */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        This marks the end of <span className="font-semibold text-slate-100">SQL Learning</span>.
+                        But I have some additional <span className="font-semibold text-slate-100">Resources</span> for you in the next two pages.
+                    </p>
+                </section>
+
             </div>
         </div>
-    )
+    );
 }
 
 // Resources pages
 // page 25
 export function Page25() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-12">
+
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800
+                min-lg:text-8xl max-lg:text-7xl max-md:text-6xl max-sm:text-5xl">
                 SQL Projects
             </h1>
 
-            <div className="text-gray-200 pt-5 min-a:text-2xl max-a:text-xl space-y-6">
-                <p>
-                    This section will showcase all the SQL-based projects I've created as part of my learning and practice journey.
-                </p>
+            <div className="text-slate-300 pt-8 space-y-16">
 
-                <p>
-                    These projects are built using concepts from <span className="font-bold">Apna College's SQL
-                        course</span> combined with real-world data handling, query writing, and optimization techniques.
-                </p>
+                {/* INTRO */}
+                <section>
+                    <p className="min-a:text-2xl max-a:text-xl">
+                        This section showcases SQL-based projects I’ve created as part of my learning and practice journey.
+                    </p>
 
-                <p>
-                    I’ll also be sharing the source code and live demos (if applicable) to help you understand how SQL
-                    works in practical applications.
-                </p>
+                    <p className="min-a:text-2xl max-a:text-xl">
+                        These projects combine concepts from <span className="font-semibold text-slate-100">Apna College's SQL course</span> with real-world
+                        data handling, query writing, and optimization techniques.
+                    </p>
 
-                <p>
-                    🔗 <span className="text-slate-400 italic">GitHub Repository Link:</span>{' '}
-                    <a
-                        href="https://github.com/TonyStark-19/SQL-Projects"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-yellow-400 italic underline"
-                    >
-                        sql-projects
-                    </a>
-                    <br />
-                    <span className="text-sm text-slate-400">
-                        This is the main repository containing all of my SQL-based learning projects and practice files.
-                    </span>
-                </p>
+                    <p className="min-a:text-2xl max-a:text-xl">
+                        I’ll also share the source code and live demos (where applicable) to help you understand SQL in practical applications.
+                    </p>
+                </section>
 
-                <p>
-                    📘 <span className="text-slate-400 italic">SQL Syntax Examples:</span>{' '}
-                    <a
-                        href="https://github.com/TonyStark-19/SQL-Projects/blob/main/SQL-Syntax.sql"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-yellow-400 italic underline"
-                    >
-                        sql_syntax.sql
-                    </a>
-                    <br />
-                    <span className="text-sm text-slate-400">
+                {/* GITHUB REPOSITORY */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        GitHub Repository
+                    </h2>
+
+                    <p className="min-a:text-2xl max-a:text-xl mt-4">
+                        🔗 <span className="text-slate-400 italic">Main Repository Link:</span>{' '}
+                        <a
+                            href="https://github.com/TonyStark-19/SQL-Projects"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-yellow-400 italic underline"
+                        >
+                            sql-projects
+                        </a>
+                    </p>
+
+                    <p className="text-sm text-slate-400 mt-1">
+                        This repository contains all of my SQL-based learning projects and practice files.
+                    </p>
+                </section>
+
+                {/* SQL SYNTAX EXAMPLES */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        SQL Syntax Examples
+                    </h2>
+
+                    <p className="min-a:text-2xl max-a:text-xl mt-4">
+                        📘 <span className="text-slate-400 italic">Quick Syntax Reference:</span>{' '}
+                        <a
+                            href="https://github.com/TonyStark-19/SQL-Projects/blob/main/SQL-Syntax.sql"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-yellow-400 italic underline"
+                        >
+                            sql_syntax.sql
+                        </a>
+                    </p>
+
+                    <p className="text-sm text-slate-400 mt-1">
                         A compilation of commonly used SQL commands and syntax examples — great for quick revision or reference.
-                    </span>
-                </p>
+                    </p>
+                </section>
 
-                <p>
-                    📁 <span className="text-slate-400 italic">Student Management System Project:</span>{' '}
-                    <a
-                        href="https://github.com/TonyStark-19/SQL-Projects/blob/main/Project1.sql"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-yellow-400 italic underline"
-                    >
-                        student-management-system4
-                    </a>
-                    <br />
-                    <span className="text-sm text-slate-400">
-                        A simple database project that manages student records using SQL queries — including table
-                        creation, data insertion, updates, and filtering.
-                    </span>
-                </p>
+                {/* STUDENT MANAGEMENT PROJECT */}
+                <section>
+                    <h2 className="font-semibold text-slate-100 min-md:text-4xl max-md:text-3xl">
+                        Student Management System Project
+                    </h2>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">
-                    Stay tuned! More projects will be published here as they are completed. 🚀
-                </div>
+                    <p className="min-a:text-2xl max-a:text-xl mt-4">
+                        📁 <span className="text-slate-400 italic">Project Link:</span>{' '}
+                        <a
+                            href="https://github.com/TonyStark-19/SQL-Projects/blob/main/Project1.sql"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-yellow-400 italic underline"
+                        >
+                            student-management-system4
+                        </a>
+                    </p>
+
+                    <p className="text-sm text-slate-400 mt-1">
+                        A database project that manages student records using SQL queries — including table creation, data insertion, updates, and filtering.
+                    </p>
+                </section>
+
+                {/* NEXT */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Stay tuned! More projects will be published here as they are completed. 🚀
+                    </p>
+                </section>
+
             </div>
         </div>
-    )
+    );
 }
 
 // page 26
 export function Page26() {
     return (
-        <div className="min-h-full w-full lg:px-4 md:px-2">
-            <h1 className="text-8xl font-semibold pt-3 pb-5 text-slate-100 border-b-2 border-slate-700
-            min-lg:text-8xl max-lg:text-8xl max-md:text-7xl max-sm:text-6xl max-a:text-5xl">
+        <div className="min-h-full w-full lg:px-6 md:px-4 px-2 pb-12">
+
+            {/* PAGE TITLE */}
+            <h1 className="font-bold tracking-tight text-slate-100 pt-6 pb-6 border-b border-slate-800
+                min-lg:text-8xl max-lg:text-7xl max-md:text-6xl max-sm:text-5xl">
                 More Links
             </h1>
 
-            <div className="text-gray-200 pt-5 min-a:text-2xl max-a:text-xl space-y-6">
-                <p>
-                    This website was created as part of my learning journey in SQL. <br /> I learned SQL concepts from apna
-                    college's <a href="https://www.youtube.com/watch?v=hlGoQC332VM&t=11487s" target="_blank"
-                        rel="noopener noreferrer" className="text-blue-400 hover:underline mx-1">SQL one shot tutorial</a>
-                    on YouTube.
-                </p>
+            <div className="text-slate-300 pt-8 space-y-16">
 
-                <p>
-                    I followed notes provided by Apna College and combined them with my own structuring techniques and
-                    design ideas to build this project using <span className="font-bold">React JS</span> and
-                    <span className="font-bold">Tailwind CSS</span>.
-                </p>
+                {/* INTRO */}
+                <section>
+                    <p className="min-a:text-2xl max-a:text-xl">
+                        This website was created as part of my SQL learning journey. I learned SQL concepts from Apna College's{' '}
+                        <a href="https://www.youtube.com/watch?v=hlGoQC332VM&t=11487s" target="_blank" rel="noopener noreferrer"
+                            className="text-blue-400 hover:underline">
+                            SQL One Shot Tutorial
+                        </a>{' '}
+                        on YouTube.
+                    </p>
 
-                <p>
-                    If you are serious about learning SQL, I highly recommend that you not only study the theory but also
-                    <span className="font-bold text-green-400"> practice it regularly</span>. <br /> <br /> Two excellent
-                    platforms for SQL practice are:
-                    <ul className="list-disc pl-8 pt-2">
+                    <p className="min-a:text-2xl max-a:text-xl mt-4">
+                        I followed notes provided by Apna College and combined them with my own structuring and design ideas to build this project using <span className="font-semibold text-slate-100">React JS</span> and <span className="font-semibold text-slate-100">Tailwind CSS</span>.
+                    </p>
+                </section>
+
+                {/* PRACTICE ADVICE */}
+                <section>
+                    <p className="min-a:text-2xl max-a:text-xl">
+                        If you are serious about learning SQL, I highly recommend not only studying the theory but also <span className="font-bold text-green-400">practicing it regularly</span>.
+                    </p>
+
+                    <p className="min-a:text-2xl max-a:text-xl mt-4">
+                        Two excellent platforms for SQL practice are:
+                    </p>
+
+                    <ul className="list-disc pl-8 space-y-2 min-a:text-2xl max-a:text-xl">
                         <li>
                             <a href="https://www.hackerrank.com/domains/sql" target="_blank" rel="noopener noreferrer"
-                                className="text-blue-400 hover:underline">HackerRank SQL Practice
+                                className="text-blue-400 hover:underline">
+                                HackerRank SQL Practice
                             </a>
                         </li>
                         <li>
                             <a href="https://leetcode.com/problemset/database/" target="_blank" rel="noopener noreferrer"
-                                className="text-blue-400 hover:underline">LeetCode SQL Questions
+                                className="text-blue-400 hover:underline">
+                                LeetCode SQL Questions
                             </a>
                         </li>
                     </ul>
-                </p>
+                </section>
 
-                <p>
-                    Some additional helpful resources for learning and mastering SQL:
-                    <ul className="list-disc pl-8 pt-2">
+                {/* ADDITIONAL RESOURCES */}
+                <section>
+                    <p className="min-a:text-2xl max-a:text-xl mt-4">
+                        Some additional helpful resources for learning and mastering SQL:
+                    </p>
+
+                    <ul className="list-disc pl-8 space-y-2 min-a:text-2xl max-a:text-xl">
                         <li>
                             <a href="https://www.w3schools.com/sql/" target="_blank" rel="noopener noreferrer"
-                                className="text-blue-400 hover:underline">W3Schools SQL Tutorial
+                                className="text-blue-400 hover:underline">
+                                W3Schools SQL Tutorial
                             </a>
                         </li>
                         <li>
                             <a href="https://sqlzoo.net/" target="_blank" rel="noopener noreferrer"
-                                className="text-blue-400 hover:underline">SQLZoo - Interactive SQL Tutorials
+                                className="text-blue-400 hover:underline">
+                                SQLZoo - Interactive SQL Tutorials
                             </a>
                         </li>
                         <li>
                             <a href="https://mode.com/sql-tutorial/" target="_blank" rel="noopener noreferrer"
-                                className="text-blue-400 hover:underline">Mode SQL Tutorial for Analysts
+                                className="text-blue-400 hover:underline">
+                                Mode SQL Tutorial for Analysts
                             </a>
                         </li>
                     </ul>
-                </p>
+                </section>
 
-                <div className="min-a:text-2xl max-a:text-xl pt-3 pb-7 border-t-2 border-slate-700">Keep learning,
-                    keep practicing, and most importantly, keep building! ✨</div>
+                {/* NEXT / CLOSING */}
+                <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
+                    <p>
+                        Keep learning, keep practicing, and most importantly, keep building! ✨
+                    </p>
+                </section>
+
             </div>
         </div>
-    )
+    );
 }
