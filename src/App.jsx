@@ -18,6 +18,8 @@ import Navbar2 from "./Components/Navbar2";
 import Home from "./Home";
 import Left from "./Components/LeftSideBar";
 import ScrollToTop from "./Components/Scroltotop";
+import Cheatsheet from "./cheatsheet";
+import About from "./About";
 
 // main app
 export default function App() {
@@ -31,6 +33,12 @@ export default function App() {
       <Routes>
         {/* Home Page */}
         <Route path="/" element={<Home />} />
+
+        {/* Cheatsheet Page */}
+        <Route path="/cheatsheet" element={<Cheatsheet />} />
+
+        {/* About Page */}
+        <Route path="/about" element={<About />} />
 
         {/* Documentation */}
         <Route path="/docs/*" element={<Docs scrollRef={scrollRef} />} />
