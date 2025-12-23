@@ -11,15 +11,15 @@ import { Navigate } from 'react-router-dom';
 import {
   Page1, Page2, Page3, Page4, Page5, Page6, Page7, Page8, Page9, Page10, Page11, Page12, Page13, Page14,
   Page15, Page16, Page17, Page18, Page19, Page20, Page21, Page22, Page23, Page24, Page25, Page26
-} from "./pages";
+} from "./Docs/pages";
 
 // home components
+import Home from "./Pages/Home";
 import Navbar2 from "./Components/Navbar2";
-import Home from "./Home";
 import Left from "./Components/LeftSideBar";
 import ScrollToTop from "./Components/Scroltotop";
-import Cheatsheet from "./cheatsheet";
-import About from "./About";
+import Cheatsheet from "./Pages/cheatsheet";
+import About from "./Pages/About";
 
 // main app
 export default function App() {

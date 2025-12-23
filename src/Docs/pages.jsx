@@ -1,7 +1,7 @@
 // import resuable components
-import CodeBlock from "./Components/CodeBlock";
-import NoteBox from "./Components/NoteBox";
-import ImageBlock from "./Components/ImageBlock";
+import CodeBlock from "../Components/CodeBlock";
+import NoteBox from "../Components/NoteBox";
+import ImageBlock from "../Components/ImageBlock";
 
 // Content for each page
 
@@ -2009,10 +2009,10 @@ WHERE marks BETWEEN 80 AND 90;`}
                         alt="BETWEEN operator example"
                     />
 
-                    <p className="min-a:text-2xl max-a:text-xl border-l-4 border-slate-700 pl-4">
-                        <span className="font-semibold">Note:</span> The <code>AND</code> here is part of the
+                    <NoteBox>
+                        The <code>AND</code> here is part of the
                         BETWEEN syntax, not a logical AND operator.
-                    </p>
+                    </NoteBox>
                 </section>
 
                 {/* IN */}
@@ -2229,12 +2229,11 @@ FROM table_name
 ORDER BY column_name ASC;`}
                     </CodeBlock>
 
-                    <div className="mt-6 pl-4 border-l-4 border-slate-700 min-a:text-2xl max-a:text-xl">
-                        <span className="font-semibold text-slate-100">Note:</span>{" "}
+                    <NoteBox>
                         <span className="font-mono">ASC</span> is the default order, so it can be omitted.
                         To sort in descending order, you must explicitly use{" "}
                         <span className="font-mono font-semibold">DESC</span>.
-                    </div>
+                    </NoteBox>
                 </section>
 
                 {/* EXAMPLE */}
@@ -2506,13 +2505,12 @@ export function Page18() {
                         </li>
                     </ul>
 
-                    <div className="mt-6 pl-4 border-l-4 border-slate-700 min-a:text-2xl max-a:text-xl">
-                        <span className="font-semibold text-slate-100">Note:</span>{" "}
+                    <NoteBox>
                         GROUP BY is usually used with aggregate functions like{" "}
                         <span className="font-mono font-semibold">COUNT()</span>,{" "}
                         <span className="font-mono font-semibold">SUM()</span>,{" "}
                         <span className="font-mono font-semibold">AVG()</span>, etc.
-                    </div>
+                    </NoteBox>
                 </section>
 
                 {/* EXAMPLE */}
@@ -2606,15 +2604,14 @@ export function Page19() {
                         </li>
                     </ul>
 
-                    <div className="mt-6 pl-4 border-l-4 border-slate-700 min-a:text-2xl max-a:text-xl">
-                        <span className="font-semibold text-slate-100">Important:</span>{" "}
+                    <NoteBox>
                         Aggregate functions like{" "}
                         <span className="font-mono font-semibold">COUNT()</span>,{" "}
                         <span className="font-mono font-semibold">MAX()</span>,{" "}
                         <span className="font-mono font-semibold">SUM()</span>{" "}
                         cannot be used inside <span className="font-mono">WHERE</span>,
                         so we use <span className="font-mono font-semibold">HAVING</span>.
-                    </div>
+                    </NoteBox>
                 </section>
 
                 {/* EXAMPLE */}
@@ -2735,12 +2732,11 @@ export function Page20() {
                         </li>
                     </ul>
 
-                    <div className="mt-6 pl-4 border-l-4 border-slate-700 min-a:text-2xl max-a:text-xl">
-                        <span className="font-semibold text-slate-100">Best Practice:</span>{" "}
+                    <NoteBox>
                         Cascading should be used thoughtfully—especially with{" "}
                         <span className="font-mono font-semibold">ON DELETE CASCADE</span>—to avoid
                         accidental data loss.
-                    </div>
+                    </NoteBox>
                 </section>
 
                 {/* EXAMPLE */}
@@ -2834,10 +2830,9 @@ WHERE grade = "A";`}
 
                     <ImageBlock src="/images/img29.png" alt="UPDATE query result" />
 
-                    <div className="mt-6 pl-4 border-l-4 border-slate-700 min-a:text-2xl max-a:text-xl">
-                        <span className="font-semibold text-slate-100">MySQL Note:</span>{" "}
+                    <NoteBox>
                         Disable safe update mode before running UPDATE:
-                    </div>
+                    </NoteBox>
 
                     <CodeBlock>{`SET SQL_SAFE_UPDATES = 0;`}</CodeBlock>
                 </section>

@@ -1,6 +1,6 @@
 // import cheat card component and navbar
-import CheatCard from "./Components/CheatCard";
-import Navbar from "./Components/Navbar";
+import CheatCard from "../Components/CheatCard";
+import Navbar from "../Components/Navbar";
 
 // cheatsheet page
 export default function Cheatsheet() {
