@@ -22,7 +22,9 @@ export default function Navbar() {
                     <Link to="/docs/sql-intro">
                         <li className="hover:text-white transition cursor-pointer">Docs</li>
                     </Link>
-                    <li className="hover:text-white transition cursor-pointer">MySQL Setup</li>
+                    <Link to="/mysql-setup">
+                        <li className="hover:text-white transition cursor-pointer">MySQL Setup</li>
+                    </Link>
                     <Link to="/cheatsheet">
                         <li className="hover:text-white transition cursor-pointer">Cheatsheet</li>
                     </Link>

@@ -1,130 +1,214 @@
-// import navbar
-import Navbar from "../Components/Navbar";
+// import link
+import { Link } from "react-router-dom";
 
+// import navbar and footer
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
+
+// About page component
 export default function About() {
     return (
         <>
             <Navbar />
 
-            <section className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-                <div className="max-w-6xl mx-auto px-6 pt-32 pb-24">
+            <main className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white pt-16 px-10">
 
-                    {/* HEADER */}
-                    <div className="mb-16">
-                        <span className="inline-block text-sm font-medium text-emerald-400 bg-emerald-400/10 px-4 py-1 rounded-full mb-4">
-                            About LearnSQL
-                        </span>
+                {/* ABOUT INTRO */}
+                <section className="border-b border-slate-800">
+                    <div className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
-                        <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-                            Simple, Practical SQL Documentation
-                        </h1>
+                        {/* LEFT TEXT */}
+                        <div className="space-y-5">
+                            <span className="text-sm font-medium text-emerald-400 uppercase tracking-wide">
+                                About the Project
+                            </span>
 
-                        <p className="text-slate-300 mt-5 max-w-3xl text-lg">
-                            LearnSQL is a clean, beginner-friendly SQL documentation platform
-                            created while learning SQL from scratch — focused on clarity,
-                            real queries, and practical understanding.
-                        </p>
-                    </div>
+                            <h1 className="text-4xl md:text-5xl font-bold leading-tight text-slate-100">
+                                LearnSQL is built <br />
+                                <span className="text-emerald-400">while learning SQL</span>
+                            </h1>
 
-                    {/* WHAT IS LEARNSQL */}
-                    <section className="mb-20">
-                        <h2 className="text-3xl font-semibold mb-4">
-                            What is LearnSQL?
-                        </h2>
+                            <p className="text-slate-300 text-lg max-w-xl">
+                                This platform documents the SQL learning journey from scratch — focusing
+                                on real queries, real database behavior, and practical understanding
+                                instead of theory-heavy explanations.
+                            </p>
 
-                        <p className="text-slate-300 leading-relaxed max-w-4xl">
-                            LearnSQL is a self-built SQL documentation website designed to
-                            make SQL easier to understand for beginners.
-                            It explains SQL concepts using clear language, structured notes,
-                            and real SQL queries executed in MySQL.
-                        </p>
+                            <p className="text-slate-400 max-w-xl">
+                                Every page, query, and example exists to make SQL feel less intimidating
+                                and more approachable for beginners.
+                            </p>
+                        </div>
 
-                        <p className="text-slate-300 leading-relaxed max-w-4xl mt-4">
-                            Instead of abstract theory, LearnSQL focuses on how SQL is actually
-                            written and used — just like you would in a real database environment.
-                        </p>
-                    </section>
-
-                    {/* HOW IT HELPS */}
-                    <section className="mb-20">
-                        <h2 className="text-3xl font-semibold mb-6">
-                            What makes LearnSQL different?
-                        </h2>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
-                                <h3 className="text-xl font-semibold mb-2">
-                                    Real SQL Queries
-                                </h3>
-                                <p className="text-slate-300">
-                                    Concepts are explained using actual SQL queries
-                                    executed in MySQL Workbench, with screenshots to
-                                    show how queries work in practice.
+                        {/* RIGHT INFO CARD */}
+                        <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-5 shadow-xl">
+                            <div>
+                                <p className="text-sm text-slate-400">Focus</p>
+                                <p className="text-slate-200 font-medium">
+                                    Beginner-first SQL documentation
                                 </p>
                             </div>
 
-                            <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
-                                <h3 className="text-xl font-semibold mb-2">
-                                    Beginner-Friendly Documentation
-                                </h3>
-                                <p className="text-slate-300">
-                                    Written in simple language with step-by-step explanations,
-                                    making it easy to follow even if you are new to databases.
+                            <div className="h-px bg-slate-800" />
+
+                            <div>
+                                <p className="text-sm text-slate-400">Database Used</p>
+                                <p className="text-emerald-400 font-medium">
+                                    MySQL Community Server
                                 </p>
                             </div>
 
-                            <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
-                                <h3 className="text-xl font-semibold mb-2">
-                                    SQL Cheatsheet
-                                </h3>
-                                <p className="text-slate-300">
-                                    A concise SQL cheatsheet covering commonly used commands
-                                    and patterns for quick reference and revision.
-                                </p>
-                            </div>
+                            <div className="h-px bg-slate-800" />
 
-                            <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
-                                <h3 className="text-xl font-semibold mb-2">
-                                    MySQL Setup Guides
-                                </h3>
-                                <p className="text-slate-300">
-                                    Step-by-step MySQL installation guides for both
-                                    Windows and macOS to help beginners get started easily.
+                            <div>
+                                <p className="text-sm text-slate-400">Learning Style</p>
+                                <p className="text-slate-200 font-medium">
+                                    Real queries • Real output • Clear explanations
                                 </p>
                             </div>
                         </div>
-                    </section>
 
-                    {/* PHILOSOPHY */}
-                    <section className="mb-20">
-                        <h2 className="text-3xl font-semibold mb-4">
-                            Learning approach
+                    </div>
+                </section>
+
+                {/* WHY */}
+                <section className="max-w-7xl mx-auto px-6 py-20">
+                    <h2 className="text-3xl font-bold mb-6">
+                        Why LearnSQL Exists
+                    </h2>
+                    <p className="max-w-3xl text-slate-300 leading-relaxed">
+                        Most SQL resources are either too theoretical or overwhelming for
+                        beginners. LearnSQL was created to bridge that gap by documenting SQL
+                        concepts while learning them — focusing on how queries actually behave
+                        inside a real database like MySQL.
+                    </p>
+                </section>
+
+                {/* FEATURES */}
+                <section className="max-w-7xl mx-auto px-6 py-20">
+                    <h2 className="text-3xl font-bold mb-10">
+                        What You’ll Find on LearnSQL
+                    </h2>
+
+                    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                        <Card
+                            title="Beginner-Friendly Docs"
+                            desc="Clear explanations of SQL concepts written from a learner’s perspective."
+                        />
+                        <Card
+                            title="SQL Cheatsheet"
+                            desc="Quick access to commonly used SQL syntax, clauses, and functions."
+                        />
+                        <Card
+                            title="MySQL Installation Guide"
+                            desc="Step-by-step setup guides for MySQL on Windows and macOS."
+                        />
+                        <Card
+                            title="Real Query Examples"
+                            desc="Actual SQL queries with screenshots from MySQL Workbench."
+                        />
+                        <Card
+                            title="Learning Resources"
+                            desc="Curated notes and references to strengthen SQL fundamentals."
+                        />
+                        <Card
+                            title="Practice-Focused"
+                            desc="Less theory, more understanding through practical examples."
+                        />
+                    </div>
+                </section>
+
+                {/* DIFFERENT */}
+                <section className="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800">
+                    <h2 className="text-3xl font-bold mb-10">
+                        How LearnSQL Is Different
+                    </h2>
+
+                    <div className="grid md:grid-cols-2 gap-8 text-slate-300">
+                        <ul className="space-y-4">
+                            <li>❌ Heavy textbook-style explanations</li>
+                            <li>❌ SQL concepts without real output</li>
+                            <li>❌ Content written only for experts</li>
+                        </ul>
+                        <ul className="space-y-4">
+                            <li>✅ Written while learning SQL</li>
+                            <li>✅ Real MySQL queries & results</li>
+                            <li>✅ Beginner-first explanations</li>
+                        </ul>
+                    </div>
+                </section>
+
+                {/* BUILDER */}
+                <section className="max-w-7xl mx-auto px-6 py-20">
+                    <h2 className="text-3xl font-bold mb-6">
+                        Built by a Learner, for Learners
+                    </h2>
+                    <p className="max-w-3xl text-slate-300 leading-relaxed">
+                        LearnSQL is built by someone actively learning SQL and documenting
+                        everything along the way. The goal is simple — help beginners gain
+                        confidence in writing SQL queries through clarity and practice.
+                    </p>
+                </section>
+
+                {/* WHO */}
+                <section className="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800">
+                    <h2 className="text-3xl font-bold mb-8">
+                        Who Is LearnSQL For?
+                    </h2>
+                    <div className="flex flex-wrap gap-4">
+                        <Pill text="SQL Beginners" />
+                        <Pill text="College Students" />
+                        <Pill text="Self-Taught Developers" />
+                        <Pill text="MySQL Learners" />
+                    </div>
+                </section>
+
+                {/* CTA */}
+                <section className="border-t border-slate-800">
+                    <div className="max-w-7xl mx-auto px-6 py-24 text-center">
+                        <h2 className="text-4xl font-bold">
+                            Start Learning SQL with Confidence
                         </h2>
-
-                        <p className="text-slate-300 leading-relaxed max-w-4xl">
-                            LearnSQL follows a documentation-first learning approach.
-                            Each topic is structured, easy to navigate, and focused
-                            on understanding how SQL works in real-world scenarios.
+                        <p className="mt-4 text-slate-300">
+                            Real queries, real understanding, zero confusion.
                         </p>
 
-                        <p className="text-slate-300 leading-relaxed max-w-4xl mt-4">
-                            The UI is intentionally kept clean and distraction-free
-                            so learners can focus entirely on reading, understanding,
-                            and practicing SQL.
-                        </p>
-                    </section>
+                        <div className="mt-8 flex justify-center gap-4">
+                            <Link to="/docs/sql-intro">
+                                <button className="px-8 py-3 bg-emerald-500 hover:bg-emerald-600 transition rounded-xl font-semibold shadow-lg shadow-emerald-500/20">
+                                    Get Started
+                                </button>
+                            </Link>
+                            <Link to="/cheatsheet">
+                                <button className="px-8 py-3 border border-slate-700 hover:border-slate-500 transition rounded-xl text-slate-300">
+                                    View Cheatsheet
+                                </button>
+                            </Link>
+                        </div>
+                    </div>
+                </section>
 
-                    {/* FOOTER NOTE */}
-                    <section className="border-t border-slate-800 pt-10">
-                        <p className="text-slate-400 max-w-3xl">
-                            LearnSQL is continuously evolving with better explanations,
-                            more real examples, and improved documentation as the
-                            learning journey continues.
-                        </p>
-                    </section>
+                {/* Footer */}
+                <Footer />
 
-                </div>
-            </section>
+            </main>
         </>
+    );
+}
+
+function Card({ title, desc }) {
+    return (
+        <div className="rounded-2xl bg-slate-900 border border-slate-800 p-6 hover:border-slate-700 transition">
+            <h3 className="text-xl font-semibold mb-3">{title}</h3>
+            <p className="text-slate-300 text-sm leading-relaxed">{desc}</p>
+        </div>
+    );
+}
+
+function Pill({ text }) {
+    return (
+        <span className="px-5 py-2 rounded-full border border-slate-700 bg-slate-900 text-slate-300 text-sm">
+            {text}
+        </span>
     );
 }

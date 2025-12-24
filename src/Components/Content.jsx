@@ -1,3 +1,4 @@
+// import link
 import { Link } from "react-router-dom";
 
 // home page content component

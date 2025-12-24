@@ -1,6 +1,7 @@
-// import cheat card component and navbar
+// import cheat card component, navbar and footer
 import CheatCard from "../Components/CheatCard";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 // cheatsheet page
 export default function Cheatsheet() {
@@ -379,9 +380,7 @@ WHERE order_amount > ALL (
                 </div>
 
                 {/* Footer */}
-                <p className="text-sm text-slate-400 bg-transparent text-center py-5">
-                    Made with <span className="text-red-500">❤️</span> by Aditya Chandel
-                </p>
+                <Footer />
             </section>
         </>
     );

@@ -20,6 +20,7 @@ import Left from "./Components/LeftSideBar";
 import ScrollToTop from "./Components/Scroltotop";
 import Cheatsheet from "./Pages/cheatsheet";
 import About from "./Pages/About";
+import MySQLSetup from "./Pages/InstalltionGuide";
 
 // main app
 export default function App() {
@@ -39,6 +40,9 @@ export default function App() {
 
         {/* About Page */}
         <Route path="/about" element={<About />} />
+
+        {/* MySQL Setup Page */}
+        <Route path="/mysql-setup" element={<MySQLSetup />} />
 
         {/* Documentation */}
         <Route path="/docs/*" element={<Docs scrollRef={scrollRef} />} />
