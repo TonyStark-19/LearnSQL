@@ -1,6 +1,10 @@
 // import link
 import { Link } from "react-router-dom";
 
+// react icons
+import { ImCross } from "react-icons/im";
+import { FaCheck } from "react-icons/fa";
+
 // import navbar and footer
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
@@ -14,7 +18,7 @@ export default function About() {
             <main className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white pt-16 px-10">
 
                 {/* ABOUT INTRO */}
-                <section className="border-b border-slate-800">
+                <section>
                     <div className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
                         {/* LEFT TEXT */}
@@ -72,7 +76,7 @@ export default function About() {
                 </section>
 
                 {/* WHY */}
-                <section className="max-w-7xl mx-auto px-6 py-20">
+                <section className="max-w-7xl mx-auto px-6 py-20 border-t border-b border-slate-800">
                     <h2 className="text-3xl font-bold mb-6">
                         Why LearnSQL Exists
                     </h2>
@@ -119,21 +123,39 @@ export default function About() {
                 </section>
 
                 {/* DIFFERENT */}
-                <section className="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800">
+                <section className="max-w-7xl mx-auto px-6 py-20 border-t border-b border-slate-800">
                     <h2 className="text-3xl font-bold mb-10">
                         How LearnSQL Is Different
                     </h2>
 
                     <div className="grid md:grid-cols-2 gap-8 text-slate-300">
                         <ul className="space-y-4">
-                            <li>❌ Heavy textbook-style explanations</li>
-                            <li>❌ SQL concepts without real output</li>
-                            <li>❌ Content written only for experts</li>
+                            <li className="border border-slate-800 p-3 rounded-full flex flex-row items-center gap-4">
+                                <div className="bg-red-600 rounded-full p-2.5"><ImCross /></div>
+                                Heavy textbook-style explanations
+                            </li>
+                            <li className="border border-slate-800 p-3 rounded-full flex flex-row items-center gap-4">
+                                <div className="bg-red-600 rounded-full p-2.5"><ImCross /></div>
+                                SQL concepts without real output
+                            </li>
+                            <li className="border border-slate-800 p-3 rounded-full flex flex-row items-center gap-4">
+                                <div className="bg-red-600 rounded-full p-2.5"><ImCross /></div>
+                                Content written only for experts
+                            </li>
                         </ul>
                         <ul className="space-y-4">
-                            <li>✅ Written while learning SQL</li>
-                            <li>✅ Real MySQL queries & results</li>
-                            <li>✅ Beginner-first explanations</li>
+                            <li className="border border-slate-800 p-3 rounded-full flex flex-row items-center gap-4">
+                                <div className="bg-green-700 rounded-full p-2.5"><FaCheck /></div>
+                                Written while learning SQL
+                            </li>
+                            <li className="border border-slate-800 p-3 rounded-full flex flex-row items-center gap-4">
+                                <div className="bg-green-700 rounded-full p-2.5"><FaCheck /></div>
+                                Real MySQL queries & results
+                            </li>
+                            <li className="border border-slate-800 p-3 rounded-full flex flex-row items-center gap-4">
+                                <div className="bg-green-700 rounded-full p-2.5"><FaCheck /></div>
+                                Beginner-first explanations
+                            </li>
                         </ul>
                     </div>
                 </section>
@@ -151,7 +173,7 @@ export default function About() {
                 </section>
 
                 {/* WHO */}
-                <section className="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800">
+                <section className="max-w-7xl mx-auto px-6 py-20 border-t border-b border-slate-800">
                     <h2 className="text-3xl font-bold mb-8">
                         Who Is LearnSQL For?
                     </h2>
@@ -164,7 +186,7 @@ export default function About() {
                 </section>
 
                 {/* CTA */}
-                <section className="border-t border-slate-800">
+                <section>
                     <div className="max-w-7xl mx-auto px-6 py-24 text-center">
                         <h2 className="text-4xl font-bold">
                             Start Learning SQL with Confidence
@@ -175,12 +197,14 @@ export default function About() {
 
                         <div className="mt-8 flex justify-center gap-4">
                             <Link to="/docs/sql-intro">
-                                <button className="px-8 py-3 bg-emerald-500 hover:bg-emerald-600 transition rounded-xl font-semibold shadow-lg shadow-emerald-500/20">
+                                <button className="px-8 py-3 bg-emerald-500 hover:bg-emerald-600 transition rounded-xl font-semibold shadow-lg
+                                shadow-emerald-500/20 cursor-pointer">
                                     Get Started
                                 </button>
                             </Link>
                             <Link to="/cheatsheet">
-                                <button className="px-8 py-3 border border-slate-700 hover:border-slate-500 transition rounded-xl text-slate-300">
+                                <button className="px-8 py-3 border border-slate-700 hover:border-slate-500 transition rounded-xl text-slate-300
+                                cursor-pointer">
                                     View Cheatsheet
                                 </button>
                             </Link>
@@ -196,6 +220,7 @@ export default function About() {
     );
 }
 
+// card component
 function Card({ title, desc }) {
     return (
         <div className="rounded-2xl bg-slate-900 border border-slate-800 p-6 hover:border-slate-700 transition">
@@ -205,6 +230,7 @@ function Card({ title, desc }) {
     );
 }
 
+// pill component
 function Pill({ text }) {
     return (
         <span className="px-5 py-2 rounded-full border border-slate-700 bg-slate-900 text-slate-300 text-sm">

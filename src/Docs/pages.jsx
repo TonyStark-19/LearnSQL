@@ -333,15 +333,29 @@ export function Page3() {
                     </h2>
 
                     <p className="mt-5 leading-relaxed min-a:text-2xl max-a:text-xl">
-                        If MySQL is not installed on your system yet, you can download it directly
-                        from the official website:
+                        If MySQL is not installed on your system yet, you can follow our
+                        <span className="font-semibold text-slate-100"> step-by-step MySQL Installation Guide</span>{" "}
+                        to install MySQL easily on both{" "}
+                        <span className="font-semibold">Windows</span> and{" "}
+                        <span className="font-semibold">macOS</span>.
+                    </p>
+
+                    <a
+                        href="/mysql-setup"
+                        className="inline-block mt-4 font-semibold text-emerald-400 hover:text-emerald-300 transition min-a:text-2xl max-a:text-xl"
+                    >
+                        → View MySQL Installation Guide
+                    </a>
+
+                    <p className="mt-4 leading-relaxed min-a:text-2xl max-a:text-xl">
+                        Or, if you prefer, you can download MySQL directly from the official website:
                     </p>
 
                     <a
                         href="https://www.mysql.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block mt-4 font-semibold text-emerald-400 hover:text-emerald-300 transition min-a:text-2xl max-a:text-xl"
+                        className="inline-block mt-2 font-semibold text-emerald-400 hover:text-emerald-300 transition min-a:text-2xl max-a:text-xl"
                     >
                         → Download MySQL
                     </a>
@@ -351,7 +365,7 @@ export function Page3() {
                         While installing, make sure to properly set up both{" "}
                         <span className="font-semibold">MySQL Server</span> and{" "}
                         <span className="font-semibold">MySQL Workbench</span>.
-                        Following a video tutorial is highly recommended.
+                        Following a video tutorial or installation guide is highly recommended.
                     </NoteBox>
                 </section>
 
@@ -3373,12 +3387,12 @@ export function Page25() {
                         This section showcases SQL-based projects I’ve created as part of my learning and practice journey.
                     </p>
 
-                    <p className="min-a:text-2xl max-a:text-xl">
+                    <p className="min-a:text-2xl max-a:text-xl mt-5">
                         These projects combine concepts from <span className="font-semibold text-slate-100">Apna College's SQL course</span> with real-world
                         data handling, query writing, and optimization techniques.
                     </p>
 
-                    <p className="min-a:text-2xl max-a:text-xl">
+                    <p className="min-a:text-2xl max-a:text-xl mt-5">
                         I’ll also share the source code and live demos (where applicable) to help you understand SQL in practical applications.
                     </p>
                 </section>
@@ -3499,7 +3513,7 @@ export function Page26() {
                         If you are serious about learning SQL, I highly recommend not only studying the theory but also <span className="font-bold text-green-400">practicing it regularly</span>.
                     </p>
 
-                    <p className="min-a:text-2xl max-a:text-xl mt-4">
+                    <p className="min-a:text-2xl max-a:text-xl my-4">
                         Two excellent platforms for SQL practice are:
                     </p>
 
@@ -3521,7 +3535,7 @@ export function Page26() {
 
                 {/* ADDITIONAL RESOURCES */}
                 <section>
-                    <p className="min-a:text-2xl max-a:text-xl mt-4">
+                    <p className="min-a:text-2xl max-a:text-xl my-4">
                         Some additional helpful resources for learning and mastering SQL:
                     </p>
 

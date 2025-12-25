@@ -30,6 +30,11 @@ export default function MySQLInstallation() {
                         </p>
                     </div>
 
+                    <div className="mt-12 p-4 rounded-xl border border-slate-800 bg-slate-900/60 text-slate-300 max-w-4xl">
+                        <span className="text-emerald-400 font-semibold">Before you start:</span>
+                        {" "}Close any running database tools and ensure you have admin access on your system.
+                    </div>
+
                     {/* WINDOWS */}
                     <section className="mt-16">
                         <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-8 shadow-xl">
@@ -38,14 +43,25 @@ export default function MySQLInstallation() {
                             </h2>
 
                             <ol className="list-decimal list-inside space-y-3 text-slate-300 max-w-4xl">
-                                <li>Visit <span className="text-emerald-400">https://www.mysql.com</span></li>
+                                <li>Visit{" "}
+                                    <span className="text-emerald-400">
+                                        <a
+                                            href="https://www.mysql.com"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-emerald-400 hover:underline"
+                                        >
+                                            https://www.mysql.com
+                                        </a>
+                                    </span>
+                                </li>
                                 <li>Go to <b>Downloads</b></li>
                                 <li>Select <b>MySQL Community (GPL) Downloads</b></li>
                                 <li>Click <b>MySQL Installer for Windows</b></li>
                                 <li>Download the recommended installer</li>
                                 <li>Skip login → <b>No thanks, just start my download</b></li>
                                 <li>Run the installer after download</li>
-                                <li>Select <b>Full</b> setup → Next</li>
+                                <li>Select <b>Full</b> setup (includes Server + Workbench) → Next</li>
                                 <li>Click <b>Execute</b> to install dependencies</li>
                                 <li>Continue until configuration starts</li>
                                 <li>Create a strong <b>root password</b></li>
@@ -68,7 +84,18 @@ export default function MySQLInstallation() {
                             </h2>
 
                             <ol className="list-decimal list-inside space-y-3 text-slate-300 max-w-4xl">
-                                <li>Visit <span className="text-emerald-400">https://www.mysql.com</span></li>
+                                <li>Visit{" "}
+                                    <span className="text-emerald-400">
+                                        <a
+                                            href="https://www.mysql.com"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-emerald-400 hover:underline"
+                                        >
+                                            https://www.mysql.com
+                                        </a>
+                                    </span>
+                                </li>
                                 <li>Downloads → <b>MySQL Community (GPL)</b></li>
                                 <li>Select <b>MySQL Community Server</b></li>
                                 <li>Download the DMG file</li>
@@ -111,8 +138,8 @@ export default function MySQLInstallation() {
                             </pre>
                         </div>
 
-                        <p className="mt-4 text-xs text-slate-500">
-                            If this runs successfully, MySQL is installed correctly.
+                        <p className="mt-4 text-sm text-slate-400">
+                            If this query returns a version number, MySQL is installed and running correctly.
                         </p>
                     </section>
 
