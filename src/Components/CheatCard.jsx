@@ -6,8 +6,10 @@ import { MdContentCopy } from "react-icons/md";
 
 /* CHEAT CARD COMPONENT */
 export default function CheatCard({ title, desc, code }) {
+    // copy state
     const [copied, setCopied] = useState(false);
 
+    // copy to clipboard function
     const copyToClipboard = () => {
         navigator.clipboard.writeText(code);
         setCopied(true);

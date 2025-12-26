@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 export default function Content() {
     return (
         <section className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white flex items-center">
-            <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 lg:gap-12 max-lg:gap-2 items-center">
 
                 {/* LEFT CONTENT */}
-                <div className="space-y-6">
+                <div className="space-y-6 max-lg:pt-10">
                     <span className="inline-block text-sm font-medium text-emerald-400 bg-emerald-400/10 px-3 py-1 rounded-full">
                         SQL Documentation
                     </span>
@@ -23,14 +23,16 @@ export default function Content() {
                         databases, write real queries, and build a strong foundation step by step.
                     </p>
 
-                    <div className="flex flex-wrap gap-4 pt-4">
-                        <button className="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 transition rounded-xl font-semibold shadow-lg shadow-emerald-500/20
-                        cursor-pointer">
-                            MySQL Installation Guide
-                        </button>
-                        <Link to="/docs/sql-intro">
+                    <div className="flex flex-wrap gap-4 pt-4 w-full">
+                        <Link to="/mysql-setup" className="max-sm:w-full">
+                            <button className="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 transition rounded-xl font-semibold shadow-lg shadow-emerald-500/20
+                        cursor-pointer w-full">
+                                MySQL Installation Guide
+                            </button>
+                        </Link>
+                        <Link to="/docs/sql-intro" className="max-sm:w-full">
                             <button className="px-6 py-3 border border-slate-700 hover:border-slate-500 transition rounded-xl font-medium text-slate-300
-                            cursor-pointer">
+                            cursor-pointer w-full">
                                 View Documentation
                             </button>
                         </Link>
@@ -38,7 +40,7 @@ export default function Content() {
                 </div>
 
                 {/* RIGHT CODE SHELL */}
-                <div className="relative mt-14">
+                <div className="relative mt-14 lg:mb-0 max-lg:mb-10">
                     <div className="bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden">
                         {/* Window Header */}
                         <div className="flex items-center gap-2 px-4 py-3 bg-slate-800/60 border-b border-slate-700">

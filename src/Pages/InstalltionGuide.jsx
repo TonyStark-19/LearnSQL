@@ -2,14 +2,20 @@
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
+// import use state
+import { useState } from "react";
+
 // MySQL Installation Guide page
 export default function MySQLInstallation() {
+    // menu toggle
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
         <>
-            <Navbar />
+            <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
             <section className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-                <div className="max-w-7xl mx-auto px-6 py-20">
+                <div className="max-w-7xl mx-auto px-6 py-16">
 
                     {/* PAGE HEADER */}
                     <div className="pt-16 pb-10 border-b border-slate-800">
@@ -37,7 +43,7 @@ export default function MySQLInstallation() {
 
                     {/* WINDOWS */}
                     <section className="mt-16">
-                        <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-8 shadow-xl">
+                        <div className="bg-slate-900/80 border border-slate-800 rounded-2xl sm:p-8 max-sm:p-5 shadow-xl">
                             <h2 className="text-2xl md:text-3xl font-semibold text-emerald-400 mb-6">
                                 MySQL Installation on Windows
                             </h2>
@@ -78,7 +84,7 @@ export default function MySQLInstallation() {
 
                     {/* MACOS */}
                     <section className="mt-16">
-                        <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-8 shadow-xl">
+                        <div className="bg-slate-900/80 border border-slate-800 rounded-2xl sm:p-8 max-sm:p-5 shadow-xl">
                             <h2 className="text-2xl md:text-3xl font-semibold text-emerald-400 mb-6">
                                 MySQL Installation on macOS
                             </h2>

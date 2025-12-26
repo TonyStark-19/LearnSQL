@@ -9,13 +9,19 @@ import { FaCheck } from "react-icons/fa";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
+// import use state
+import { useState } from "react";
+
 // About page component
 export default function About() {
+    // menu toggle
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
         <>
-            <Navbar />
+            <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
-            <main className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white pt-16 px-10">
+            <main className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white sm:pt-16 max-sm:pt-10 sm:px-10 max-sm:px-3">
 
                 {/* ABOUT INTRO */}
                 <section>
@@ -123,7 +129,7 @@ export default function About() {
                 </section>
 
                 {/* DIFFERENT */}
-                <section className="max-w-7xl mx-auto px-6 py-20 border-t border-b border-slate-800">
+                <section className="max-w-7xl mx-auto sm:px-6 max-sm:px-2 py-20 border-t border-b border-slate-800">
                     <h2 className="text-3xl font-bold mb-10">
                         How LearnSQL Is Different
                     </h2>
@@ -187,24 +193,24 @@ export default function About() {
 
                 {/* CTA */}
                 <section>
-                    <div className="max-w-7xl mx-auto px-6 py-24 text-center">
-                        <h2 className="text-4xl font-bold">
+                    <div className="max-w-7xl mx-auto px-6 sm:py-24 max-sm:py-16 text-center">
+                        <h2 className="sm:text-4xl max-sm:text-3xl font-bold">
                             Start Learning SQL with Confidence
                         </h2>
                         <p className="mt-4 text-slate-300">
                             Real queries, real understanding, zero confusion.
                         </p>
 
-                        <div className="mt-8 flex justify-center gap-4">
-                            <Link to="/docs/sql-intro">
+                        <div className="mt-8 flex justify-center gap-4 max-[500px]:flex-col max-[500px]:items-center w-full">
+                            <Link to="/docs/sql-intro" className="max-[500px]:w-full">
                                 <button className="px-8 py-3 bg-emerald-500 hover:bg-emerald-600 transition rounded-xl font-semibold shadow-lg
-                                shadow-emerald-500/20 cursor-pointer">
+                                shadow-emerald-500/20 cursor-pointer w-full">
                                     Get Started
                                 </button>
                             </Link>
-                            <Link to="/cheatsheet">
+                            <Link to="/cheatsheet" className="max-[500px]:w-full">
                                 <button className="px-8 py-3 border border-slate-700 hover:border-slate-500 transition rounded-xl text-slate-300
-                                cursor-pointer">
+                                cursor-pointer w-full">
                                     View Cheatsheet
                                 </button>
                             </Link>

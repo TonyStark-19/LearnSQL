@@ -7,7 +7,7 @@ import { IoMenu } from "react-icons/io5";
 // navbar component
 export default function Navbar2({ setMenuOpen }) {
     return (
-        <div className="w-full fixed p-3 flex flex-row items-center justify-between border-b border-slate-800">
+        <div className="w-full fixed p-3 flex flex-row items-center justify-between backdrop-blur bg-slate-950/80 border-b border-slate-800">
             <div className="flex flex-row items-center justify-center gap-2">
                 <button className="text-4xl text-white min-lg:hidden cursor-pointer" onClick={() => setMenuOpen(prev => !prev)}>
                     <IoMenu />

@@ -5,16 +5,16 @@
 }
 
 /* Custom Scrollbar: Transparent Track */
-.scrollbar-transparent::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 8px;
 }
 
-.scrollbar-transparent::-webkit-scrollbar-track {
-  background: transparent;
+::-webkit-scrollbar-track {
+  background: rgb(15 23 42);
 }
 
-.scrollbar-transparent::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.4);
+::-webkit-scrollbar-thumb {
+  background-color: rgb(2 6 23 / 0.8);
   /* semi-transparent white */
   border-radius: 10px;
 }

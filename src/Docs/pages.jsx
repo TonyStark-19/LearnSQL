@@ -776,11 +776,13 @@ export function Page6() {
                 {/* NEXT PAGE */}
                 <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
                     <p>
-                        Understanding data types is essential for building efficient and reliable databases.
-                        Up next — let’s learn about{" "}
+                        Now that you understand SQL data types, it’s time to learn how databases
+                        uniquely identify and relate data.
+                        Up next — let’s explore{" "}
                         <span className="font-semibold text-slate-100">
-                            SQL commands
-                        </span> 🚀
+                            SQL Keys
+                        </span>{" "}
+                        🔑
                     </p>
                 </section>
 
@@ -1249,10 +1251,11 @@ VALUES
                 {/* NEXT PAGE */}
                 <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
                     <p>
-                        Up next — we’ll explore an important concept in SQL:{" "}
+                        Great progress! 🚀 Up next, we’ll explore more{" "}
                         <span className="font-semibold text-slate-100">
-                            SQL Keys
-                        </span>.
+                            table-related queries
+                        </span>{" "}
+                        and learn how to work efficiently with table data.
                     </p>
                 </section>
 
@@ -1598,12 +1601,13 @@ export function Page11() {
                 {/* NEXT PAGE */}
                 <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
                     <p>
-                        Excellent! 🎯 You’ve learned all major SQL constraints.
-                        Next up — we’ll dive deep into the{" "}
+                        Great work! 🎯 Now that you understand SQL constraints,
+                        it’s time to see how changes propagate across related tables.
+                        Next up — let’s explore{" "}
                         <span className="font-semibold text-slate-100">
-                            SELECT query
+                            Cascading for Foreign Keys
                         </span>{" "}
-                        and data retrieval.
+                        🔗
                     </p>
                 </section>
 
@@ -2075,8 +2079,9 @@ WHERE city NOT IN ("Delhi", "Mumbai");`}
                         Excellent work! 🎯 You’ve learned how operators help filter data.
                         Up next — we’ll explore the{" "}
                         <span className="font-semibold text-slate-100">
-                            LIMIT clause
-                        </span>.
+                            ORDER BY clause
+                        </span>{" "}
+                        to sort query results effectively.
                     </p>
                 </section>
 
@@ -2181,11 +2186,16 @@ LIMIT 3;`}
                 {/* NEXT PAGE */}
                 <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
                     <p>
-                        Nice work! 🎉 You now know how to control result size.
-                        Up next — we’ll explore the{" "}
+                        Great job! 🎯 You’ve learned how to sort data effectively.
+                        Next, we’ll begin the{" "}
                         <span className="font-semibold text-slate-100">
-                            ORDER BY clause
-                        </span>.
+                            Functions & Grouping
+                        </span>{" "}
+                        section by exploring{" "}
+                        <span className="font-semibold text-slate-100">
+                            Aggregate Functions
+                        </span>{" "}
+                        and summarizing data.
                     </p>
                 </section>
 
@@ -2303,11 +2313,11 @@ ORDER BY city ASC;`}
                 {/* NEXT PAGE */}
                 <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
                     <p>
-                        Excellent progress! 🎯 Next, we’ll explore{" "}
+                        Great progress! 🎯 Next up — we’ll learn about the{" "}
                         <span className="font-semibold text-slate-100">
-                            Aggregate Functions
+                            LIMIT clause
                         </span>{" "}
-                        and learn how to summarize data.
+                        and how to control the number of rows returned by a query.
                     </p>
                 </section>
 
@@ -2679,11 +2689,16 @@ HAVING MAX(marks) > 90;`}
                 {/* NEXT PAGE */}
                 <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
                     <p>
-                        Great work! 🎯 Next, we’ll learn about{" "}
+                        Excellent progress! 🚀 You’ve understood how cascading works with foreign keys.
+                        Up next, we’ll step into the{" "}
                         <span className="font-semibold text-slate-100">
-                            Cascading in Foreign Keys
+                            Advanced SQL
                         </span>{" "}
-                        and how changes propagate across related tables.
+                        section and learn about{" "}
+                        <span className="font-semibold text-slate-100">
+                            Joins in SQL
+                        </span>{" "}
+                        to combine data from multiple tables.
                     </p>
                 </section>
 
@@ -2792,11 +2807,12 @@ export function Page20() {
                 {/* NEXT PAGE */}
                 <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
                     <p>
-                        Excellent progress! 🚀 Next, we’ll explore more{" "}
+                        Excellent progress! 🚀 You’re now entering the core of SQL.
+                        Next up — let’s learn the{" "}
                         <span className="font-semibold text-slate-100">
-                            table-related queries
+                            SQL SELECT query
                         </span>{" "}
-                        and how to manage table structures efficiently.
+                        and how to retrieve data effectively from tables.
                     </p>
                 </section>
 
@@ -2955,9 +2971,15 @@ MODIFY age VARCHAR(2);`}
                 {/* NEXT */}
                 <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
                     <p>
-                        Excellent work! 🎯
-                        Up next, we’ll explore one of the most important concepts in SQL —
-                        <span className="font-semibold text-slate-100"> JOINS</span>.
+                        Fantastic job! 🚀 You’ve mastered the core concepts of{" "}
+                        <span className="font-semibold text-slate-100">
+                            SQL Joins
+                        </span>.
+                        Up next, explore some{" "}
+                        <span className="font-semibold text-slate-100">
+                            SQL Projects
+                        </span>{" "}
+                        I’ve created to help you practice and apply your skills in real-world scenarios.
                     </p>
                 </section>
 
@@ -3357,8 +3379,15 @@ FROM studenttable;`}
                 {/* NEXT */}
                 <section className="pt-6 border-t border-slate-800 min-a:text-2xl max-a:text-xl">
                     <p>
-                        This marks the end of <span className="font-semibold text-slate-100">SQL Learning</span>.
-                        But I have some additional <span className="font-semibold text-slate-100">Resources</span> for you in the next two pages.
+                        🎉 You’ve completed the core{" "}
+                        <span className="font-semibold text-slate-100">
+                            SQL learning journey
+                        </span>.
+                        Next, we’ll move to the{" "}
+                        <span className="font-semibold text-slate-100">
+                            Practice & Resources
+                        </span>{" "}
+                        section, where you can apply what you’ve learned and explore helpful materials.
                     </p>
                 </section>
 

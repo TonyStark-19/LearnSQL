@@ -62,8 +62,9 @@ export default function Left({ menuOpen, setMenuOpen }) {
     const location = useLocation();
 
     return (
-        <div className={`w-96 h-full overflow-y-auto py-4 border-r border-slate-800 scrollbar-transparent max-lg:fixed
-        max-lg:w-full max-lg:top-16 max-lg:z-50 max-lg:transition-transform max-lg:duration-300 ${menuOpen ? "max-lg:translate-x-0" : "max-lg:-translate-x-full"}`}>
+        <div className={`w-96 h-full overflow-y-auto py-4 max-lg:pb-16 border-r border-slate-800 scrollbar-transparent bg-transparent max-lg:fixed max-lg:w-full
+        max-lg:top-16 max-lg:z-50 max-lg:transition-transform max-lg:duration-300 max-lg:bg-gradient-to-br max-lg:from-slate-950 max-lg:via-slate-900
+        max-lg:to-slate-950 ${menuOpen ? "max-lg:translate-x-0" : "max-lg:-translate-x-full"}`}>
             <div className="text-slate-500 pl-4 font-semibold uppercase tracking-wider text-sm">Get started</div>
             <div className='py-3 pr-7 w-85 border-b-2 border-slate-700 min-lg:w-85 max-lg:w-full'>
                 {fundamentals.map((arr, idx) => (

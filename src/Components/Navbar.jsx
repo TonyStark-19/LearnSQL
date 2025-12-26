@@ -1,46 +1,50 @@
 // react icons
-import { FiGithub } from "react-icons/fi";
+import { FiGithub, FiMenu, FiX } from "react-icons/fi";
 
 // import link
 import { Link } from "react-router-dom";
 
-// Navbar component
-export default function Navbar() {
+// navbar component
+export default function Navbar({ menuOpen, setMenuOpen }) {
     return (
         <header className="fixed top-0 left-0 w-full z-50 backdrop-blur bg-slate-950/80 border-b border-slate-800">
             <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-                {/* LOGO */}
-                <Link to="/">
-                    <div className="flex items-center">
-                        <span className="text-emerald-400 font-bold text-xl">Learn</span>
-                        <span className="text-white font-bold text-xl">SQL</span>
-                    </div>
-                </Link>
 
-                {/* NAV LINKS */}
+                {/* LEFT: LOGO + MENU TOGGLE */}
+                <div className="flex items-center gap-4">
+                    {/* MOBILE MENU TOGGLE */}
+                    <button
+                        onClick={() => setMenuOpen(!menuOpen)}
+                        className="md:hidden text-slate-300 hover:text-white transition text-2xl"
+                        aria-label="Toggle Menu"
+                    >
+                        {menuOpen ? <FiX /> : <FiMenu />}
+                    </button>
+
+                    {/* LOGO */}
+                    <Link to="/">
+                        <div className="flex items-center">
+                            <span className="text-emerald-400 font-bold text-xl">Learn</span>
+                            <span className="text-white font-bold text-xl">SQL</span>
+                        </div>
+                    </Link>
+                </div>
+
+                {/* DESKTOP LINKS */}
                 <ul className="hidden md:flex items-center gap-8 text-slate-300 font-medium">
-                    <Link to="/docs/sql-intro">
-                        <li className="hover:text-white transition cursor-pointer">Docs</li>
-                    </Link>
-                    <Link to="/cheatsheet">
-                        <li className="hover:text-white transition cursor-pointer">Cheatsheet</li>
-                    </Link>
-                    <Link to="/mysql-setup">
-                        <li className="hover:text-white transition cursor-pointer">MySQL Setup</li>
-                    </Link>
-                    <Link to="/about">
-                        <li className="hover:text-white transition cursor-pointer">About</li>
-                    </Link>
+                    <li className="hover:text-white"><Link to="/docs/sql-intro">Docs</Link></li>
+                    <li className="hover:text-white"><Link to="/cheatsheet">Cheatsheet</Link></li>
+                    <li className="hover:text-white"><Link to="/mysql-setup">MySQL Setup</Link></li>
+                    <li className="hover:text-white"><Link to="/about">About</Link></li>
                 </ul>
 
-                {/* CTA */}
+                {/* RIGHT CTA */}
                 <div className="flex items-center gap-4">
                     <a
                         href="https://github.com/TonyStark-19/LearnSQL"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-slate-300 hover:text-white transition text-xl"
-                        aria-label="GitHub Repository"
+                        className="text-slate-300 hover:text-white text-xl"
                     >
                         <FiGithub />
                     </a>
@@ -49,13 +53,33 @@ export default function Navbar() {
                         href="https://github.com/your-username/learnsql/blob/main/CONTRIBUTING.md"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-5 py-2 bg-emerald-500 hover:bg-emerald-600 transition rounded-xl text-sm font-semibold shadow-lg shadow-emerald-500/20"
+                        className="px-5 py-2 bg-emerald-500 hover:bg-emerald-600 rounded-xl text-sm font-semibold shadow-lg shadow-emerald-500/20"
                     >
                         Contribute
                     </a>
                 </div>
-
             </nav>
+
+            {/* MOBILE MENU */}
+            <div
+                className={`md:hidden transition-all duration-300 overflow-hidden 
+                ${menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
+            >
+                <ul className="flex flex-col gap-4 px-6 py-6 bg-slate-950 border-t border-slate-800 text-slate-300">
+                    {[
+                        ["Docs", "/docs/sql-intro"],
+                        ["Cheatsheet", "/cheatsheet"],
+                        ["MySQL Setup", "/mysql-setup"],
+                        ["About", "/about"],
+                    ].map(([label, path]) => (
+                        <li key={path} className="hover:text-white">
+                            <Link to={path} onClick={() => setMenuOpen(false)}>
+                                {label}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </header>
     );
 }
