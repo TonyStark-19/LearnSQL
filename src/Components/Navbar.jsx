@@ -50,7 +50,7 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
                     </a>
 
                     <a
-                        href="https://github.com/your-username/learnsql/blob/main/CONTRIBUTING.md"
+                        href="https://github.com/TonyStark-19/LearnSQL/blob/main/CONTRIBUTING.md"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-5 py-2 bg-emerald-500 hover:bg-emerald-600 rounded-xl text-sm font-semibold shadow-lg shadow-emerald-500/20"
