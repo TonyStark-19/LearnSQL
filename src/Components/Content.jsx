@@ -26,7 +26,7 @@ export default function Content() {
                     <div className="flex flex-wrap gap-4 pt-4 w-full">
                         <Link to="/mysql-setup" className="max-sm:w-full">
                             <button className="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 transition rounded-xl font-semibold shadow-lg shadow-emerald-500/20
-                        cursor-pointer w-full">
+                            cursor-pointer w-full">
                                 MySQL Installation Guide
                             </button>
                         </Link>

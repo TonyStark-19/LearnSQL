@@ -9,6 +9,10 @@ import { FaCheck } from "react-icons/fa";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
+// import card and pill components
+import Card from "../Components/Card";
+import Pill from "../Components/Pill";
+
 // import use state
 import { useState } from "react";
 
@@ -223,24 +227,5 @@ export default function About() {
 
             </main>
         </>
-    );
-}
-
-// card component
-function Card({ title, desc }) {
-    return (
-        <div className="rounded-2xl bg-slate-900 border border-slate-800 p-6 hover:border-slate-700 transition">
-            <h3 className="text-xl font-semibold mb-3">{title}</h3>
-            <p className="text-slate-300 text-sm leading-relaxed">{desc}</p>
-        </div>
-    );
-}
-
-// pill component
-function Pill({ text }) {
-    return (
-        <span className="px-5 py-2 rounded-full border border-slate-700 bg-slate-900 text-slate-300 text-sm">
-            {text}
-        </span>
     );
 }

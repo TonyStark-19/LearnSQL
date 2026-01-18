@@ -2570,7 +2570,7 @@ GROUP BY city;`}
                     </ul>
 
                     <ImageBlock
-                        src="/images/image12.png"
+                        src="/images/img12.png"
                         alt="GROUP BY city result preview"
                     />
                 </section>
