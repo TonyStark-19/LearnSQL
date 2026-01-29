@@ -17,6 +17,8 @@
 ![Live Demo](https://img.shields.io/badge/Live-Demo-success?logo=googlechrome)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 
+---
+
 LearnSQL is a beginner-friendly, interactive SQL documentation website designed to make learning SQL simple, structured, and visual. <br />
 Built using React JS and Tailwind CSS, this project focuses on clarity, real examples, and easy navigation — perfect for anyone starting their SQL journey 🚀
 
@@ -53,6 +55,8 @@ While learning SQL, I felt that beginners often struggle to:
 
 > So I built `LearnSQL` to solve exactly that.
 
+---
+
 This website:
 - Explains SQL step by step
 - Uses clear explanations and structured flow
@@ -78,6 +82,8 @@ This website:
 - DBMS
 - MySQL
 
+---
+
 ### 🔹 Database & Table Basics (DDL)
 - Create Database
 - Create Table
@@ -86,6 +92,8 @@ This website:
 - SQL Constraints
 - Cascading (Foreign Key)
 
+---
+
 ### 🔹 Core Querying (MOST IMPORTANT)
 - SQL SELECT
 - WHERE Clause
@@ -93,15 +101,21 @@ This website:
 - ORDER BY Clause
 - LIMIT Clause
 
+---
+
 ### 🔹 Functions & Grouping
 - Aggregate Functions
 - GROUP BY Clause
 - HAVING Clause
 
+---
+
 ### 🔹 Advanced Queries
 - Joins in SQL
 - SQL Subqueries
 - MySQL Views
+
+---
 
 ### 🔹 Practice & Extras
 - Practice Queries (Database)
@@ -116,8 +130,10 @@ This website:
 
 - 🏠 Landing Page — Overview of LearnSQL
 - 🛠️ MySQL Installation Guide
+
   - Windows
   - macOS
+  
 - 📄 SQL Cheatsheet — Quick revision for interviews & practice
 - ℹ️ About Page — Purpose and motivation behind LearnSQL
 
