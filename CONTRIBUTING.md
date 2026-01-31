@@ -1,13 +1,15 @@
 # 🤝 Contributing to LearnSQL
 
 First of all, thank you for taking the time to contribute to **LearnSQL**! 🎉  
+
 This project is built to help beginners learn SQL in a clear, structured, and practical way — and your contributions can make it even better.
 
 ---
 
 ## 📌 About the Project
 
-**LearnSQL** is a beginner-friendly SQL documentation website built using **React JS** and **Tailwind CSS**.  
+**LearnSQL** is a beginner-friendly SQL documentation website built using **React JS** and **Tailwind CSS**.
+
 It focuses on:
 - Clear explanations  
 - Proper learning order  
