@@ -19,7 +19,8 @@
 
 ---
 
-LearnSQL is a beginner-friendly, interactive SQL documentation website designed to make learning SQL simple, structured, and visual. <br />
+LearnSQL is a beginner-friendly, interactive SQL documentation website designed to make learning SQL simple, structured, and visual.
+
 Built using React JS and Tailwind CSS, this project focuses on clarity, real examples, and easy navigation — perfect for anyone starting their SQL journey 🚀
 
 ---
@@ -208,7 +209,9 @@ If you’d like to improve LearnSQL:
 - Make your changes
 - Submit a Pull Request
 
-Every contribution helps beginners learn better 💙
+> Every contribution helps beginners learn better 💙
+
+Please read the **[CONTRIBUTING.md](CONTRIBUTING.md)** before you start.
 
 ---
 
